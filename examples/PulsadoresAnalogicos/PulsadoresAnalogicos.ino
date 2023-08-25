@@ -10,7 +10,7 @@
 const uint8_t pulsador_pulldown = PIN_A2;
 const uint8_t pulsador_pullup = PIN_A3;
 
-// Declaración de pin donde está conectado los LED (Cambiar librería)
+// Declaración de pin donde están conectados los LED (Cambiar librería)
 const uint8_t ledRojo = 5;
 const uint8_t rgbRojo = 8;
 
@@ -21,7 +21,7 @@ void setup() {
     pinMode(ledRojo, OUTPUT);
     pinMode(rgbRojo, OUTPUT);
 
-    // Inicializar pin del LED apagado
+    // Inicializar pin de los LED apagado
     digitalWrite(ledRojo, LOW);
     digitalWrite(rgbRojo, LOW);
 
