@@ -11,9 +11,6 @@
 // Declaración de instancia de la clase
 Entrenador miEntrenador;
 
-// Definición de pines donde están conectado el zumbador
-const uint8_t miEntrenador.zumbador = 25;
-
 // Inicialización del sketch
 void setup() {
 
