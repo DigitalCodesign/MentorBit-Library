@@ -6,28 +6,29 @@
  * Ajuste de brillo de un LED con la lectura del potenciómetro.
  */
 
-// Definición de pines donde están conectado el potenciómetro y el LED rojo
-const uint8_t potenciometro = PIN_A0;
-const uint8_t ledRojo = 5;
+#include "Entrenador.h"
+
+// Declaración de instancia de la clase
+Entrenador miEntrenador();
 
 // Inicialización del sketch
 void setup() {
 
     // Definición de LED como salida
-    pinMode(ledRojo, OUTPUT);
+    pinMode(miEntrenador.ledRojo, OUTPUT);
 
     // Inicializar pines apagados
-    analogWrite(ledRojo, 0);
+    analogWrite(miEntrenador.ledRojo, 0);
 
 }
 
 // Bucle principal del sketch
 void loop() {
 
-    uint8_t lectura0a1023 = analogRead(potenciometro);
+    int lectura0a1023 = analogRead(miEntrenador.potenciometro);
     float lectura0a25 = (lectura0a1023 / 1023.00) * 255;
 
-    analogWrite(ledRojo, lectura0a255);
+    analogWrite(miEntrenador.ledRojo, lectura0a255);
     delay(100);
 
 }

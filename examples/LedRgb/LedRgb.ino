@@ -7,23 +7,23 @@
  * utilizando la librería.
  */
 
-// Definición de pines donde están conectados los LEDs (Cambiar a librería)
-const uint8_t rgbRojo = 8;
-const uint8_t rgbVerde = 9;
-const uint8_t rgbAzul = 10;
+#include "Entrenador.h"
+
+// Declaración de instancia de la clase
+Entrenador miEntrenador();
 
 // Inicialización del sketch
 void setup() {
 
     // Definición de pines como salida
-    pinMode(rgbRojo, OUTPUT);
-    pinMode(rgbVerde, OUTPUT);
-    pinMode(rgbAzul, OUTPUT);
+    pinMode(miEntrenador.rgbRojo, OUTPUT);
+    pinMode(miEntrenador.rgbVerde, OUTPUT);
+    pinMode(miEntrenador.rgbAzul, OUTPUT);
 
     // Inicializar pines apagados
-    digitalWrite(rgbRojo, LOW);
-    digitalWrite(rgbVerde, LOW);
-    digitalWrite(rgbAzul, LOW);
+    digitalWrite(miEntrenador.rgbRojo, LOW);
+    digitalWrite(miEntrenador.rgbVerde, LOW);
+    digitalWrite(miEntrenador.rgbAzul, LOW);
 
 }
 
@@ -31,39 +31,39 @@ void setup() {
 void loop() {
 
     // Encendemos el color rojo
-    digitalWrite(rgbRojo, HIGH);
-    digitalWrite(rgbVerde, LOW);
-    digitalWrite(rgbAzul, LOW);
+    digitalWrite(miEntrenador.rgbRojo, HIGH);
+    digitalWrite(miEntrenador.rgbVerde, LOW);
+    digitalWrite(miEntrenador.rgbAzul, LOW);
     delay(500);
 
     // Encendemos el color rojo y el verde
-    digitalWrite(rgbRojo, HIGH);
-    digitalWrite(rgbVerde, HIGH);
-    digitalWrite(rgbAzul, LOW);
+    digitalWrite(miEntrenador.rgbRojo, HIGH);
+    digitalWrite(miEntrenador.rgbVerde, HIGH);
+    digitalWrite(miEntrenador.rgbAzul, LOW);
     delay(500);
 
     // Encendemos el color verde
-    digitalWrite(rgbRojo, LOW);
-    digitalWrite(rgbVerde, HIGH);
-    digitalWrite(rgbAzul, LOW);
+    digitalWrite(miEntrenador.rgbRojo, LOW);
+    digitalWrite(miEntrenador.rgbVerde, HIGH);
+    digitalWrite(miEntrenador.rgbAzul, LOW);
     delay(500);
 
     // Encendemos el color verde y el azul
-    digitalWrite(rgbRojo, LOW);
-    digitalWrite(rgbVerde, HIGH);
-    digitalWrite(rgbAzul, HIGH);
+    digitalWrite(miEntrenador.rgbRojo, LOW);
+    digitalWrite(miEntrenador.rgbVerde, HIGH);
+    digitalWrite(miEntrenador.rgbAzul, HIGH);
     delay(500);
 
     // Encendemos el color Azul
-    digitalWrite(rgbRojo, LOW);
-    digitalWrite(rgbVerde, LOW);
-    digitalWrite(rgbAzul, HIGH);
+    digitalWrite(miEntrenador.rgbRojo, LOW);
+    digitalWrite(miEntrenador.rgbVerde, LOW);
+    digitalWrite(miEntrenador.rgbAzul, HIGH);
     delay(500);
 
     // Encendemos el color azul y el rojo
-    digitalWrite(rgbRojo, HIGH);
-    digitalWrite(rgbVerde, LOW);
-    digitalWrite(rgbAzul, HIGH);
+    digitalWrite(miEntrenador.rgbRojo, HIGH);
+    digitalWrite(miEntrenador.rgbVerde, LOW);
+    digitalWrite(miEntrenador.rgbAzul, HIGH);
     delay(500);
 
 }

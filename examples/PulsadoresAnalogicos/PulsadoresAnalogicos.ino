@@ -6,24 +6,21 @@
  * Encendido de LED en función del botón pulsado.
  */
 
-// Definición de pines analogicos donde están conectados los pulsadores (Cambiar librería)
-const uint8_t pulsador_pulldown = PIN_A2;
-const uint8_t pulsador_pullup = PIN_A3;
+#include "Entrenador.h"
 
-// Declaración de pin donde están conectados los LED (Cambiar librería)
-const uint8_t ledRojo = 5;
-const uint8_t rgbRojo = 8;
+// Declaración de instancia de la clase
+Entrenador miEntrenador();
 
 // Inicialización del sketch
 void setup() {
 
     // Definición de pines como salida para los LED
-    pinMode(ledRojo, OUTPUT);
-    pinMode(rgbRojo, OUTPUT);
+    pinMode(miEntrenador.ledRojo, OUTPUT);
+    pinMode(miEntrenador.rgbRojo, OUTPUT);
 
     // Inicializar pin de los LED apagado
-    digitalWrite(ledRojo, LOW);
-    digitalWrite(rgbRojo, LOW);
+    digitalWrite(miEntrenador.ledRojo, LOW);
+    digitalWrite(miEntrenador.rgbRojo, LOW);
 
 }
 
@@ -31,24 +28,24 @@ void setup() {
 void loop() {
 
     // Comprobar la lectura del pulsador Pull Up en pin analogico
-    if(analogRead(pulsador_pullup) < 500)
+    if(analogRead(miEntrenador.pulsadorPullUpAnalogico) < 500)
     {
 
         // Encendemos el LED rojo durante un cuarto de segundo (0'25s)
-        digitalWrite(ledRojo, HIGH);
+        digitalWrite(miEntrenador.ledRojo, HIGH);
         delay(250);
-        digitalWrite(ledRojo, LOW);
+        digitalWrite(miEntrenador.ledRojo, LOW);
 
     }
 
     // Comprobar la lectura del pulsador Pull Down en pin analogico
-    if(analogRead(pulsador_pulldown) > 500)
+    if(analogRead(miEntrenador.pulsadorPullDownAnalogico) > 500)
     {
 
         // Encendemos el LED RGB rojo durante un cuarto de segundo (0'25s)
-        digitalWrite(rgbRojo, HIGH);
+        digitalWrite(miEntrenador.rgbRojo, HIGH);
         delay(250);
-        digitalWrite(rgbRojo, LOW);
+        digitalWrite(miEntrenador.rgbRojo, LOW);
 
     }
 

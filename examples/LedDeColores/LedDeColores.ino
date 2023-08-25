@@ -7,23 +7,23 @@
  * utilizando la librería.
  */
 
-// Definición de pines donde están conectados los LEDs
-const uint8_t ledRojo = 5;
-const uint8_t ledVerde = 6;
-const uint8_t ledAzul = 7;
+#include "Entrenador.h"
+
+// Declaración de instancia de la clase
+Entrenador miEntrenador();
 
 // Inicialización del sketch
 void setup() {
 
     // Definición de pines como salida
-    pinMode(ledRojo, OUTPUT);
-    pinMode(ledVerde, OUTPUT);
-    pinMode(ledAzul, OUTPUT);
+    pinMode(miEntrenador.ledRojo, OUTPUT);
+    pinMode(miEntrenador.ledVerde, OUTPUT);
+    pinMode(miEntrenador.ledAzul, OUTPUT);
 
     // Inicializar pines apagados
-    digitalWrite(ledRojo, LOW);
-    digitalWrite(ledVerde, LOW);
-    digitalWrite(ledAzul, LOW);
+    digitalWrite(miEntrenador.ledRojo, LOW);
+    digitalWrite(miEntrenador.ledVerde, LOW);
+    digitalWrite(miEntrenador.ledAzul, LOW);
 
 }
 
@@ -31,21 +31,21 @@ void setup() {
 void loop() {
 
     // Encendemos el LED rojo solamente y esperamos
-    digitalWrite(ledRojo, HIGH);
-    digitalWrite(ledVerde, LOW);
-    digitalWrite(ledAzul, LOW);
+    digitalWrite(miEntrenador.ledRojo, HIGH);
+    digitalWrite(miEntrenador.ledVerde, LOW);
+    digitalWrite(miEntrenador.ledAzul, LOW);
     delay(500);
 
     // Encendemos el LED verde solamente y esperamos
-    digitalWrite(ledRojo, LOW);
-    digitalWrite(ledVerde, HIGH);
-    digitalWrite(ledAzul, LOW);
+    digitalWrite(miEntrenador.ledRojo, LOW);
+    digitalWrite(miEntrenador.ledVerde, HIGH);
+    digitalWrite(miEntrenador.ledAzul, LOW);
     delay(500);
 
     // Encendemos el LED azul solamente y esperamos
-    digitalWrite(ledRojo, LOW);
-    digitalWrite(ledVerde, LOW);
-    digitalWrite(ledAzul, HIGH);
+    digitalWrite(miEntrenador.ledRojo, LOW);
+    digitalWrite(miEntrenador.ledVerde, LOW);
+    digitalWrite(miEntrenador.ledAzul, HIGH);
     delay(500);
 
 }

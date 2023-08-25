@@ -6,17 +6,22 @@
  * Generación de tonos secuencial con el zumbador.
  */
 
+#include "Entrenador.h"
+
+// Declaración de instancia de la clase
+Entrenador miEntrenador();
+
 // Definición de pines donde están conectado el zumbador
-const uint8_t zumbador = 25;
+const uint8_t miEntrenador.zumbador = 25;
 
 // Inicialización del sketch
 void setup() {
 
     // Definición de zumbador como salida
-    pinMode(zumbador, OUTPUT);
+    pinMode(miEntrenador.zumbador, OUTPUT);
 
     // Inicializar pines apagados
-    digitalWrite(zumbador, LOW);
+    digitalWrite(miEntrenador.zumbador, LOW);
 
 }
 
@@ -28,7 +33,7 @@ void loop() {
     {
 
         // Generar tono con la frecuencia dada por el bucle for
-        tone(zumbador, i, 100);
+        tone(miEntrenador.zumbador, i, 100);
 
     }
 
