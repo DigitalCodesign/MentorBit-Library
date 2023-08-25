@@ -3,7 +3,7 @@
  * 
  * Creado el 25/08/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
  * 
- * 
+ * Encendido de LED en función del botón pulsado.
  */
 
 // Definición de pines analogicos donde están conectados los pulsadores (Cambiar librería)
