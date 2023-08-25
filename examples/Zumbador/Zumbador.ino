@@ -9,7 +9,7 @@
 #include "Entrenador.h"
 
 // Declaración de instancia de la clase
-Entrenador miEntrenador();
+Entrenador miEntrenador;
 
 // Definición de pines donde están conectado el zumbador
 const uint8_t miEntrenador.zumbador = 25;

@@ -9,7 +9,7 @@
 #include "Entrenador.h"
 
 // Declaración de instancia de la clase
-Entrenador miEntrenador();
+Entrenador miEntrenador;
 
 // Inicialización del sketch
 void setup() {
