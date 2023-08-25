@@ -22,17 +22,17 @@
 
             // Atributos
             const uint8_t ledRojo;
-            const uint8_t ledAzul;
             const uint8_t ledVerde;
+            const uint8_t ledAzul;
             const uint8_t rgbRojo;
-            const uint8_t rgbAzul;
             const uint8_t rgbVerde;
-            const uint8_t potenciometro;
+            const uint8_t rgbAzul;
             const uint8_t pulsadorPullUpDigital;
-            const uint8_t pulsadorPullUpAnalogico;
             const uint8_t pulsadorPullDownDigital;
-            const uint8_t pulsadorPullDownAnalogico;
             const uint8_t zumbador;
+            const uint8_t potenciometro;
+            const uint8_t pulsadorPullDownAnalogico;
+            const uint8_t pulsadorPullUpAnalogico;
 
         private:
 
