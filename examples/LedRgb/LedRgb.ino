@@ -21,9 +21,9 @@ void setup() {
     pinMode(rgbAzul, OUTPUT);
 
     // Inicializar pines apagados
-    analogWrite(rgbRojo, 0);
-    analogWrite(rgbVerde, 0);
-    analogWrite(rgbAzul, 0);
+    digitalWrite(rgbRojo, LOW);
+    digitalWrite(rgbVerde, LOW);
+    digitalWrite(rgbAzul, LOW);
 
 }
 
