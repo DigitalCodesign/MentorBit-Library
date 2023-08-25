@@ -26,7 +26,7 @@ void setup() {
 void loop() {
 
     int lectura0a1023 = analogRead(miEntrenador.potenciometro);
-    float lectura0a25 = (lectura0a1023 / 1023.00) * 255;
+    float lectura0a255 = (lectura0a1023 / 1023.00) * 255;
 
     analogWrite(miEntrenador.ledRojo, lectura0a255);
     delay(100);
