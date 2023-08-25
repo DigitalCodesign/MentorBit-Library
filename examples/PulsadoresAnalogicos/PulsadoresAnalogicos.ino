@@ -7,8 +7,8 @@
  */
 
 // Definición de pines analogicos donde están conectados los pulsadores (Cambiar librería)
-const uint8_t pulsador_pullup = PIN_A3;
 const uint8_t pulsador_pulldown = PIN_A2;
+const uint8_t pulsador_pullup = PIN_A3;
 
 // Declaración de pin donde está conectado los LED (Cambiar librería)
 const uint8_t ledRojo = 5;
