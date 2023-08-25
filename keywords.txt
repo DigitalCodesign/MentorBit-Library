@@ -1,0 +1,13 @@
+Entrenador KEYWORD1
+ledRojo LITERAL1
+ledVerde LITERAL1
+ledAzul LITERAL1
+rgbRojo LITERAL1
+rgbVerde LITERAL1
+rgbAzul LITERAL1
+pulsadorPullUpDigital LITERAL1
+pulsadorPullDownDigital LITERAL1
+zumbador LITERAL1
+potenciometro LITERAL1
+pulsadorPullDownAnalogico LITERAL1
+pulsadorPullUpAnalogico LITERAL1
