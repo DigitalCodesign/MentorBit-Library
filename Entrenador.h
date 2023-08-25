@@ -17,10 +17,8 @@
 
         public:
 
-            // Constructor
             Entrenador();
 
-            // Atributos
             const uint8_t ledRojo;
             const uint8_t ledVerde;
             const uint8_t ledAzul;
@@ -33,10 +31,6 @@
             const uint8_t potenciometro;
             const uint8_t pulsadorPullDownAnalogico;
             const uint8_t pulsadorPullUpAnalogico;
-
-        private:
-
-
 
     };
 
