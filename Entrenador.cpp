@@ -9,6 +9,18 @@
 
 #include "Entrenador.h"
 
+/*
+ * Constructor de la clase base del Entrenador.
+ *
+ * Devuelve una instancia de la clase Entrenador que provee los pines de conexión
+ * de los elementos básicos de la placa.
+ * 
+ * -> LED de colores
+ * -> LED RGB
+ * -> Pulsadores
+ * -> Zumbador
+ * -> Potenciómetro
+ */
 Entrenador::Entrenador()
 {
 

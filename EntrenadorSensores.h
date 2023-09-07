@@ -31,8 +31,20 @@
             obtenerLuzLDR();
             obtenerDistanciaUlrasonidos();
 
+            // FALTA EL MQ
+            uint8_t LDRpin;
+            uint8_t DHTpin;
+            uint8_t DS18B20pin;
+            uint8_t HCSRecho;
+            uint8_t HCSRtrigger;
+
+            DHT DHT11;
+            DallasTemperature DS18B20;
+
         private:
 
+            OneWire _oneWireObject;
 
+    };
 
-    }
+#endif
