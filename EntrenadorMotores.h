@@ -6,11 +6,9 @@
  * Declaración de atributos y métodos para la clase EntrenadorMotores,
  * referida al Entrenador compatible con Arduino y el módulo de motores.
  * 
- * -> DHT
- * -> MQ
- * -> HC-SR04
- * -> DS18B20
- * -> LDR
+ * -> Servomotor
+ * -> Motor Corriente Continua
+ * -> Motor Paso a Paso
  */
 
 #ifndef EntrenadorMotores_h

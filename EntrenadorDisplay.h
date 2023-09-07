@@ -6,11 +6,6 @@
  * Declaración de atributos y métodos para la clase EntrenadorDisplay,
  * referida al Entrenador compatible con Arduino y el módulo de display 7 segmentos.
  * 
- * -> DHT
- * -> MQ
- * -> HC-SR04
- * -> DS18B20
- * -> LDR
  */
 
 #ifndef EntrenadorDisplay_h
