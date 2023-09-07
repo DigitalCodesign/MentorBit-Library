@@ -8,9 +8,6 @@
  */
 
 #include "EntrenadorSensores.h"
-#include "libraries/DHT_sensor_library/DHT.h"
-#include "libraries/OneWire/OneWire.h"
-#include "libraries/DallasTemperature/DallasTemperature.h"
 
 /*
  * Constructor de la clase para el módulo de Sensores del Entrenador.
@@ -29,14 +26,8 @@ EntrenadorSensores::EntrenadorSensores()
 {
 
     this->LDRpin = PIN_A1;
-
     this->DHTpin = 24;
-    this->DHT11(this->DHTpin, DHT11);
-
     this->DS18B20pin = 9;
-    this->_oneWireObject(this->DS18B20pin);
-    this->DS18B20(&this->_oneWireObject);
-
     this->HCSRecho = 2;
     this->HCSRtrigger = 26;
 
@@ -57,7 +48,7 @@ EntrenadorSensores::EntrenadorSensores()
  * Devuelve un valor entero con la lectura obtenida en el pin donde se
  * encuentra conectado el LDR.
  */
-obtenerLuzLDR()
+uint8_t EntrenadorSensores::obtenerLuzLDR()
 {
 
     return analogRead(this->LDR);
@@ -70,7 +61,7 @@ obtenerLuzLDR()
  * Devuelve un valor decimal con la lectura en Centígrados obtenida en el
  * pin donde se encuentra conectado el DHT.
  */
-obtenerTemperaturaDHT()
+float EntrenadorSensores::obtenerTemperaturaDHT()
 {
 
     return this->DHT11.readTemperature();
@@ -83,7 +74,7 @@ obtenerTemperaturaDHT()
  * Devuelve un valor decimal con la lectura en tanto por ciento obtenida
  * en el pin donde se encuentra conectado el DHT.
  */
-obtenerHumedadDHT()
+float EntrenadorSensores::obtenerHumedadDHT()
 {
 
     return this->DHT11.readHumidity();
@@ -96,7 +87,7 @@ obtenerHumedadDHT()
  * Devuelve un valor decimal con la lectura en Centígrados obtenida en el
  * pin donde se encuentra conectado el DS18B20.
  */
-obtenerTemperaturaDS18B20()
+float EntrenadorSensores::obtenerTemperaturaDS18B20()
 {
 
     this->DS18B20.requestTemperatures();
@@ -110,7 +101,7 @@ obtenerTemperaturaDS18B20()
  * Devuelve un valor entero con la lectura en Centímetros obtenida con
  * los pines donde se encuentra conectado el HC-SR04 (Ultrasonidos).
  */
-obtenerDistanciaUlrasonidos()
+uint16_t EntrenadorSensores::obtenerDistanciaUlrasonidos()
 {
 
     digitalWrite(this->HCSRtrigger, LOW);
@@ -119,7 +110,7 @@ obtenerDistanciaUlrasonidos()
     delayMicroseconds(10);
     digitalWrite(this->HCSRtrigger, LOW);
 
-    long duration = pulseIn(Echo, HIGH);
+    long duration = pulseIn(this->HCSRecho, HIGH);
     long distance = duration * 10 / 292 / 2;
 
     return distance;

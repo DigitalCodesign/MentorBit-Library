@@ -17,6 +17,9 @@
 #define EntrenadorSensores_h
 
     #include "Arduino.h"
+    #include "libraries/DHT_sensor_library/DHT.h"
+    #include "libraries/OneWire/OneWire.h"
+    #include "libraries/DallasTemperature/DallasTemperature.h"
 
     class EntrenadorSensores
     {
@@ -25,11 +28,11 @@
 
             EntrenadorSensores();
 
-            obtenerTemperaturaDS18B20();
-            obtenerTemperaturaDHT();
-            obtenerHumedadDHT();
-            obtenerLuzLDR();
-            obtenerDistanciaUlrasonidos();
+            uint8_t obtenerLuzLDR();
+            float obtenerTemperaturaDHT();
+            float obtenerHumedadDHT();
+            float obtenerTemperaturaDS18B20();
+            uint16_t obtenerDistanciaUlrasonidos();
 
             // FALTA EL MQ
             uint8_t LDRpin;
@@ -38,12 +41,15 @@
             uint8_t HCSRecho;
             uint8_t HCSRtrigger;
 
-            DHT DHT11;
-            DallasTemperature DS18B20;
-
         private:
 
+            DHT DHT11;
+            DallasTemperature DS18B20;
             OneWire _oneWireObject;
+
+            EntrenadorSensores(uint8_t DHTpin) : DHT11(DHTpin, DHT11) {}
+            EntrenadorSensores(uint8_t DS18B20pin) : _oneWireObject(DS18B20pin) {}
+            EntrenadorSensores(OneWire) : DS18B20(OneWire) {}
 
     };
 
