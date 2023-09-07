@@ -1,9 +1,9 @@
 /*
- * Entrenador.cpp - Librería para Entrenador Arduino
+ * Entrenador.cpp - Librería base para Entrenador Arduino
  *
  * Creado el 24/08/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
  * 
- * Definición de la clase Trainer,
+ * Definición de la clase base Entrenador,
  * referida al Entrenador compatible con Arduino.
  */
 

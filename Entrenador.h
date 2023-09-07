@@ -1,10 +1,16 @@
 /*
- * Entrenador.h - Librería para Entrenador Arduino
+ * Entrenador.h - Librería base para Entrenador Arduino
  *
  * Creado el 24/08/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
  * 
- * Declaración de atributos y métodos para la clase Trainer,
- * referida al Entrenador compatible con Arduino.
+ * Declaración de atributos y métodos para la clase base Entrenador,
+ * referida al Entrenador compatible con Arduino y sus elementos básicos.
+ * 
+ * -> LEDs
+ * -> LED RGB
+ * -> Pulsadores
+ * -> Zumbador
+ * -> Potenciómetro
  */
 
 #ifndef Entrenador_h
