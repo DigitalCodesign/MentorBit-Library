@@ -1,5 +1,5 @@
 /**
- * SensoresLDR.ino - Ejemplo de uso de MQ del Entrenador
+ * SensoresMQ.ino - Ejemplo de uso de MQ del Entrenador
  * 
  * Creado el 12/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
  * 
