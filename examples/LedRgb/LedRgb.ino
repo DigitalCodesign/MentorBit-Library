@@ -15,11 +15,6 @@ Entrenador miEntrenador;
 // Inicialización del sketch
 void setup() {
 
-    // Definición de pines como salida
-    pinMode(miEntrenador.rgbRojo, OUTPUT);
-    pinMode(miEntrenador.rgbVerde, OUTPUT);
-    pinMode(miEntrenador.rgbAzul, OUTPUT);
-
     // Inicializar pines apagados
     digitalWrite(miEntrenador.rgbRojo, LOW);
     digitalWrite(miEntrenador.rgbVerde, LOW);

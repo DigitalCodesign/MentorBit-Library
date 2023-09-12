@@ -14,9 +14,6 @@ Entrenador miEntrenador;
 // Inicialización del sketch
 void setup() {
 
-    // Definición de zumbador como salida
-    pinMode(miEntrenador.zumbador, OUTPUT);
-
     // Inicializar pines apagados
     digitalWrite(miEntrenador.zumbador, LOW);
 

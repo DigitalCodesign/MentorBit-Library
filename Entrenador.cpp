@@ -37,4 +37,17 @@ Entrenador::Entrenador()
     this->pulsadorPullDownAnalogico = PIN_A2;
     this->pulsadorPullUpAnalogico = PIN_A3;
 
+    pinMode(ledRojo, OUTPUT);
+    pinMode(ledVerde, OUTPUT);
+    pinMode(ledAzul, OUTPUT);
+    pinMode(rgbRojo, OUTPUT);
+    pinMode(rgbVerde, OUTPUT);
+    pinMode(rgbAzul, OUTPUT);
+    pinMode(pulsadorPullUpDigital, INPUT);
+    pinMode(pulsadorPullDownDigital, INPUT);
+    pinMode(zumbador, OUTPUT);
+    pinMode(potenciometro, INPUT);
+    pinMode(pulsadorPullDownAnalogico, INPUT);
+    pinMode(pulsadorPullUpAnalogico, INPUT);
+
 }

@@ -7,6 +7,8 @@
  * referida al Entrenador compatible con Arduino y el módulo de sensores.
  */
 
+#include "libraries/DHT_sensor_library/DHT.cpp"
+#include "libraries/DallasTemperature/DallasTemperature.cpp"
 #include "EntrenadorSensores.h"
 
 /*
@@ -23,22 +25,26 @@
  * -> HC-SR04
  */
 EntrenadorSensores::EntrenadorSensores()
+    : myDHT(24, DHT11)
+    , DS18B20(new OneWire(27))
 {
 
-    this->LDRpin = PIN_A1;
-    this->DHTpin = 24;
-    this->DS18B20pin = 9;
-    this->HCSRecho = 2;
-    this->HCSRtrigger = 26;
+    LDRpin = PIN_A1;
+    MQpin = PIN_A4;
+    DHTpin = 24;
+    DS18B20pin = 9;
+    HCSRecho = 2;
+    HCSRtrigger = 26;
 
-    this->DHT11.begin();
-    this->DS18B20.begin();
+    myDHT.begin(55);
+    DS18B20.begin();
 
-    pinMode(this->LDRpin, INPUT);
-    pinMode(this->DHTpin, INPUT);
-    pinMode(this->DS18B20pin, INPUT);
-    pinMode(this->HCSRecho, INPUT);
-    pinMode(this->HCSRtrigger, OUTPUT);
+    pinMode(LDRpin, INPUT);
+    pinMode(MQpin, INPUT);
+    pinMode(DHTpin, INPUT);
+    pinMode(DS18B20pin, INPUT);
+    pinMode(HCSRecho, INPUT);
+    pinMode(HCSRtrigger, OUTPUT);
 
 }
 
@@ -48,10 +54,23 @@ EntrenadorSensores::EntrenadorSensores()
  * Devuelve un valor entero con la lectura obtenida en el pin donde se
  * encuentra conectado el LDR.
  */
-uint8_t EntrenadorSensores::obtenerLuzLDR()
+uint8_t EntrenadorSensores::obtenerLecturaLDR()
 {
 
-    return analogRead(this->LDR);
+    return analogRead(LDRpin);
+
+}
+
+/*
+ * Función para obtener la medida del sensor MQ.
+ * 
+ * Devuelve un valor entero con la lectura obtenida en el pin donde se
+ * encuentra conectado el MQ.
+ */
+uint8_t EntrenadorSensores::obtenerLecturaMQ()
+{
+
+    return analogRead(MQpin);
 
 }
 
@@ -64,7 +83,7 @@ uint8_t EntrenadorSensores::obtenerLuzLDR()
 float EntrenadorSensores::obtenerTemperaturaDHT()
 {
 
-    return this->DHT11.readTemperature();
+    return myDHT.readTemperature();
 
 }
 
@@ -77,7 +96,7 @@ float EntrenadorSensores::obtenerTemperaturaDHT()
 float EntrenadorSensores::obtenerHumedadDHT()
 {
 
-    return this->DHT11.readHumidity();
+    return myDHT.readHumidity();
 
 }
 
@@ -90,8 +109,8 @@ float EntrenadorSensores::obtenerHumedadDHT()
 float EntrenadorSensores::obtenerTemperaturaDS18B20()
 {
 
-    this->DS18B20.requestTemperatures();
-    return this->DS18B20.getTempCByIndex(0);
+    DS18B20.requestTemperatures();
+    return DS18B20.getTempCByIndex(0);
 
 }
 
@@ -104,13 +123,13 @@ float EntrenadorSensores::obtenerTemperaturaDS18B20()
 uint16_t EntrenadorSensores::obtenerDistanciaUlrasonidos()
 {
 
-    digitalWrite(this->HCSRtrigger, LOW);
+    digitalWrite(HCSRtrigger, LOW);
     delayMicroseconds(4);
-    digitalWrite(this->HCSRtrigger, HIGH);
+    digitalWrite(HCSRtrigger, HIGH);
     delayMicroseconds(10);
-    digitalWrite(this->HCSRtrigger, LOW);
+    digitalWrite(HCSRtrigger, LOW);
 
-    long duration = pulseIn(this->HCSRecho, HIGH);
+    long duration = pulseIn(HCSRecho, HIGH);
     long distance = duration * 10 / 292 / 2;
 
     return distance;

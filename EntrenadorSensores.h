@@ -28,14 +28,15 @@
 
             EntrenadorSensores();
 
-            uint8_t obtenerLuzLDR();
+            uint8_t obtenerLecturaLDR();
+            uint8_t obtenerLecturaMQ();
             float obtenerTemperaturaDHT();
             float obtenerHumedadDHT();
             float obtenerTemperaturaDS18B20();
             uint16_t obtenerDistanciaUlrasonidos();
 
-            // FALTA EL MQ
             uint8_t LDRpin;
+            uint8_t MQpin;
             uint8_t DHTpin;
             uint8_t DS18B20pin;
             uint8_t HCSRecho;
@@ -43,13 +44,8 @@
 
         private:
 
-            DHT DHT11;
+            DHT myDHT;
             DallasTemperature DS18B20;
-            OneWire _oneWireObject;
-
-            EntrenadorSensores(uint8_t DHTpin) : DHT11(DHTpin, DHT11) {}
-            EntrenadorSensores(uint8_t DS18B20pin) : _oneWireObject(DS18B20pin) {}
-            EntrenadorSensores(OneWire) : DS18B20(OneWire) {}
 
     };
 
