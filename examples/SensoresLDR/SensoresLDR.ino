@@ -21,11 +21,14 @@ void setup() {
 
 }
 
+// Bucle principal del sketch
 void loop() {
 
+    // Obtención y conversión de la lectura del sensor
     int lectura0a1023 = analogRead(miEntrenadorSensores.LDRpin);
     float lectura0a255 = (lectura0a1023 / 1023.00) * 255;
 
+    // Modificación de la intensidad del LED
     analogWrite(miEntrenador.ledAzul, lectura0a255);
     delay(100);
 
