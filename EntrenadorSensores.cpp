@@ -29,22 +29,22 @@ EntrenadorSensores::EntrenadorSensores()
     , DS18B20(new OneWire(27))
 {
 
-    LDRpin = PIN_A1;
-    MQpin = PIN_A4;
-    DHTpin = 24;
-    DS18B20pin = 9;
-    HCSRecho = 2;
-    HCSRtrigger = 26;
+    ldr = PIN_A1;
+    mq = PIN_A4;
+    dht = 24;
+    ds18b20 = 9;
+    ultrasonidosEcho = 2;
+    ultrasonidosTrigger = 26;
 
     myDHT.begin();
     DS18B20.begin();
 
-    pinMode(LDRpin, INPUT);
-    pinMode(MQpin, INPUT);
-    pinMode(DHTpin, INPUT);
-    pinMode(DS18B20pin, INPUT);
-    pinMode(HCSRecho, INPUT);
-    pinMode(HCSRtrigger, OUTPUT);
+    pinMode(ldr, INPUT);
+    pinMode(mq, INPUT);
+    pinMode(dht, INPUT);
+    pinMode(ds18b20, INPUT);
+    pinMode(ultrasonidosEcho, INPUT);
+    pinMode(ultrasonidosTrigger, OUTPUT);
 
 }
 
@@ -57,7 +57,7 @@ EntrenadorSensores::EntrenadorSensores()
 uint8_t EntrenadorSensores::obtenerLecturaLDR()
 {
 
-    return analogRead(LDRpin);
+    return analogRead(ldr);
 
 }
 
@@ -70,7 +70,7 @@ uint8_t EntrenadorSensores::obtenerLecturaLDR()
 uint8_t EntrenadorSensores::obtenerLecturaMQ()
 {
 
-    return analogRead(MQpin);
+    return analogRead(mq);
 
 }
 
@@ -123,13 +123,13 @@ float EntrenadorSensores::obtenerTemperaturaDS18B20()
 uint16_t EntrenadorSensores::obtenerDistanciaUlrasonidos()
 {
 
-    digitalWrite(HCSRtrigger, LOW);
+    digitalWrite(ultrasonidosTrigger, LOW);
     delayMicroseconds(4);
-    digitalWrite(HCSRtrigger, HIGH);
+    digitalWrite(ultrasonidosTrigger, HIGH);
     delayMicroseconds(10);
-    digitalWrite(HCSRtrigger, LOW);
+    digitalWrite(ultrasonidosTrigger, LOW);
 
-    long duration = pulseIn(HCSRecho, HIGH);
+    long duration = pulseIn(ultrasonidosEcho, HIGH);
     long distance = duration * 10 / 292 / 2;
 
     return distance;
