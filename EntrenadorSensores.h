@@ -35,12 +35,12 @@
             float obtenerTemperaturaDS18B20();
             uint16_t obtenerDistanciaUlrasonidos();
 
-            uint8_t LDRpin;
-            uint8_t MQpin;
-            uint8_t DHTpin;
-            uint8_t DS18B20pin;
-            uint8_t HCSRecho;
-            uint8_t HCSRtrigger;
+            uint8_t ldr;
+            uint8_t mq;
+            uint8_t dht;
+            uint8_t ds18b20;
+            uint8_t ultrasonidosEcho;
+            uint8_t ultrasonidosTrigger;
 
         private:
 

@@ -27,15 +27,13 @@
             moverMotorDC(uint8_t velocidad, uint8_t direccion);
             moverMotorPasoPaso(uint8_t pasos, uint8_t direccion);
 
-        private:
-
-            uint8_t _servomotor;
-            uint8_t _enableDC;
-            uint8_t _entrada1DC;
-            uint8_t _entrada2DC;
-            uint8_t _bobina1PAP;
-            uint8_t _bobina2PAP;
-            uint8_t _bobina3PAP;
-            uint8_t _bobina4PAP;
+            uint8_t servomotor;
+            uint8_t enableDC;
+            uint8_t entrada1DC;
+            uint8_t entrada2DC;
+            uint8_t bobina1PAP;
+            uint8_t bobina2PAP;
+            uint8_t bobina3PAP;
+            uint8_t bobina4PAP;
 
     }
