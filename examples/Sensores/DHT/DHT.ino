@@ -6,11 +6,9 @@
  * Volcado de información del sensor al monitor serial.
  */
 
-#include "Entrenador.h"
 #include "EntrenadorSensores.h"
 
 // Declaración de instancia de las clases
-Entrenador miEntrenador;
 EntrenadorSensores miEntrenadorSensores;
 
 // Inicialización del sketch

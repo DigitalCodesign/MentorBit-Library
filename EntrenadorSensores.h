@@ -17,9 +17,9 @@
 #define EntrenadorSensores_h
 
     #include "Arduino.h"
-    #include "libraries/DHT_sensor_library/DHT.h"
-    #include "libraries/OneWire/OneWire.h"
-    #include "libraries/DallasTemperature/DallasTemperature.h"
+    #include "DHT.h"
+    #include "OneWire.h"
+    #include "DallasTemperature.h"
 
     class EntrenadorSensores
     {

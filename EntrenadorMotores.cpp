@@ -35,7 +35,7 @@ EntrenadorMotores::EntrenadorMotores()
     bobina3PAP = 32;
     bobina4PAP = 33;
 
-    myServo.attach(servomotor);
+    myServo.attach(3);
 
     pinMode(servomotor, OUTPUT);
     pinMode(enableDC, OUTPUT);

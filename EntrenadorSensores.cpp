@@ -7,8 +7,6 @@
  * referida al Entrenador compatible con Arduino y el módulo de sensores.
  */
 
-#include "libraries/DHT_sensor_library/DHT.cpp"
-#include "libraries/DallasTemperature/DallasTemperature.cpp"
 #include "EntrenadorSensores.h"
 
 /*

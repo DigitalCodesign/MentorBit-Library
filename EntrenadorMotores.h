@@ -15,7 +15,7 @@
 #define EntrenadorMotores_h
 
     #include "Arduino.h"
-    #include "libraries/Servo/src/Servo.h"
+    #include "Servo.h"
 
     class EntrenadorMotores
     {
