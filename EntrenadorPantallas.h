@@ -12,6 +12,8 @@
 #define EntrenadorPantallas_h
 
     #include "Arduino.h"
+    #include "Wire.h"
+    #include "LiquidCrystal_I2C.h"
 
     class EntrenadorPantallas
     {
@@ -20,6 +22,10 @@
 
             EntrenadorPantallas();
 
+            void initLCD();
+
         private:
+
+            LiquidCrystal_I2C lcd;
 
     }
