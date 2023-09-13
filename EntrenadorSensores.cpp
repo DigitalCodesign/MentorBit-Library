@@ -36,7 +36,7 @@ EntrenadorSensores::EntrenadorSensores()
     HCSRecho = 2;
     HCSRtrigger = 26;
 
-    myDHT.begin(55);
+    myDHT.begin();
     DS18B20.begin();
 
     pinMode(LDRpin, INPUT);

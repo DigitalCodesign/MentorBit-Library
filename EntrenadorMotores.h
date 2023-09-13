@@ -15,6 +15,7 @@
 #define EntrenadorMotores_h
 
     #include "Arduino.h"
+    #include "libraries/Servo/src/Servo.h"
 
     class EntrenadorMotores
     {
@@ -35,5 +36,9 @@
             uint8_t bobina2PAP;
             uint8_t bobina3PAP;
             uint8_t bobina4PAP;
+
+        private:
+
+        Servo myServo;
 
     }
