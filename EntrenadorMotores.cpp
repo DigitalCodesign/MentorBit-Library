@@ -151,4 +151,9 @@ void EntrenadorMotores::moverMotorPasoPaso(uint8_t pasos, uint8_t direccion)
 
     }
 
+    digitalWrite(bobina1PAP, 0);
+    digitalWrite(bobina2PAP, 0);
+    digitalWrite(bobina3PAP, 0);
+    digitalWrite(bobina4PAP, 0);
+
 }
