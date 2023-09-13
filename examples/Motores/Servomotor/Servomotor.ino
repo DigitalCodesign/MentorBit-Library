@@ -21,15 +21,15 @@ void setup() {
 // Bucle principal del sketch
 void loop() {
 
-    // Mover el servomotor a 0º
+    // Mover el servomotor a 180º
     miEntrenadorMotores.moverServo(180);
     delay(1000);
 
-    // Mover el servomotor a 30º
+    // Mover el servomotor a 150º
     miEntrenadorMotores.moverServo(150);
     delay(1000);
 
-    // Mover el servomotor a 60º
+    // Mover el servomotor a 120º
     miEntrenadorMotores.moverServo(120);
     delay(1000);
 
