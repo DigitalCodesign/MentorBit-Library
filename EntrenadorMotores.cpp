@@ -7,7 +7,6 @@
  * referida al Entrenador compatible con Arduino y el módulo de Motores.
  */
 
-#include "libraries/Servo/src/avr/Servo.cpp"
 #include "EntrenadorMotores.h"
 
 /*
@@ -102,7 +101,7 @@ void EntrenadorMotores::moverMotorDC(uint8_t velocidad, uint8_t direccion)
 void EntrenadorMotores::moverMotorPasoPaso(uint8_t pasos, uint8_t direccion)
 {
 
-    uint8_t pasos[8][4] = {
+    uint8_t secuencia[8][4] = {
         {1, 0, 0, 0},
         {1, 1, 0, 0},
         {0, 1, 0, 0},
@@ -110,34 +109,34 @@ void EntrenadorMotores::moverMotorPasoPaso(uint8_t pasos, uint8_t direccion)
         {0, 0, 1, 0},
         {0, 0, 1, 1},
         {0, 0, 0, 1},
-        {1, 0, 0, 1},
+        {1, 0, 0, 1}
     };
 
     switch (direccion)
     {
 
         case 0:
-            for(uint8_t i = 0; i < 256; i++)
+            for(uint8_t i = 0; i < pasos; i++)
             {
-                for(uint8_t j = 0; j < 256; j++)
+                for(uint8_t j = 0; j < pasos; j++)
                 {
-                    digitalWrite(bobina1PAP, paso[j][0]);
-                    digitalWrite(bobina2PAP, paso[j][1]);
-                    digitalWrite(bobina3PAP, paso[j][2]);
-                    digitalWrite(bobina4PAP, paso[j][3]);
+                    digitalWrite(bobina1PAP, secuencia[j][0]);
+                    digitalWrite(bobina2PAP, secuencia[j][1]);
+                    digitalWrite(bobina3PAP, secuencia[j][2]);
+                    digitalWrite(bobina4PAP, secuencia[j][3]);
                 }
             }
             break;
 
         case 1:
-            for(uint8_t i = 0; i < 256; i++)
+            for(uint8_t i = 0; i < pasos; i++)
             {
-                for(uint8_t j = 0; j < 256; j++)
+                for(uint8_t j = 0; j < pasos; j++)
                 {
-                    digitalWrite(bobina1PAP, paso[j][3]);
-                    digitalWrite(bobina2PAP, paso[j][2]);
-                    digitalWrite(bobina3PAP, paso[j][1]);
-                    digitalWrite(bobina4PAP, paso[j][0]);
+                    digitalWrite(bobina1PAP, secuencia[j][3]);
+                    digitalWrite(bobina2PAP, secuencia[j][2]);
+                    digitalWrite(bobina3PAP, secuencia[j][1]);
+                    digitalWrite(bobina4PAP, secuencia[j][0]);
                 }
             }
             break;

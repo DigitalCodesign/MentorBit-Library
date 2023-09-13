@@ -24,9 +24,9 @@
 
             EntrenadorMotores();
 
-            moverServo(uint8_t grados);
-            moverMotorDC(uint8_t velocidad, uint8_t direccion);
-            moverMotorPasoPaso(uint8_t pasos, uint8_t direccion);
+            void moverServo(uint8_t grados);
+            void moverMotorDC(uint8_t velocidad, uint8_t direccion);
+            void moverMotorPasoPaso(uint8_t pasos, uint8_t direccion);
 
             uint8_t servomotor;
             uint8_t enableDC;
@@ -41,4 +41,6 @@
 
         Servo myServo;
 
-    }
+    };
+
+#endif
