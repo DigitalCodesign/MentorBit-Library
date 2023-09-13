@@ -115,38 +115,40 @@ void EntrenadorMotores::moverMotorPasoPaso(uint8_t pasos, uint8_t direccion)
 
     switch (direccion)
     {
-    case 0:
-        for(uint8_t i = 0; i < 256; i++)
-        {
-            for(uint8_t j = 0; j < 256; j++)
-            {
-                digitalWrite(bobina1PAP, paso[j][0]);
-                digitalWrite(bobina2PAP, paso[j][1]);
-                digitalWrite(bobina3PAP, paso[j][2]);
-                digitalWrite(bobina4PAP, paso[j][3]);
-            }
-        }
-        break;
-    
-    case 1:
-        for(uint8_t i = 0; i < 256; i++)
-        {
-            for(uint8_t j = 0; j < 256; j++)
-            {
-                digitalWrite(bobina1PAP, paso[j][3]);
-                digitalWrite(bobina2PAP, paso[j][2]);
-                digitalWrite(bobina3PAP, paso[j][1]);
-                digitalWrite(bobina4PAP, paso[j][0]);
-            }
-        }
-        break;
 
-    default:
-        digitalWrite(bobina1PAP, 0);
-        digitalWrite(bobina2PAP, 0);
-        digitalWrite(bobina3PAP, 0);
-        digitalWrite(bobina4PAP, 0);
-        break;
+        case 0:
+            for(uint8_t i = 0; i < 256; i++)
+            {
+                for(uint8_t j = 0; j < 256; j++)
+                {
+                    digitalWrite(bobina1PAP, paso[j][0]);
+                    digitalWrite(bobina2PAP, paso[j][1]);
+                    digitalWrite(bobina3PAP, paso[j][2]);
+                    digitalWrite(bobina4PAP, paso[j][3]);
+                }
+            }
+            break;
+
+        case 1:
+            for(uint8_t i = 0; i < 256; i++)
+            {
+                for(uint8_t j = 0; j < 256; j++)
+                {
+                    digitalWrite(bobina1PAP, paso[j][3]);
+                    digitalWrite(bobina2PAP, paso[j][2]);
+                    digitalWrite(bobina3PAP, paso[j][1]);
+                    digitalWrite(bobina4PAP, paso[j][0]);
+                }
+            }
+            break;
+
+        default:
+            digitalWrite(bobina1PAP, 0);
+            digitalWrite(bobina2PAP, 0);
+            digitalWrite(bobina3PAP, 0);
+            digitalWrite(bobina4PAP, 0);
+            break;
+
     }
 
 }
