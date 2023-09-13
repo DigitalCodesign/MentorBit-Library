@@ -35,9 +35,6 @@ EntrenadorMotores::EntrenadorMotores()
     bobina3PAP = 32;
     bobina4PAP = 33;
 
-    myServo.attach(3);
-
-    pinMode(servomotor, OUTPUT);
     pinMode(enableDC, OUTPUT);
     pinMode(entrada1DC, OUTPUT);
     pinMode(entrada2DC, OUTPUT);
@@ -49,11 +46,23 @@ EntrenadorMotores::EntrenadorMotores()
 }
 
 /*
+ * Función para inicializar el pin del servomotor.
+ * 
+ * No devuelve ningún valor.
+ */
+void EntrenadorMotores::inicializarServo()
+{
+
+    myServo.attach(EntrenadorMotores::servomotor);
+
+}
+
+/*
  * Función para mover el servomotor el número de grados dado.
  * 
  * No devuelve ningún valor.
  */
-void EntrenadorMotores::moverServo(uint8_t grados)
+void EntrenadorMotores::moverServo(uint16_t grados)
 {
 
     myServo.write(grados);
@@ -94,11 +103,11 @@ void EntrenadorMotores::moverMotorDC(uint8_t velocidad, uint8_t direccion)
 
 /*
  * Función para mover el motor paso a paso un número dado de pasos
- * en la dirección indicada.
+ * en la dirección indicada (0 un sentido, 1 el otro sentido).
  * 
  * No devuelve ningún valor.
  */
-void EntrenadorMotores::moverMotorPasoPaso(uint8_t pasos, uint8_t direccion)
+void EntrenadorMotores::moverMotorPP(uint16_t pasos, uint8_t direccion)
 {
 
     uint8_t secuencia[8][4] = {
@@ -116,27 +125,29 @@ void EntrenadorMotores::moverMotorPasoPaso(uint8_t pasos, uint8_t direccion)
     {
 
         case 0:
-            for(uint8_t i = 0; i < pasos; i++)
+            for(uint16_t i = 0; i < pasos; i++)
             {
-                for(uint8_t j = 0; j < pasos; j++)
+                for(uint16_t j = 0; j < 8; j++)
                 {
                     digitalWrite(bobina1PAP, secuencia[j][0]);
                     digitalWrite(bobina2PAP, secuencia[j][1]);
                     digitalWrite(bobina3PAP, secuencia[j][2]);
                     digitalWrite(bobina4PAP, secuencia[j][3]);
+                    delay(1);
                 }
             }
             break;
 
         case 1:
-            for(uint8_t i = 0; i < pasos; i++)
+            for(uint16_t i = 0; i < pasos; i++)
             {
-                for(uint8_t j = 0; j < pasos; j++)
+                for(uint16_t j = 0; j < 8; j++)
                 {
                     digitalWrite(bobina1PAP, secuencia[j][3]);
                     digitalWrite(bobina2PAP, secuencia[j][2]);
                     digitalWrite(bobina3PAP, secuencia[j][1]);
                     digitalWrite(bobina4PAP, secuencia[j][0]);
+                    delay(1);
                 }
             }
             break;
