@@ -14,6 +14,8 @@
     #include "Arduino.h"
     #include "Wire.h"
     #include "LiquidCrystal_I2C.h"
+    #include "Adafruit_GFX.h"
+    #include "Adafruit_SSD1306.h"
 
     class EntrenadorPantallas
     {
@@ -22,10 +24,17 @@
 
             EntrenadorPantallas();
 
-            void initLCD();
+            void inicializarLCD();
+            void inicializarOLED();
+
+            LiquidCrystal_I2C lcd;
+            Adafruit_SSD1306 oled;
 
         private:
 
-            LiquidCrystal_I2C lcd;
+            uint8_t lcdDirection;
+            uint8_t oledDirection;
 
-    }
+    };
+
+#endif
