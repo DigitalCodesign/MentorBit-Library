@@ -21,7 +21,6 @@
  * -> Motor DC
  * -> Motor Paso a Paso
  */
-
 EntrenadorMotores::EntrenadorMotores()
     : myServo()
 {

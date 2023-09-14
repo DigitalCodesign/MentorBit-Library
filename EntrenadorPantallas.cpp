@@ -19,7 +19,6 @@
  * -> Pantalla LCD
  * -> Pantalla OLED
  */
-
 EntrenadorPantallas::EntrenadorPantallas()
     : lcd(0x3F, 16, 2)
     , oled(-1)
