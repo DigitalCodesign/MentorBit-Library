@@ -1,5 +1,5 @@
 /**
- * SensoresUltrasonidos.ino - Ejemplo de uso de Ultrasonidos del Entrenador
+ * Ultrasonidos.ino - Ejemplo de uso de Ultrasonidos del Entrenador
  * 
  * Creado el 12/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
  * 

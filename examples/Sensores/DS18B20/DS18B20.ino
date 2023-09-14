@@ -1,5 +1,5 @@
 /**
- * SensoresDS18B20.ino - Ejemplo de uso de DS18B20 del Entrenador
+ * DS18B20.ino - Ejemplo de uso de DS18B20 del Entrenador
  * 
  * Creado el 12/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
  * 

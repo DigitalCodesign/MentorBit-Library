@@ -1,5 +1,5 @@
 /**
- * SensoresDHT.ino - Ejemplo de uso de DHT del Entrenador
+ * DHT.ino - Ejemplo de uso de DHT del Entrenador
  * 
  * Creado el 12/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
  * 
