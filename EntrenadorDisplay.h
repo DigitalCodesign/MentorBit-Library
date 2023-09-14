@@ -22,4 +22,6 @@
 
         private:
 
+            uint8_t displayDirection;
+
     }

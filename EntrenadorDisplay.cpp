@@ -9,3 +9,17 @@
  */
 
 #include "EntrenadorDisplay.h"
+
+/*
+ * Constructor de la clase para el módulo de Display del Entrenador.
+ * 
+ * Devuelve una instancia de la clase EntrenadorDisplay que provee las
+ * direcciones y métodos necesarios para controlar el display 7 segmentos
+ * en el Entrenador.
+ */
+EntrenadorDisplay::EntrenadorDisplay()
+{
+
+
+
+}
