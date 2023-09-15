@@ -12,6 +12,9 @@
 #define EntrenadorDisplay_h
 
     #include "Arduino.h"
+    #include "Wire.h"
+    #include "Adafruit_GFX.h"
+    #include "Adafruit_LEDBackpack.h"
 
     class EntrenadorDisplay
     {
@@ -20,8 +23,18 @@
 
             EntrenadorDisplay();
 
+            void inicializarDisplay();
+            void imprimir(char valor);
+            void imprimir(String valor);
+            void imprimir(int valor);
+            void imprimir(double valor);
+
         private:
 
-            uint8_t displayDirection;
+            uint8_t _dots[4];
+            uint8_t _displayDirection;
+            Adafruit_7segment myDisplay;
 
-    }
+    };
+
+#endif
