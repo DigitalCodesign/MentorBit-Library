@@ -13,20 +13,9 @@
  * -> ESP01
  */
 
-#ifndef EntrenadorComunicaciones_h
-#define EntrenadorComunicaciones_h
+#include "EntrenadorComunicaciones.h"
 
-    #include "Arduino.h"
+EntrenadorComunicaciones::EntrenadorComunicaciones()
+{
 
-    class EntrenadorComunicaciones
-    {
-
-        public:
-
-            EntrenadorComunicaciones();
-
-        private:
-
-    };
-
-#endif
+}
