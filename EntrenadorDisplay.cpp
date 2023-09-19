@@ -29,6 +29,11 @@ EntrenadorDisplay::EntrenadorDisplay()
 
 }
 
+/*
+ * Función para inicializar el Driver del Display 7 segmentos.
+ * 
+ * No devuelve ningún valor.
+ */
 void EntrenadorDisplay::inicializarDisplay()
 {
 
@@ -36,6 +41,11 @@ void EntrenadorDisplay::inicializarDisplay()
 
 }
 
+/*
+ * Función para mostrar por Display un valor de tipo caracter.
+ * 
+ * No devuelve ningún valor.
+ */
 void EntrenadorDisplay::imprimir(char valor)
 {
 
@@ -45,6 +55,11 @@ void EntrenadorDisplay::imprimir(char valor)
 
 }
 
+/*
+ * Función para mostrar por Display un valor de tipo cadena de texto.
+ * 
+ * No devuelve ningún valor.
+ */
 void EntrenadorDisplay::imprimir(String valor)
 {
 
@@ -73,6 +88,11 @@ void EntrenadorDisplay::imprimir(String valor)
 
 }
 
+/*
+ * Función para mostrar por Display un valor de tipo entero.
+ * 
+ * No devuelve ningún valor.
+ */
 void EntrenadorDisplay::imprimir(int valor)
 {
 
@@ -81,6 +101,11 @@ void EntrenadorDisplay::imprimir(int valor)
 
 }
 
+/*
+ * Función para mostrar por Display un valor de tipo numérico decimal.
+ * 
+ * No devuelve ningún valor.
+ */
 void EntrenadorDisplay::imprimir(double valor)
 {
 
