@@ -24,18 +24,18 @@
 Entrenador::Entrenador()
 {
 
-    this->ledRojo = 5;
-    this->ledVerde = 6;
-    this->ledAzul = 7;
-    this->rgbRojo = 8;
-    this->rgbVerde = 9;
-    this->rgbAzul = 10;
-    this->pulsadorPullUpDigital = 22;
-    this->pulsadorPullDownDigital = 23;
-    this->zumbador = 25;
-    this->potenciometro = PIN_A0;
-    this->pulsadorPullDownAnalogico = PIN_A2;
-    this->pulsadorPullUpAnalogico = PIN_A3;
+    ledRojo = 5;
+    ledVerde = 6;
+    ledAzul = 7;
+    rgbRojo = 8;
+    rgbVerde = 9;
+    rgbAzul = 10;
+    pulsadorPullUpDigital = 22;
+    pulsadorPullDownDigital = 23;
+    zumbador = 25;
+    potenciometro = PIN_A0;
+    pulsadorPullDownAnalogico = PIN_A2;
+    pulsadorPullUpAnalogico = PIN_A3;
 
     pinMode(ledRojo, OUTPUT);
     pinMode(ledVerde, OUTPUT);
