@@ -1,27 +1,25 @@
 /*
- * Entrenador.cpp - Librería base para Entrenador Arduino
+ * EntrenadorPuertos.cpp - Librería de los puertos genéricos para Entrenador Arduino
  *
- * Creado el 24/08/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
+ * Creado el 27/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
  * 
- * Definición de la clase base Entrenador,
- * referida al Entrenador compatible con Arduino.
+ * Definición de la clase base EntrenadorPuertos, referida a
+ * los puertos genéricos del Entrenador compatible con Arduino.
  */
 
-#include "Entrenador.h"
+#include "EntrenadorPuertos.h"
 
 /*
- * Constructor de la clase base del Entrenador.
+ * Constructor de la clase para puertos genéricos del Entrenador.
  *
- * Devuelve una instancia de la clase Entrenador que provee los pines de conexión
- * de los elementos básicos de la placa.
+ * Devuelve una instancia de la clase EntrenadorPuertos que provee los pines de conexión
+ * de los conectores de los puertos.
  * 
- * -> LED de colores
- * -> LED RGB
- * -> Pulsadores
- * -> Zumbador
- * -> Potenciómetro
+ * -> Puerto genérico 1
+ * -> Puerto genérico 2
+ * -> Puerto genérico 3
  */
-Entrenador::Entrenador()
+EntrenadorPuertos::EntrenadorPuertos()
 {
 
     puerto1_digital1 = 35;
