@@ -14,6 +14,10 @@ Entrenador miEntrenador;
 // Inicialización del sketch
 void setup() {
 
+    // Definición de pines como salida para los LED
+    pinMode(miEntrenador.ledRojo, OUTPUT);
+    pinMode(miEntrenador.rgbRojo, OUTPUT);
+
     // Inicializar pin de los LED apagado
     digitalWrite(miEntrenador.ledRojo, LOW);
     digitalWrite(miEntrenador.rgbRojo, LOW);
