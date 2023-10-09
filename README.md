@@ -44,7 +44,7 @@ Hay una serie de elementos que vienen incluidos en el Entrenador como Leds, Puls
 Dispones de ejemplos de diferentes dificultades para ir probando y experimentando con los distintos componentes del Entrenador (LEDs, pulsadores, zumbador, etc.). Aquí tienes una lista con todos los que hay y qué puedes hacer con ellos:
 
 |Ejemplo |  Descripción  |
-|--|--|--|
+|--|--|
 | LedDeColores | Encendido secuencial de los LEDs |
 | LedRGB |Encendido secuencial y combinado del RGB |   
 | Potenciometro |Se toman lecturas del potenciómetro |    
