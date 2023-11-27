@@ -11,8 +11,8 @@
  * -> Puerto genérico 3
  */
 
-#ifndef Entrenador_h
-#define Entrenador_h
+#ifndef EntrenadorPuertos_h
+#define EntrenadorPuertos_h
 
     #include "Arduino.h"
 
