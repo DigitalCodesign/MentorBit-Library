@@ -25,7 +25,7 @@ EntrenadorDisplay::EntrenadorDisplay()
     _dots[1] = false;
     _dots[2] = false;
     _dots[3] = false;
-    _displayDirection = 0x70;
+    _displayDirection = 0x77;
 
 }
 
@@ -37,7 +37,7 @@ EntrenadorDisplay::EntrenadorDisplay()
 void EntrenadorDisplay::inicializarDisplay()
 {
 
-    myDisplay.begin(0x70);
+    myDisplay.begin(_displayDirection);
 
 }
 
