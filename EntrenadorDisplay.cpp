@@ -72,8 +72,6 @@ void EntrenadorDisplay::imprimir(String valor)
 
     }
 
-    Serial.println(valor);
-
     while(valor.endsWith("0"))
     {
 
