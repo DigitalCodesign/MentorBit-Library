@@ -40,7 +40,7 @@
             String obtenerHoraRTC();
 
             uint8_t chipSelectSD;
-            RTC_DS3231 rtc;
+            RTC_DS1307 rtc;
 
         private:
 
