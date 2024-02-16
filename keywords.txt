@@ -1,0 +1,61 @@
+Entrenador KEYWORD1
+ledRojo LITERAL1
+ledVerde LITERAL1
+ledAzul LITERAL1
+rgbRojo LITERAL1
+rgbVerde LITERAL1
+rgbAzul LITERAL1
+pulsadorPullUpDigital LITERAL1
+pulsadorPullDownDigital LITERAL1
+zumbador LITERAL1
+potenciometro LITERAL1
+pulsadorPullDownAnalogico LITERAL1
+pulsadorPullUpAnalogico LITERAL1
+
+EntrenadorSensores KEYWORD1
+obtenerLecturaLDR KEYWORD2
+obtenerLecturaMQ KEYWORD2
+obtenerTemperaturaDHT KEYWORD2
+obtenerHumedadDHT KEYWORD2
+obtenerTemperaturaDS18B20 KEYWORD2
+obtenerDistanciaUlrasonidos KEYWORD2
+ldr LITERAL1
+mq LITERAL1
+dht LITERAL1
+ds18b20 LITERAL1
+ultrasonidosEcho LITERAL1
+ultrasonidosTrigger LITERAL1
+
+EntrenadorPantallas KEYWORD1
+inicializarLCD KEYWORD2
+inicializarOLED KEYWORD2
+lcd LITERAL1
+oled LITERAL1
+
+EntrenadorMotores KEYWORD1
+inicializarServo KEYWORD2
+moverServo KEYWORD2
+moverMotorDC KEYWORD2
+moverMotorPP KEYWORD2
+servomotor LITERAL1
+enableDC LITERAL1
+entrada1DC LITERAL1
+entrada2DC LITERAL1
+bobina1PAP LITERAL1
+bobina2PAP LITERAL1
+bobina3PAP LITERAL1
+bobina4PAP LITERAL1
+
+EntrenadorDisplay KEYWORD1
+inicializarDisplay KEYWORD2
+imprimir KEYWORD2
+
+EntrenadorDataLogger KEYWORD1
+inicializarSD KEYWORD2
+escribirEnArchivo KEYWORD2
+leerDeArchivo KEYWORD2
+inicializarRTC KEYWORD2
+ajustarHoraRTC KEYWORD2
+obtenerHoraRTC KEYWORD2
+chipSelectSD LITERAL1
+rtc LITERAL1
