@@ -1,4 +1,4 @@
-# Librería de Entrenador Arduino
+# Librería de Entrenador compatible con Arduino
 
 Esta librería está construida por Digital Codesign para utilizar junto con el kit educacional "Entrenador Arduino". La librería se compone de ocho clases diferentes que permiten utilizar las diferentes funcionalidades del Entrenador a través de varias funciones y ejemplos.
 
