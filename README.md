@@ -5,9 +5,6 @@ Esta librería está construida por Digital Codesign para utilizar junto con el 
 Puedes encontrar nuestro Kit de Entrenador Arduino y mucho más material de electrónica y robótica en nuestra tienda oficial:  [https://digitalcodesign.com/shop](https://digitalcodesign.com/shop)
 
 
-Autor: **Kevin Rosa** - kevin.ingenieria@digitalcodesign.com
-Fecha de última modificación: *6/10/2023*
-
 ![My Skills](https://skills.thijs.gg/icons?i=c,cpp,github&theme=light)
 
 # Modo de empleo
