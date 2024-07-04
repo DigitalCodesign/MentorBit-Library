@@ -1,28 +1,28 @@
 /*
- * EntrenadorMotores.h - Librería del módulo de Motores para Entrenador Arduino
+ * MentorBitMotores.h - Librería del módulo de Motores para MentorBit Arduino
  *
  * Creado el 07/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
  * 
- * Declaración de atributos y métodos para la clase EntrenadorMotores,
- * referida al Entrenador compatible con Arduino y el módulo de motores.
+ * Declaración de atributos y métodos para la clase MentorBitMotores,
+ * referida al MentorBit compatible con Arduino y el módulo de motores.
  * 
  * -> Servomotor
  * -> Motor Corriente Continua
  * -> Motor Paso a Paso
  */
 
-#ifndef EntrenadorMotores_h
-#define EntrenadorMotores_h
+#ifndef MentorBitMotores_h
+#define MentorBitMotores_h
 
     #include "Arduino.h"
     #include "Servo.h"
 
-    class EntrenadorMotores
+    class MentorBitMotores
     {
 
         public:
 
-            EntrenadorMotores();
+            MentorBitMotores();
 
             void inicializarServo();
             void moverServo(uint16_t grados);

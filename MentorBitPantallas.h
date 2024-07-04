@@ -1,15 +1,15 @@
 /*
- * EntrenadorPantallas.h - Librería del módulo de Pantallas para Entrenador Arduino
+ * MentorBitPantallas.h - Librería del módulo de Pantallas para MentorBit Arduino
  *
  * Creado el 07/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
  * 
- * Declaración de atributos y métodos para la clase EntrenadorPantallas,
- * referida al Entrenador compatible con Arduino y el módulo de pantallas.
+ * Declaración de atributos y métodos para la clase MentorBitPantallas,
+ * referida al MentorBit compatible con Arduino y el módulo de pantallas.
  * 
  */
 
-#ifndef EntrenadorPantallas_h
-#define EntrenadorPantallas_h
+#ifndef MentorBitPantallas_h
+#define MentorBitPantallas_h
 
     #include "Arduino.h"
     #include "Wire.h"
@@ -17,12 +17,12 @@
     #include "Adafruit_GFX.h"
     #include "Adafruit_SSD1306.h"
 
-    class EntrenadorPantallas
+    class MentorBitPantallas
     {
 
         public:
 
-            EntrenadorPantallas();
+            MentorBitPantallas();
 
             void inicializarLCD();
             void inicializarOLED();

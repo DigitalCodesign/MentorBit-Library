@@ -1,18 +1,18 @@
 /*
- * Entrenador.cpp - Librería base para Entrenador Arduino
+ * MentorBit.cpp - Librería base para MentorBit Arduino
  *
  * Creado el 24/08/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
  * 
- * Definición de la clase base Entrenador,
- * referida al Entrenador compatible con Arduino.
+ * Definición de la clase base MentorBit,
+ * referida al MentorBit compatible con Arduino.
  */
 
-#include "Entrenador.h"
+#include "MentorBit.h"
 
 /*
- * Constructor de la clase base del Entrenador.
+ * Constructor de la clase base del MentorBit.
  *
- * Devuelve una instancia de la clase Entrenador que provee los pines de conexión
+ * Devuelve una instancia de la clase MentorBit que provee los pines de conexión
  * de los elementos básicos de la placa.
  * 
  * -> LED de colores
@@ -21,7 +21,7 @@
  * -> Zumbador
  * -> Potenciómetro
  */
-Entrenador::Entrenador()
+MentorBit::MentorBit()
 {
 
     ledRojo = 5;

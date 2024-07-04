@@ -1,10 +1,10 @@
 /*
- * Entrenador.h - Librería base para Entrenador Arduino
+ * MentorBit.h - Librería base para MentorBit Arduino
  *
  * Creado el 24/08/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
  * 
- * Declaración de atributos y métodos para la clase base Entrenador,
- * referida al Entrenador compatible con Arduino y sus elementos básicos.
+ * Declaración de atributos y métodos para la clase base MentorBit,
+ * referida al MentorBit compatible con Arduino y sus elementos básicos.
  * 
  * -> LEDs
  * -> LED RGB
@@ -13,17 +13,17 @@
  * -> Potenciómetro
  */
 
-#ifndef Entrenador_h
-#define Entrenador_h
+#ifndef MentorBit_h
+#define MentorBit_h
 
     #include "Arduino.h"
 
-    class Entrenador
+    class MentorBit
     {
 
         public:
 
-            Entrenador();
+            MentorBit();
 
             uint8_t ledRojo;
             uint8_t ledVerde;

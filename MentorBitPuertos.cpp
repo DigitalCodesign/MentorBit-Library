@@ -1,25 +1,25 @@
 /*
- * EntrenadorPuertos.cpp - Librería de los puertos genéricos para Entrenador Arduino
+ * MentorBitPuertos.cpp - Librería de los puertos genéricos para MentorBit Arduino
  *
  * Creado el 27/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
  * 
- * Definición de la clase base EntrenadorPuertos, referida a
- * los puertos genéricos del Entrenador compatible con Arduino.
+ * Definición de la clase base MentorBitPuertos, referida a
+ * los puertos genéricos del MentorBit compatible con Arduino.
  */
 
-#include "EntrenadorPuertos.h"
+#include "MentorBitPuertos.h"
 
 /*
- * Constructor de la clase para puertos genéricos del Entrenador.
+ * Constructor de la clase para puertos genéricos del MentorBit.
  *
- * Devuelve una instancia de la clase EntrenadorPuertos que provee los pines de conexión
+ * Devuelve una instancia de la clase MentorBitPuertos que provee los pines de conexión
  * de los conectores de los puertos.
  * 
  * -> Puerto genérico 1
  * -> Puerto genérico 2
  * -> Puerto genérico 3
  */
-EntrenadorPuertos::EntrenadorPuertos()
+MentorBitPuertos::MentorBitPuertos()
 {
 
     puerto1_digital1 = 35;

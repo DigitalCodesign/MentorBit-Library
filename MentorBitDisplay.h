@@ -1,27 +1,27 @@
 /*
- * EntrenadorDisplay.h - Librería del módulo de Display para Entrenador Arduino
+ * MentorBitDisplay.h - Librería del módulo de Display para MentorBit Arduino
  *
  * Creado el 07/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
  * 
- * Declaración de atributos y métodos para la clase EntrenadorDisplay,
- * referida al Entrenador compatible con Arduino y el módulo de display 7 segmentos.
+ * Declaración de atributos y métodos para la clase MentorBitDisplay,
+ * referida al MentorBit compatible con Arduino y el módulo de display 7 segmentos.
  * 
  */
 
-#ifndef EntrenadorDisplay_h
-#define EntrenadorDisplay_h
+#ifndef MentorBitDisplay_h
+#define MentorBitDisplay_h
 
     #include "Arduino.h"
     #include "Wire.h"
     #include "Adafruit_GFX.h"
     #include "Adafruit_LEDBackpack.h"
 
-    class EntrenadorDisplay
+    class MentorBitDisplay
     {
 
         public:
 
-            EntrenadorDisplay();
+            MentorBitDisplay();
 
             void inicializarDisplay();
             void imprimir(char valor);

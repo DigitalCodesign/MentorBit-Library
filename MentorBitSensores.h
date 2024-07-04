@@ -1,10 +1,10 @@
 /*
- * EntrenadorSensores.h - Librería del módulo de Sensores para Entrenador Arduino
+ * MentorBitSensores.h - Librería del módulo de Sensores para MentorBit Arduino
  *
  * Creado el 07/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
  * 
- * Declaración de atributos y métodos para la clase EntrenadorSensores,
- * referida al Entrenador compatible con Arduino y el módulo de sensores.
+ * Declaración de atributos y métodos para la clase MentorBitSensores,
+ * referida al MentorBit compatible con Arduino y el módulo de sensores.
  * 
  * -> DHT
  * -> MQ
@@ -13,20 +13,20 @@
  * -> LDR
  */
 
-#ifndef EntrenadorSensores_h
-#define EntrenadorSensores_h
+#ifndef MentorBitSensores_h
+#define MentorBitSensores_h
 
     #include "Arduino.h"
     #include "DHT.h"
     #include "OneWire.h"
     #include "DallasTemperature.h"
 
-    class EntrenadorSensores
+    class MentorBitSensores
     {
 
         public:
 
-            EntrenadorSensores();
+            MentorBitSensores();
 
             uint8_t obtenerLecturaLDR();
             uint8_t obtenerLecturaMQ();

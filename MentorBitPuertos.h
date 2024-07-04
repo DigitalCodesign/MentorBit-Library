@@ -1,27 +1,27 @@
 /*
- * EntrenadorPuertos.h - Librería de los puertos genéricos para Entrenador Arduino
+ * MentorBitPuertos.h - Librería de los puertos genéricos para MentorBit Arduino
  *
  * Creado el 27/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
  * 
- * Declaración de atributos y métodos para la clase base EntrenadorPuertos,
- * referida al Entrenador compatible con Arduino y sus puertos genéricos.
+ * Declaración de atributos y métodos para la clase base MentorBitPuertos,
+ * referida al MentorBit compatible con Arduino y sus puertos genéricos.
  * 
  * -> Puerto genérico 1
  * -> Puerto genérico 2
  * -> Puerto genérico 3
  */
 
-#ifndef EntrenadorPuertos_h
-#define EntrenadorPuertos_h
+#ifndef MentorBitPuertos_h
+#define MentorBitPuertos_h
 
     #include "Arduino.h"
 
-    class EntrenadorPuertos
+    class MentorBitPuertos
     {
 
         public:
 
-            EntrenadorPuertos();
+            MentorBitPuertos();
 
             uint8_t puerto1_digital1;
             uint8_t puerto1_digital2;

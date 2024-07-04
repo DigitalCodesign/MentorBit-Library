@@ -1,4 +1,4 @@
-Entrenador KEYWORD1
+MentorBit KEYWORD1
 ledRojo LITERAL1
 ledVerde LITERAL1
 ledAzul LITERAL1
@@ -12,7 +12,7 @@ potenciometro LITERAL1
 pulsadorPullDownAnalogico LITERAL1
 pulsadorPullUpAnalogico LITERAL1
 
-EntrenadorSensores KEYWORD1
+MentorBitSensores KEYWORD1
 obtenerLecturaLDR KEYWORD2
 obtenerLecturaMQ KEYWORD2
 obtenerTemperaturaDHT KEYWORD2
@@ -26,13 +26,13 @@ ds18b20 LITERAL1
 ultrasonidosEcho LITERAL1
 ultrasonidosTrigger LITERAL1
 
-EntrenadorPantallas KEYWORD1
+MentorBitPantallas KEYWORD1
 inicializarLCD KEYWORD2
 inicializarOLED KEYWORD2
 lcd LITERAL1
 oled LITERAL1
 
-EntrenadorMotores KEYWORD1
+MentorBitMotores KEYWORD1
 inicializarServo KEYWORD2
 moverServo KEYWORD2
 moverMotorDC KEYWORD2
@@ -46,11 +46,11 @@ bobina2PAP LITERAL1
 bobina3PAP LITERAL1
 bobina4PAP LITERAL1
 
-EntrenadorDisplay KEYWORD1
+MentorBitDisplay KEYWORD1
 inicializarDisplay KEYWORD2
 imprimir KEYWORD2
 
-EntrenadorDataLogger KEYWORD1
+MentorBitDataLogger KEYWORD1
 inicializarSD KEYWORD2
 escribirEnArchivo KEYWORD2
 leerDeArchivo KEYWORD2

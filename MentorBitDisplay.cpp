@@ -1,23 +1,23 @@
 /*
- * EntrenadorDisplay.cpp - Librería del módulo de Display para Entrenador Arduino
+ * MentorBitDisplay.cpp - Librería del módulo de Display para MentorBit Arduino
  *
  * Creado el 14/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
  * 
- * Definición de la clase EntrenadorDisplay,
- * referida al Entrenador compatible con Arduino y el módulo de display 7 segmentos.
+ * Definición de la clase MentorBitDisplay,
+ * referida al MentorBit compatible con Arduino y el módulo de display 7 segmentos.
  * 
  */
 
-#include "EntrenadorDisplay.h"
+#include "MentorBitDisplay.h"
 
 /*
- * Constructor de la clase para el módulo de Display del Entrenador.
+ * Constructor de la clase para el módulo de Display del MentorBit.
  * 
- * Devuelve una instancia de la clase EntrenadorDisplay que provee las
+ * Devuelve una instancia de la clase MentorBitDisplay que provee las
  * direcciones y métodos necesarios para controlar el display 7 segmentos
- * en el Entrenador.
+ * en el MentorBit.
  */
-EntrenadorDisplay::EntrenadorDisplay()
+MentorBitDisplay::MentorBitDisplay()
     : myDisplay()
 {
 
@@ -34,7 +34,7 @@ EntrenadorDisplay::EntrenadorDisplay()
  * 
  * No devuelve ningún valor.
  */
-void EntrenadorDisplay::inicializarDisplay()
+void MentorBitDisplay::inicializarDisplay()
 {
 
     myDisplay.begin(_displayDirection);
@@ -46,7 +46,7 @@ void EntrenadorDisplay::inicializarDisplay()
  * 
  * No devuelve ningún valor.
  */
-void EntrenadorDisplay::imprimir(char valor)
+void MentorBitDisplay::imprimir(char valor)
 {
 
     myDisplay.clear();
@@ -60,7 +60,7 @@ void EntrenadorDisplay::imprimir(char valor)
  * 
  * No devuelve ningún valor.
  */
-void EntrenadorDisplay::imprimir(String valor)
+void MentorBitDisplay::imprimir(String valor)
 {
 
     myDisplay.clear();
@@ -101,11 +101,11 @@ void EntrenadorDisplay::imprimir(String valor)
  * 
  * No devuelve ningún valor.
  */
-void EntrenadorDisplay::imprimir(int valor)
+void MentorBitDisplay::imprimir(int valor)
 {
 
     String valorString = String(valor);
-    EntrenadorDisplay::imprimir(valorString);
+    MentorBitDisplay::imprimir(valorString);
 
 }
 
@@ -114,7 +114,7 @@ void EntrenadorDisplay::imprimir(int valor)
  * 
  * No devuelve ningún valor.
  */
-void EntrenadorDisplay::imprimir(double valor)
+void MentorBitDisplay::imprimir(double valor)
 {
 
     String valorString = String(valor, 3);
@@ -135,6 +135,6 @@ void EntrenadorDisplay::imprimir(double valor)
     }
 
     _dots[indiceComa - 1] = true;
-    EntrenadorDisplay::imprimir(valorString);
+    MentorBitDisplay::imprimir(valorString);
 
 }

@@ -1,22 +1,22 @@
 /*
- * EntrenadorDataLogger.h - Librería del módulo de DataLogger (SD y RTC) para Entrenador Arduino
+ * MentorBitDataLogger.h - Librería del módulo de DataLogger (SD y RTC) para MentorBit Arduino
  *
  * Creado el 18/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
  * 
- * Declaración de atributos y métodos para la clase EntrenadorDataLogger,
- * referida al Entrenador compatible con Arduino y el módulo de SD y RTC.
+ * Declaración de atributos y métodos para la clase MentorBitDataLogger,
+ * referida al MentorBit compatible con Arduino y el módulo de SD y RTC.
  * 
  */
 
-#include "EntrenadorDataLogger.h"
+#include "MentorBitDataLogger.h"
 
 /*
- * Constructor de la clase para el módulo de SD y RTC del Entrenador.
+ * Constructor de la clase para el módulo de SD y RTC del MentorBit.
  * 
- * Devuelve una instancia de la clase EntrenadorDataLogger que provee los
- * pines y métodos necesarios para controlar la tarjeta SD y el RTC en el Entrenador.
+ * Devuelve una instancia de la clase MentorBitDataLogger que provee los
+ * pines y métodos necesarios para controlar la tarjeta SD y el RTC en el MentorBit.
  */
-EntrenadorDataLogger::EntrenadorDataLogger()
+MentorBitDataLogger::MentorBitDataLogger()
 {
 
     chipSelectSD = PIN_A6;
@@ -29,10 +29,10 @@ EntrenadorDataLogger::EntrenadorDataLogger()
  * Devuelve un booleano, true si consigue inicializar correctamente
  * y false si no es capaz de hacerlo.
  */
-boolean EntrenadorDataLogger::inicializarRTC()
+boolean MentorBitDataLogger::inicializarRTC()
 {
 
-    if(!EntrenadorDataLogger::rtc.begin())
+    if(!MentorBitDataLogger::rtc.begin())
     {
 
         return false;
@@ -48,7 +48,7 @@ boolean EntrenadorDataLogger::inicializarRTC()
  * 
  * No devuelve ningún valor.
  */
-void EntrenadorDataLogger::ajustarHoraRTC(
+void MentorBitDataLogger::ajustarHoraRTC(
     uint16_t anyo,
     uint8_t mes,
     uint8_t dia,
@@ -58,7 +58,7 @@ void EntrenadorDataLogger::ajustarHoraRTC(
 )
 {
 
-    EntrenadorDataLogger::rtc.adjust(DateTime(anyo, mes, dia, hora, minuto, segundo));
+    MentorBitDataLogger::rtc.adjust(DateTime(anyo, mes, dia, hora, minuto, segundo));
 
 }
 
@@ -67,10 +67,10 @@ void EntrenadorDataLogger::ajustarHoraRTC(
  * 
  * No devuelve ningún valor.
  */
-void EntrenadorDataLogger::ajustarHoraRTC()
+void MentorBitDataLogger::ajustarHoraRTC()
 {
 
-    EntrenadorDataLogger::rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
+    MentorBitDataLogger::rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
 
 }
 
@@ -79,10 +79,10 @@ void EntrenadorDataLogger::ajustarHoraRTC()
  * 
  * Hora actual en formato cadena de texto.
  */
-String EntrenadorDataLogger::obtenerHoraRTC()
+String MentorBitDataLogger::obtenerHoraRTC()
 {
 
-    DateTime actualTime = EntrenadorDataLogger::rtc.now();
+    DateTime actualTime = MentorBitDataLogger::rtc.now();
 
     return String(actualTime.timestamp(DateTime::TIMESTAMP_FULL));
 
@@ -94,10 +94,10 @@ String EntrenadorDataLogger::obtenerHoraRTC()
  * Devuelve un booleano, true si consigue inicializar correctamente
  * y false si no es capaz de hacerlo.
  */
-boolean EntrenadorDataLogger::inicializarSD()
+boolean MentorBitDataLogger::inicializarSD()
 {
 
-    if(!SD.begin(EntrenadorDataLogger::chipSelectSD))
+    if(!SD.begin(MentorBitDataLogger::chipSelectSD))
     {
 
         return false;
@@ -114,16 +114,16 @@ boolean EntrenadorDataLogger::inicializarSD()
  * Devuelve un booleano, true si consigue realizar la escritura correctamente
  * y false si no es capaz de hacerlo.
  */
-boolean EntrenadorDataLogger::escribirEnArchivo(String nombre, String mensaje)
+boolean MentorBitDataLogger::escribirEnArchivo(String nombre, String mensaje)
 {
 
-    EntrenadorDataLogger::_dataFile = SD.open(nombre, FILE_WRITE);
+    MentorBitDataLogger::_dataFile = SD.open(nombre, FILE_WRITE);
 
-    if(EntrenadorDataLogger::_dataFile)
+    if(MentorBitDataLogger::_dataFile)
     {
 
-        EntrenadorDataLogger::_dataFile.println(mensaje);
-        EntrenadorDataLogger::_dataFile.close();
+        MentorBitDataLogger::_dataFile.println(mensaje);
+        MentorBitDataLogger::_dataFile.close();
 
         return true;
 
@@ -139,26 +139,26 @@ boolean EntrenadorDataLogger::escribirEnArchivo(String nombre, String mensaje)
  * Devuelve una cadena de texto con el contenido del archivo o una cadena vacía
  * si no es capaz de realizar la lectura.
  */
-String EntrenadorDataLogger::leerDeArchivo(String nombre)
+String MentorBitDataLogger::leerDeArchivo(String nombre)
 {
 
     String dataFromFile = "None";
-    EntrenadorDataLogger::_dataFile = SD.open(nombre, FILE_READ);
+    MentorBitDataLogger::_dataFile = SD.open(nombre, FILE_READ);
 
-    if(EntrenadorDataLogger::_dataFile)
+    if(MentorBitDataLogger::_dataFile)
     {
 
         char incomingChar = NULL;
         dataFromFile = "";
-        while(EntrenadorDataLogger::_dataFile.available())
+        while(MentorBitDataLogger::_dataFile.available())
         {
 
-            incomingChar = EntrenadorDataLogger::_dataFile.read();
+            incomingChar = MentorBitDataLogger::_dataFile.read();
             dataFromFile += incomingChar;
 
         }
 
-        EntrenadorDataLogger::_dataFile.close();
+        MentorBitDataLogger::_dataFile.close();
 
     }
 

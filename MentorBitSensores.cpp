@@ -1,18 +1,18 @@
 /*
- * EntrenadorSensores.cpp - Librería del módulo Sensores para Entrenador Arduino
+ * MentorBitSensores.cpp - Librería del módulo Sensores para MentorBit Arduino
  *
  * Creado el 07/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
  * 
- * Definición de la clase EntrenadorSensores,
- * referida al Entrenador compatible con Arduino y el módulo de sensores.
+ * Definición de la clase MentorBitSensores,
+ * referida al MentorBit compatible con Arduino y el módulo de sensores.
  */
 
-#include "EntrenadorSensores.h"
+#include "MentorBitSensores.h"
 
 /*
- * Constructor de la clase para el módulo de Sensores del Entrenador.
+ * Constructor de la clase para el módulo de Sensores del MentorBit.
  * 
- * Devuelve una instancia de la clase EntrenadorSensores que provee los pines
+ * Devuelve una instancia de la clase MentorBitSensores que provee los pines
  * de conexión de los sensores de la placa y los puertos correspondientes.
  * También provee de los métodos necesarios para obtener las lecturas de cada
  * sensor de manera sencilla.
@@ -22,7 +22,7 @@
  * -> LDR
  * -> HC-SR04
  */
-EntrenadorSensores::EntrenadorSensores()
+MentorBitSensores::MentorBitSensores()
     : myDHT(24, DHT11)
     , DS18B20(new OneWire(27))
 {
@@ -52,7 +52,7 @@ EntrenadorSensores::EntrenadorSensores()
  * Devuelve un valor entero con la lectura obtenida en el pin donde se
  * encuentra conectado el LDR.
  */
-uint8_t EntrenadorSensores::obtenerLecturaLDR()
+uint8_t MentorBitSensores::obtenerLecturaLDR()
 {
 
     return analogRead(ldr);
@@ -65,7 +65,7 @@ uint8_t EntrenadorSensores::obtenerLecturaLDR()
  * Devuelve un valor entero con la lectura obtenida en el pin donde se
  * encuentra conectado el MQ.
  */
-uint8_t EntrenadorSensores::obtenerLecturaMQ()
+uint8_t MentorBitSensores::obtenerLecturaMQ()
 {
 
     return analogRead(mq);
@@ -78,7 +78,7 @@ uint8_t EntrenadorSensores::obtenerLecturaMQ()
  * Devuelve un valor decimal con la lectura en Centígrados obtenida en el
  * pin donde se encuentra conectado el DHT.
  */
-float EntrenadorSensores::obtenerTemperaturaDHT()
+float MentorBitSensores::obtenerTemperaturaDHT()
 {
 
     return myDHT.readTemperature();
@@ -91,7 +91,7 @@ float EntrenadorSensores::obtenerTemperaturaDHT()
  * Devuelve un valor decimal con la lectura en tanto por ciento obtenida
  * en el pin donde se encuentra conectado el DHT.
  */
-float EntrenadorSensores::obtenerHumedadDHT()
+float MentorBitSensores::obtenerHumedadDHT()
 {
 
     return myDHT.readHumidity();
@@ -104,7 +104,7 @@ float EntrenadorSensores::obtenerHumedadDHT()
  * Devuelve un valor decimal con la lectura en Centígrados obtenida en el
  * pin donde se encuentra conectado el DS18B20.
  */
-float EntrenadorSensores::obtenerTemperaturaDS18B20()
+float MentorBitSensores::obtenerTemperaturaDS18B20()
 {
 
     DS18B20.requestTemperatures();
@@ -118,7 +118,7 @@ float EntrenadorSensores::obtenerTemperaturaDS18B20()
  * Devuelve un valor entero con la lectura en Centímetros obtenida con
  * los pines donde se encuentra conectado el HC-SR04 (Ultrasonidos).
  */
-uint16_t EntrenadorSensores::obtenerDistanciaUlrasonidos()
+uint16_t MentorBitSensores::obtenerDistanciaUlrasonidos()
 {
 
     digitalWrite(ultrasonidosTrigger, LOW);

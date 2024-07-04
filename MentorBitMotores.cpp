@@ -1,27 +1,27 @@
 /*
- * EntrenadorMotores.cpp - Librería del módulo Motores para Entrenador Arduino
+ * MentorBitMotores.cpp - Librería del módulo Motores para MentorBit Arduino
  *
  * Creado el 13/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
  * 
- * Definición de la clase EntrenadorMotores,
- * referida al Entrenador compatible con Arduino y el módulo de Motores.
+ * Definición de la clase MentorBitMotores,
+ * referida al MentorBit compatible con Arduino y el módulo de Motores.
  */
 
-#include "EntrenadorMotores.h"
+#include "MentorBitMotores.h"
 
 /*
- * Constructor de la clase para el módulo de Motores del Entrenador.
+ * Constructor de la clase para el módulo de Motores del MentorBit.
  * 
- * Devuelve una instancia de la clase EntrenadorMotores que provee los pines
+ * Devuelve una instancia de la clase MentorBitMotores que provee los pines
  * de conexión de los motores de la placa y los puertos correspondientes.
  * También provee de los métodos necesarios para controlar los diferentes
- * motores que podemos utilizar en el Entrenador.
+ * motores que podemos utilizar en el MentorBit.
  * 
  * -> Servomotor
  * -> Motor DC
  * -> Motor Paso a Paso
  */
-EntrenadorMotores::EntrenadorMotores()
+MentorBitMotores::MentorBitMotores()
     : myServo()
 {
 
@@ -49,10 +49,10 @@ EntrenadorMotores::EntrenadorMotores()
  * 
  * No devuelve ningún valor.
  */
-void EntrenadorMotores::inicializarServo()
+void MentorBitMotores::inicializarServo()
 {
 
-    myServo.attach(EntrenadorMotores::servomotor);
+    myServo.attach(MentorBitMotores::servomotor);
 
 }
 
@@ -61,7 +61,7 @@ void EntrenadorMotores::inicializarServo()
  * 
  * No devuelve ningún valor.
  */
-void EntrenadorMotores::moverServo(uint16_t grados)
+void MentorBitMotores::moverServo(uint16_t grados)
 {
 
     myServo.write(grados);
@@ -74,7 +74,7 @@ void EntrenadorMotores::moverServo(uint16_t grados)
  * 
  * No devuelve ningún valor.
  */
-void EntrenadorMotores::moverMotorDC(uint8_t velocidad, uint8_t direccion)
+void MentorBitMotores::moverMotorDC(uint8_t velocidad, uint8_t direccion)
 {
 
     switch(direccion)
@@ -106,7 +106,7 @@ void EntrenadorMotores::moverMotorDC(uint8_t velocidad, uint8_t direccion)
  * 
  * No devuelve ningún valor.
  */
-void EntrenadorMotores::moverMotorPP(uint16_t pasos, uint8_t direccion)
+void MentorBitMotores::moverMotorPP(uint16_t pasos, uint8_t direccion)
 {
 
     uint8_t secuencia[8][4] = {

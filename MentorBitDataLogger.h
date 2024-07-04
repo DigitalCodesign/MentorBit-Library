@@ -1,27 +1,27 @@
 /*
- * EntrenadorDataLogger.h - Librería del módulo de DataLogger (SD y RTC) para Entrenador Arduino
+ * MentorBitDataLogger.h - Librería del módulo de DataLogger (SD y RTC) para MentorBit Arduino
  *
  * Creado el 18/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
  * 
- * Declaración de atributos y métodos para la clase EntrenadorDataLogger,
- * referida al Entrenador compatible con Arduino y el módulo de SD y RTC.
+ * Declaración de atributos y métodos para la clase MentorBitDataLogger,
+ * referida al MentorBit compatible con Arduino y el módulo de SD y RTC.
  * 
  */
 
-#ifndef EntrenadorDataLogger_h
-#define EntrenadorDataLogger_h
+#ifndef MentorBitDataLogger_h
+#define MentorBitDataLogger_h
 
     #include "Arduino.h"
     #include "Wire.h"
     #include "SD.h"
     #include "RTClib.h"
 
-    class EntrenadorDataLogger
+    class MentorBitDataLogger
     {
 
         public:
 
-            EntrenadorDataLogger();
+            MentorBitDataLogger();
 
             boolean inicializarSD();
             boolean escribirEnArchivo(String nombre, String mensaje);
