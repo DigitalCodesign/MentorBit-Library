@@ -72,13 +72,6 @@ void MentorBitDisplay::imprimir(String valor)
 
     }
 
-    while(valor.endsWith("0"))
-    {
-
-        valor.remove(valor.length() - 1);
-
-    }
-
     uint8_t correcionPosicion = 4 - valor.length();
 
     for(uint8_t i = 0; i < valor.length(); i++)
@@ -120,7 +113,6 @@ void MentorBitDisplay::imprimir(double valor)
     String valorString = String(valor, 3);
 
     uint8_t indiceComa = valorString.indexOf('.');
-    uint8_t decimales = (valorString.length() - indiceComa) - 1;
 
     String parteEntera = valorString.substring(0, indiceComa);
     String parteDecimal = valorString.substring(indiceComa + 1);
