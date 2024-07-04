@@ -52,7 +52,7 @@ MentorBitSensores::MentorBitSensores()
  * Devuelve un valor entero con la lectura obtenida en el pin donde se
  * encuentra conectado el LDR.
  */
-uint8_t MentorBitSensores::obtenerLecturaLDR()
+uint16_t MentorBitSensores::obtenerLecturaLDR()
 {
 
     return analogRead(ldr);
@@ -65,7 +65,7 @@ uint8_t MentorBitSensores::obtenerLecturaLDR()
  * Devuelve un valor entero con la lectura obtenida en el pin donde se
  * encuentra conectado el MQ.
  */
-uint8_t MentorBitSensores::obtenerLecturaMQ()
+uint16_t MentorBitSensores::obtenerLecturaMQ()
 {
 
     return analogRead(mq);

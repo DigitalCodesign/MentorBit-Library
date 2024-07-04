@@ -28,8 +28,8 @@
 
             MentorBitSensores();
 
-            uint8_t obtenerLecturaLDR();
-            uint8_t obtenerLecturaMQ();
+            uint16_t obtenerLecturaLDR();
+            uint16_t obtenerLecturaMQ();
             float obtenerTemperaturaDHT();
             float obtenerHumedadDHT();
             float obtenerTemperaturaDS18B20();
