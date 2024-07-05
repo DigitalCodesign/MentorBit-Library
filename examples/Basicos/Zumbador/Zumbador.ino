@@ -1,24 +1,24 @@
 /**
- * Zumbador.ino - Ejemplo de uso del zumbador del Entrenador
+ * Zumbador.ino - Ejemplo de uso del zumbador del MentorBit
  * 
  * Creado el 25/08/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
  * 
  * Generación de tonos secuencial con el zumbador.
  */
 
-#include "Entrenador.h"
+#include "MentorBit.h"
 
 // Declaración de instancia de la clase
-Entrenador miEntrenador;
+MentorBit miMentorBit;
 
 // Inicialización del sketch
 void setup() {
 
     // Definición de zumbador como salida
-    pinMode(miEntrenador.zumbador, OUTPUT);
+    pinMode(miMentorBit.zumbador, OUTPUT);
 
     // Inicializar pines apagados
-    digitalWrite(miEntrenador.zumbador, LOW);
+    digitalWrite(miMentorBit.zumbador, LOW);
 
 }
 
@@ -30,7 +30,7 @@ void loop() {
     {
 
         // Generar tono con la frecuencia dada por el bucle for
-        tone(miEntrenador.zumbador, i, 100);
+        tone(miMentorBit.zumbador, i, 100);
 
     }
 

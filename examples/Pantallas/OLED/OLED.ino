@@ -1,22 +1,22 @@
 /**
- * OLED.ino - Ejemplo de uso de la pantalla OLED del Entrenador
+ * OLED.ino - Ejemplo de uso de la pantalla OLED del MentorBit
  * 
  * Creado el 13/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
  * 
  * Mostrar por la pantalla el icono por defecto.
  */
 
-#include "EntrenadorPantallas.h"
+#include "MentorBitPantallas.h"
 
 // Declaración de instancia de las clases
-EntrenadorPantallas miEntrenadorPantallas;
+MentorBitPantallas miMentorBitPantallas;
 
 // Inicialización del sketch
 void setup() {
 
     // Inicializamos la pantalla y mostramos el icono
-    miEntrenadorPantallas.inicializarOLED();
-    miEntrenadorPantallas.oled.display();
+    miMentorBitPantallas.inicializarOLED();
+    miMentorBitPantallas.oled.display();
 
 }
 

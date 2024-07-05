@@ -1,15 +1,15 @@
 /**
- * TarjetaSD.ino - Ejemplo de uso de la Tarjeta SD del Entrenador
+ * TarjetaSD.ino - Ejemplo de uso de la Tarjeta SD del MentorBit
  * 
  * Creado el 18/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
  * 
  * Escribir un texto a un archivo de la tarjeta y leer luego el mismo contenido.
  */
 
-#include <EntrenadorDataLogger.h>
+#include <MentorBitDataLogger.h>
 
 // Declaración de instancia de la clase
-EntrenadorDataLogger miDataLogger;
+MentorBitDataLogger miDataLogger;
 
 // Inicialización del sketch
 void setup() {
@@ -24,7 +24,7 @@ void setup() {
         Serial.println("Escribiendo a la tarjeta...");
 
         // Escribir el mensaje a un archivo
-        miDataLogger.escribirEnArchivo("Prueba.txt", "Prueba del Entrenador.");
+        miDataLogger.escribirEnArchivo("Prueba.txt", "Prueba del MentorBit.");
         Serial.println("Escritura realizada. Pasando a leer contenido...");
 
         // Leer contenido del archivo

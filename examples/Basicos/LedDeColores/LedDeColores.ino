@@ -1,29 +1,29 @@
 /**
- * LedDeColores.ino - Ejemplo de uso de LEDs del Entrenador
+ * LedDeColores.ino - Ejemplo de uso de LEDs del MentorBit
  * 
  * Creado el 25/08/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
  * 
- * Encendido secuencial de los LEDs de colores del Entrenador
+ * Encendido secuencial de los LEDs de colores del MentorBit
  * utilizando la librería.
  */
 
-#include "Entrenador.h"
+#include "MentorBit.h"
 
 // Declaración de instancia de la clase
-Entrenador miEntrenador;
+MentorBit miMentorBit;
 
 // Inicialización del sketch
 void setup() {
 
     // Definición de pines como salida
-    pinMode(miEntrenador.ledRojo, OUTPUT);
-    pinMode(miEntrenador.ledVerde, OUTPUT);
-    pinMode(miEntrenador.ledAzul, OUTPUT);
+    pinMode(miMentorBit.ledRojo, OUTPUT);
+    pinMode(miMentorBit.ledVerde, OUTPUT);
+    pinMode(miMentorBit.ledAzul, OUTPUT);
 
     // Inicializar pines apagados
-    digitalWrite(miEntrenador.ledRojo, LOW);
-    digitalWrite(miEntrenador.ledVerde, LOW);
-    digitalWrite(miEntrenador.ledAzul, LOW);
+    digitalWrite(miMentorBit.ledRojo, LOW);
+    digitalWrite(miMentorBit.ledVerde, LOW);
+    digitalWrite(miMentorBit.ledAzul, LOW);
 
 }
 
@@ -31,21 +31,21 @@ void setup() {
 void loop() {
 
     // Encendemos el LED rojo solamente y esperamos
-    digitalWrite(miEntrenador.ledRojo, HIGH);
-    digitalWrite(miEntrenador.ledVerde, LOW);
-    digitalWrite(miEntrenador.ledAzul, LOW);
+    digitalWrite(miMentorBit.ledRojo, HIGH);
+    digitalWrite(miMentorBit.ledVerde, LOW);
+    digitalWrite(miMentorBit.ledAzul, LOW);
     delay(500);
 
     // Encendemos el LED verde solamente y esperamos
-    digitalWrite(miEntrenador.ledRojo, LOW);
-    digitalWrite(miEntrenador.ledVerde, HIGH);
-    digitalWrite(miEntrenador.ledAzul, LOW);
+    digitalWrite(miMentorBit.ledRojo, LOW);
+    digitalWrite(miMentorBit.ledVerde, HIGH);
+    digitalWrite(miMentorBit.ledAzul, LOW);
     delay(500);
 
     // Encendemos el LED azul solamente y esperamos
-    digitalWrite(miEntrenador.ledRojo, LOW);
-    digitalWrite(miEntrenador.ledVerde, LOW);
-    digitalWrite(miEntrenador.ledAzul, HIGH);
+    digitalWrite(miMentorBit.ledRojo, LOW);
+    digitalWrite(miMentorBit.ledVerde, LOW);
+    digitalWrite(miMentorBit.ledAzul, HIGH);
     delay(500);
 
 }

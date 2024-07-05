@@ -1,20 +1,20 @@
 /**
- * Servomotor.ino - Ejemplo de uso del servomotor del Entrenador
+ * Servomotor.ino - Ejemplo de uso del servomotor del MentorBit
  * 
  * Creado el 13/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
  * 
  * Control del servomotor realizando movimiento de diferentes ángulos.
  */
 
-#include "EntrenadorMotores.h"
+#include "MentorBitMotores.h"
 
 // Declaración de instancia de las clases
-EntrenadorMotores miEntrenadorMotores;
+MentorBitMotores miMentorBitMotores;
 
 // Inicialización del sketch
 void setup() {
 
-    miEntrenadorMotores.inicializarServo();
+    miMentorBitMotores.inicializarServo();
 
 }
 
@@ -22,19 +22,19 @@ void setup() {
 void loop() {
 
     // Mover el servomotor a 180º
-    miEntrenadorMotores.moverServo(180);
+    miMentorBitMotores.moverServo(180);
     delay(1000);
 
     // Mover el servomotor a 150º
-    miEntrenadorMotores.moverServo(150);
+    miMentorBitMotores.moverServo(150);
     delay(1000);
 
     // Mover el servomotor a 120º
-    miEntrenadorMotores.moverServo(120);
+    miMentorBitMotores.moverServo(120);
     delay(1000);
 
     // Mover el servomotor a 90º
-    miEntrenadorMotores.moverServo(90);
+    miMentorBitMotores.moverServo(90);
     delay(1000);
 
 }

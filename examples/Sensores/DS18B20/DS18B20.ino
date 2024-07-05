@@ -1,15 +1,15 @@
 /**
- * DS18B20.ino - Ejemplo de uso de DS18B20 del Entrenador
+ * DS18B20.ino - Ejemplo de uso de DS18B20 del MentorBit
  * 
  * Creado el 12/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
  * 
  * Volcado de información del sensor al monitor serial.
  */
 
-#include "EntrenadorSensores.h"
+#include "MentorBitSensores.h"
 
 // Declaración de instancia de las clases
-EntrenadorSensores miEntrenadorSensores;
+MentorBitSensores miMentorBitSensores;
 
 // Inicialización del sketch
 void setup() {
@@ -22,7 +22,7 @@ void setup() {
 void loop() {
 
     // Obtención de la lectura del sensor
-    float temperatura = miEntrenadorSensores.obtenerTemperaturaDS18B20();
+    float temperatura = miMentorBitSensores.obtenerTemperaturaDS18B20();
 
     // Mostrar datos por monitor serial
     Serial.println("--------------------");

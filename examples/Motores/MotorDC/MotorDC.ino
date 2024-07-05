@@ -1,5 +1,5 @@
 /**
- * MotorDC.ino - Ejemplo de uso del motor de corriente continua del Entrenador
+ * MotorDC.ino - Ejemplo de uso del motor de corriente continua del MentorBit
  * 
  * Creado el 13/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
  * 
@@ -7,10 +7,10 @@
  * y a velocidades graduales
  */
 
-#include "EntrenadorMotores.h"
+#include "MentorBitMotores.h"
 
 // Declaración de instancia de las clases
-EntrenadorMotores miEntrenadorMotores;
+MentorBitMotores miMentorBitMotores;
 
 // Inicialización del sketch
 void setup() {
@@ -23,25 +23,25 @@ void loop() {
     // Giro gradual del motor en un sentido
     for(int i = 0; i < 256 ; i = i + 50) {
 
-        miEntrenadorMotores.moverMotorDC(i, 0);
+        miMentorBitMotores.moverMotorDC(i, 0);
         delay(250);
 
     }
 
     // Parada momentánea
     delay(500);
-    miEntrenadorMotores.moverMotorDC(0, 0);
+    miMentorBitMotores.moverMotorDC(0, 0);
 
     // Giro gradual del motor en el otro sentido
     for(int i = 0; i < 256 ; i = i + 50) {
 
-        miEntrenadorMotores.moverMotorDC(i, 1);
+        miMentorBitMotores.moverMotorDC(i, 1);
         delay(250);
 
     }
 
     // Parada momentánea
     delay(500);
-    miEntrenadorMotores.moverMotorDC(0, 0);
+    miMentorBitMotores.moverMotorDC(0, 0);
 
 }

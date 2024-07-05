@@ -1,23 +1,23 @@
 /**
- * MQ.ino - Ejemplo de uso de MQ del Entrenador
+ * MQ.ino - Ejemplo de uso de MQ del MentorBit
  * 
  * Creado el 12/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
  * 
- * Encendido de un LED utilizando la medida del MQ del Entrenador
+ * Encendido de un LED utilizando la medida del MQ del MentorBit
  * utilizando la librería.
  */
 
-#include "Entrenador.h"
-#include "EntrenadorSensores.h"
+#include "MentorBit.h"
+#include "MentorBitSensores.h"
 
 // Declaración de instancia de las clases
-Entrenador miEntrenador;
-EntrenadorSensores miEntrenadorSensores;
+MentorBit miMentorBit;
+MentorBitSensores miMentorBitSensores;
 
 // Inicialización del sketch
 void setup() {
 
-    digitalWrite(miEntrenador.ledRojo, LOW);
+    digitalWrite(miMentorBit.ledRojo, LOW);
 
 }
 
@@ -25,18 +25,18 @@ void setup() {
 void loop() {
 
     // Obtención de la lectura del sensor
-    int lecturaMQ = analogRead(miEntrenadorSensores.MQpin);
+    int lecturaMQ = analogRead(miMentorBitSensores.MQpin);
 
     // Comprobación del valor de la lectura
     if(lecturaMQ > 500) {
 
         // Encender LED
-        digitalWrite(miEntrenador.ledRojo, HIGH);
+        digitalWrite(miMentorBit.ledRojo, HIGH);
 
     } else {
 
         // Apagar LED
-        digitalWrite(miEntrenador.ledRojo, LOW);
+        digitalWrite(miMentorBit.ledRojo, LOW);
 
     }
 

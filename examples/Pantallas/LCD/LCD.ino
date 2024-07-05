@@ -1,24 +1,24 @@
 /**
- * LCD.ino - Ejemplo de uso de la pantalla LCD del Entrenador
+ * LCD.ino - Ejemplo de uso de la pantalla LCD del MentorBit
  * 
  * Creado el 13/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
  * 
  * Mostrar por la pantalla el mensaje "Hello, world!".
  */
 
-#include "EntrenadorPantallas.h"
+#include "MentorBitPantallas.h"
 
 // Declaración de instancia de las clases
-EntrenadorPantallas miEntrenadorPantallas;
+MentorBitPantallas miMentorBitPantallas;
 
 // Inicialización del sketch
 void setup() {
 
     // Inicializamos la pantalla y mostramos el mensaje.
-    miEntrenadorPantallas.inicializarLCD();
-    miEntrenadorPantallas.lcd.backlight();
-    miEntrenadorPantallas.lcd.setCursor(0, 0);
-    miEntrenadorPantallas.lcd.print("Hello, world!");
+    miMentorBitPantallas.inicializarLCD();
+    miMentorBitPantallas.lcd.backlight();
+    miMentorBitPantallas.lcd.setCursor(0, 0);
+    miMentorBitPantallas.lcd.print("Hello, world!");
 
 }
 

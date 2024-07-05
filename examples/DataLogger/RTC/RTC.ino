@@ -1,5 +1,5 @@
 /**
- * RTC.ino - Ejemplo de uso de la RTC del Entrenador
+ * RTC.ino - Ejemplo de uso de la RTC del MentorBit
  * 
  * Creado el 19/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
  * 
@@ -7,10 +7,10 @@
  * hora para comprobar el ajuste del reloj.
  */
 
-#include <EntrenadorDataLogger.h>
+#include <MentorBitDataLogger.h>
 
 // Declaración de instancia de la clase
-EntrenadorDataLogger miDataLogger;
+MentorBitDataLogger miDataLogger;
 
 // Inicialización del sketch
 void setup() {
