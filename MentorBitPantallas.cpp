@@ -19,10 +19,39 @@
  * -> Pantalla LCD
  * -> Pantalla OLED
  */
-MentorBitPantallas::MentorBitPantallas(DisplayType screen_type)
+MentorBitPantallas::MentorBitPantallas()
+    : lcd(0x3F, 16, 2)
+    , oled(-1)
 {
 
-    if(screen_type == LCD) display = new ScreenLCD(0x27, 16, 2);
-    else if(screen_type == OLED) display = new ScreenOLED(128, 64);
+    uint16_t lcdDirection = 0x3F;
+    uint16_t oledDirection = 0x3C;
+
+}
+
+/*
+ * Función para inicializar la pantalla LCD.
+ * 
+ * No devuelve ningún valor.
+ */
+void MentorBitPantallas::inicializarLCD()
+{
+
+    MentorBitPantallas::lcd.init();
+
+}
+
+/*
+ * Función para inicializar la pantalla OLED.
+ * 
+ * No devuelve ningún valor.
+ */
+void MentorBitPantallas::inicializarOLED()
+{
+
+    MentorBitPantallas::oled.begin(
+        SSD1306_SWITCHCAPVCC,
+        MentorBitPantallas::oledDirection
+    );
 
 }
