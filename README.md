@@ -1,66 +1,64 @@
-# Librería de Entrenador compatible con Arduino
+# Librería de MentorBit
 
-Esta librería está construida por Digital Codesign para utilizar junto con el kit educacional "Entrenador Arduino". La librería se compone de ocho clases diferentes que permiten utilizar las diferentes funcionalidades del Entrenador a través de varias funciones y ejemplos.
+Esta librería está construida por Digital Codesign para utilizar junto con el kit educacional "MentorBit". La librería se compone de ocho clases diferentes que permiten utilizar las diferentes funcionalidades del MentorBit a través de varias funciones y ejemplos.
 
-Puedes encontrar nuestro Kit de Entrenador Arduino y mucho más material de electrónica y robótica en nuestra tienda oficial:  [https://digitalcodesign.com/shop](https://digitalcodesign.com/shop)
+Puedes encontrar nuestro MentorBit y mucho más material de electrónica y robótica en nuestra tienda oficial:  [https://digitalcodesign.com/shop](https://digitalcodesign.com/shop)
 
-
-![My Skills](https://skills.thijs.gg/icons?i=c,cpp,github&theme=light)
 
 # Modo de empleo
 Cuando tengas la librería instalada, debes incluir la librería al comienzo de tu sketch, antes del setup, con la siguiente línea:
 
-   ``#include  "Entrenador.h"``
+   ``#include  "MentorBit.h"``
 
 En función del módulo que quieras utilizar, deberás importarlo de la misma manera que en el ejemplo.
 
 ### Constructor
 
-Crea una instancia de la clase con el nombre que más te guste, nosotros usaremos en este caso "miEntrenador". Al constructor del entrenador solo debemos indicarle el nombre de la instancia (No olvidar el ;)
+Crea una instancia de la clase con el nombre que más te guste, nosotros usaremos en este caso "miMentorBit". Al constructor del MentorBit solo debemos indicarle el nombre de la instancia (No olvidar el ;)
 
-``Entrenador miEntrenador;``
+``MentorBit miMentorBit;``
 
-Ahora podemos emplear las propiedades y métodos de nuestro objeto miEntrenador. La librería incluye varios módulos importables cuyo constructor coincidirá con el nombre del módulo.
+Ahora podemos emplear las propiedades y métodos de nuestro objeto miMentorBit. La librería incluye varios módulos importables cuyo constructor coincidirá con el nombre del módulo.
 
-### Elementos del Entrenador
-Hay una serie de elementos que vienen incluidos en el Entrenador como Leds, Pulsadores, etcétera. Para referirnos a cada uno de ellos en nuestro código debemos emplear el nombre que se le ha dado en la librería. Podemos mirar la siguiente tabla para ver la relación entre los elementos y sus nombres de referencia.
+### Elementos del MentorBit
+Hay una serie de elementos que vienen incluidos en el MentorBit como Leds, Pulsadores, etcétera. Para referirnos a cada uno de ellos en nuestro código debemos emplear el nombre que se le ha dado en la librería. Podemos mirar la siguiente tabla para ver la relación entre los elementos y sus nombres de referencia.
 | Módulo | Elemento | Nombre de ref. |
 |:--|:--|:--|
-| Entrenador |Led de color Rojo | ledRojo |
-| Entrenador |Led de color Verde | ledVerde |
-| Entrenador |Led de color Azul | ledAzul|
-| Entrenador |RGB elemento Rojo | rgbRojo |
-| Entrenador |RGB elemento Verde | rgbVerde |
-| Entrenador |RGB elemento Azul | rgbAzul | 
-| Entrenador |Pulsador Digital (PullUP) | pulsadorPullUpDigital|
-| Entrenador |Pulsador Digital (PullDOWN) |pulsadorPullDownDigital |
-| Entrenador |Pulsador Analógico (PullUP) |pulsadorPullUpAnalogico |
-| Entrenador |Pulsador Analógico (PullDOWN) | pulsadorPullDownAnalogico |
-| Entrenador |Zumbador | zumbador |
-| Entrenador |Potenciómetro | potenciometro |
-| EntrenadorSensores |Fotorresistencia | ldr |
-| EntrenadorSensores |Sensor de gases MQ | mq |
-| EntrenadorSensores |Sensor de temperatura y humedad | dht |
-| EntrenadorSensores |Sensor de temperatura | ds18b20 |
-| EntrenadorSensores |Sensor ultrasonidos (Pin de Echo) | ultrasonidosEcho |
-| EntrenadorSensores |Sensor ultrasonidos (Pin de Trigger) | ultrasonidosTrigger |
-| EntrenadorMotores |Servomotor | servomotor |
-| EntrenadorMotores |Motor DC (Enable) | enableDC |
-| EntrenadorMotores |Motor DC (Entrada 1) | entrada1DC |
-| EntrenadorMotores |Motor DC (Entrada 2) | entrada2DC |
-| EntrenadorMotores |Motor Paso a Paso (Bobina 1) | bobina1PAP |
-| EntrenadorMotores |Motor Paso a Paso (Bobina 2) | bobina2PAP |
-| EntrenadorMotores |Motor Paso a Paso (Bobina 3) | bobina3PAP |
-| EntrenadorMotores |Motor Paso a Paso (Bobina 4) | bobina4PAP |
-| EntrenadorPantallas |Pantalla LCD | lcd |
-| EntrenadorPantallas |Pantalla OLED | oled |
-| EntrenadorDataLogger |Pin selector de tarjeta SD | chipSelectSD |
-| EntrenadorDataLogger |Reloj en Tiempo Real (RTC, Real Time Clock) | rtc |
-| EntrenadorPuertos |Pin digital Y del Puerto X (del 0 al 6) | puertoX_digitalY |
-| EntrenadorPuertos |Pin analógico Y del Puerto X (del 0 al 2) | puertoX_analogY |
+| MentorBit |Led de color Rojo | ledRojo |
+| MentorBit |Led de color Verde | ledVerde |
+| MentorBit |Led de color Azul | ledAzul|
+| MentorBit |RGB elemento Rojo | rgbRojo |
+| MentorBit |RGB elemento Verde | rgbVerde |
+| MentorBit |RGB elemento Azul | rgbAzul | 
+| MentorBit |Pulsador Digital (PullUP) | pulsadorPullUpDigital|
+| MentorBit |Pulsador Digital (PullDOWN) |pulsadorPullDownDigital |
+| MentorBit |Pulsador Analógico (PullUP) |pulsadorPullUpAnalogico |
+| MentorBit |Pulsador Analógico (PullDOWN) | pulsadorPullDownAnalogico |
+| MentorBit |Zumbador | zumbador |
+| MentorBit |Potenciómetro | potenciometro |
+| MentorBitSensores |Fotorresistencia | ldr |
+| MentorBitSensores |Sensor de gases MQ | mq |
+| MentorBitSensores |Sensor de temperatura y humedad | dht |
+| MentorBitSensores |Sensor de temperatura | ds18b20 |
+| MentorBitSensores |Sensor ultrasonidos (Pin de Echo) | ultrasonidosEcho |
+| MentorBitSensores |Sensor ultrasonidos (Pin de Trigger) | ultrasonidosTrigger |
+| MentorBitMotores |Servomotor | servomotor |
+| MentorBitMotores |Motor DC (Enable) | enableDC |
+| MentorBitMotores |Motor DC (Entrada 1) | entrada1DC |
+| MentorBitMotores |Motor DC (Entrada 2) | entrada2DC |
+| MentorBitMotores |Motor Paso a Paso (Bobina 1) | bobina1PAP |
+| MentorBitMotores |Motor Paso a Paso (Bobina 2) | bobina2PAP |
+| MentorBitMotores |Motor Paso a Paso (Bobina 3) | bobina3PAP |
+| MentorBitMotores |Motor Paso a Paso (Bobina 4) | bobina4PAP |
+| MentorBitPantallas |Pantalla LCD | lcd |
+| MentorBitPantallas |Pantalla OLED | oled |
+| MentorBitDataLogger |Pin selector de tarjeta SD | chipSelectSD |
+| MentorBitDataLogger |Reloj en Tiempo Real (RTC, Real Time Clock) | rtc |
+| MentorBitPuertos |Pin digital Y del Puerto X (del 0 al 6) | puertoX_digitalY |
+| MentorBitPuertos |Pin analógico Y del Puerto X (del 0 al 2) | puertoX_analogY |
 
 ### Ejemplos
-Dispones de ejemplos de diferentes dificultades para ir probando y experimentando con los distintos componentes del Entrenador (LEDs, pulsadores, zumbador, etc.). Aquí tienes una lista con todos los que hay y qué puedes hacer con ellos:
+Dispones de ejemplos de diferentes dificultades para ir probando y experimentando con los distintos componentes del MentorBit (LEDs, pulsadores, zumbador, etc.). Aquí tienes una lista con todos los que hay y qué puedes hacer con ellos:
 
 |Ejemplo |  Descripción  |
 |--|--|
@@ -91,26 +89,26 @@ Dispones de ejemplos de diferentes dificultades para ir probando y experimentand
 # Ficheros
 
 En esta versión se cuenta con quince archivos principales en la librería : 
-- Entrenador.cpp
-- Entrenador.h
-- EntrenadorDataLogger.cpp
-- EntrenadorDataLogger.h
-- EntrenadorDisplay.cpp
-- EntrenadorDisplay.h
-- EntrenadorMotores.cpp
-- EntrenadorMotores.h
-- EntrenadorPantallas.cpp
-- EntrenadorPantallas.h
-- EntrenadorPuertos.cpp
-- EntrenadorPuertos.h
-- EntrenadorSensores.cpp
-- EntrenadorSensores.h
+- MentorBit.cpp
+- MentorBit.h
+- MentorBitDataLogger.cpp
+- MentorBitDataLogger.h
+- MentorBitDisplay.cpp
+- MentorBitDisplay.h
+- MentorBitMotores.cpp
+- MentorBitMotores.h
+- MentorBitPantallas.cpp
+- MentorBitPantallas.h
+- MentorBitPuertos.cpp
+- MentorBitPuertos.h
+- MentorBitSensores.cpp
+- MentorBitSensores.h
 
-## Entrenador
+## MentorBit
 
-Librería base para Entrenador Arduino. Contiene la definición de la clase base Entrenador, que es referida al Entrenador compatible con Arduino.
+Librería base para MentorBit Arduino. Contiene la definición de la clase base MentorBit, que es referida al MentorBit compatible con Arduino.
 
-El constructor de la clase provee una instancia de la clase Entrenador con los pines de conexión de los elementos básicos de la placa.
+El constructor de la clase provee una instancia de la clase MentorBit con los pines de conexión de los elementos básicos de la placa.
 * LED de colores
 
 * LED RGB
@@ -121,12 +119,12 @@ El constructor de la clase provee una instancia de la clase Entrenador con los p
 
 *  Potenciómetro
 
-## EntrenadorDataLogger
+## MentorBitDataLogger
 
-Librería del módulo de DataLogger (SD y RTC) para Entrenador Arduino. En ella se declaran los atributos y métodos para la clase EntrenadorDataLogger,
-El constructor de la clase devuelve una instancia de la clase EntrenadorDataLogger que provee los pines y métodos necesarios para controlar la tarjeta SD y el RTC en el Entrenador.
+Librería del módulo de DataLogger (SD y RTC) para MentorBit Arduino. En ella se declaran los atributos y métodos para la clase MentorBitDataLogger,
+El constructor de la clase devuelve una instancia de la clase MentorBitDataLogger que provee los pines y métodos necesarios para controlar la tarjeta SD y el RTC en el MentorBit.
 
-``EntrenadorDataLogger() {
+``MentorBitDataLogger() {
 	chipSelectSD = PIN_A6;
 }``
 
@@ -153,13 +151,13 @@ Función para ajustar la hora del RTC a la hora dada.
 Devuelve un booleano, **TRUE** si consigue inicializar correctamente y **FALSE** si no es capaz de hacerlo.
  
 
-## EntrenadorDisplay
+## MentorBitDisplay
 
-Librería del módulo de Display para Entrenador Arduino. En ella se define de la clase EntrenadorDisplay, referida al Entrenador compatible con Arduino y el módulo de display 7 segmentos.
+Librería del módulo de Display para MentorBit Arduino. En ella se define de la clase MentorBitDisplay, referida al MentorBit compatible con Arduino y el módulo de display 7 segmentos.
 
 Incluido su constructor e inicializador cuenta con el métodos imprimir:
-* `` EntrenadorDisplay() ``
-Devuelve una instancia de la clase EntrenadorDisplay que provee las direcciones y métodos necesarios para controlar el display 7 segmentos integrado en el Entrenador
+* `` MentorBitDisplay() ``
+Devuelve una instancia de la clase MentorBitDisplay que provee las direcciones y métodos necesarios para controlar el display 7 segmentos integrado en el MentorBit
 
 * `` void inicializarDisplay() ``
 
@@ -170,10 +168,10 @@ El método `` void imprimir(X valor) ``está sobrecargado para funcionar con los
 * string
 
 
-## EntrenadorMotores
+## MentorBitMotores
 
-Librería del módulo Motores para Entrenador Arduino. Definición de la clase EntrenadorMotores, referida al Entrenador compatible con Arduino y el módulo de Motores.
-* `` EntrenadorMotores() ``
+Librería del módulo Motores para MentorBit Arduino. Definición de la clase MentorBitMotores, referida al MentorBit compatible con Arduino y el módulo de Motores.
+* `` MentorBitMotores() ``
 * `` void inicializarServo() ``
 
 Una vez inicializado el Servo se provee de tres funciones que permiten manejar los diferentes motores.
@@ -182,33 +180,33 @@ Una vez inicializado el Servo se provee de tres funciones que permiten manejar l
 * `` void moverMotorPP(uint16_t pasos,  uint8_t direccion) ``
 
 
-## EntrenadorPantallas
+## MentorBitPantallas
 
-Definición de la clase EntrenadorPantallas, referida al Entrenador compatible con Arduino y el módulo de pantallas.
-* `` EntrenadorPantallas() ``
-Devuelve una instancia de la clase EntrenadorPantallas que provee las direcciones de conexión de los pantallas de la placa y un objeto para utilizarlas.
+Definición de la clase MentorBitPantallas, referida al MentorBit compatible con Arduino y el módulo de pantallas.
+* `` MentorBitPantallas() ``
+Devuelve una instancia de la clase MentorBitPantallas que provee las direcciones de conexión de los pantallas de la placa y un objeto para utilizarlas.
 
 * `` void inicializarLCD() ``
 * `` void inicializarOLED() ``
 
 
-## EntrenadorPuertos
+## MentorBitPuertos
 
-Librería de los puertos genéricos para Entrenador Arduino. Definición de la clase base EntrenadorPuertos, que hace referencia a los diferentes puertos que forma parte del Entrenador compatible con Arduino de forma genérica.
+Librería de los puertos genéricos para MentorBit Arduino. Definición de la clase base MentorBitPuertos, que hace referencia a los diferentes puertos que forma parte del MentorBit compatible con Arduino de forma genérica.
 
-La clase cuenta con un constructor ``EntrenadorPuertos()`` que devuelve una instancia de la clase EntrenadorPuertos que provee los pines de conexión de los conectores de los puertos.
+La clase cuenta con un constructor ``MentorBitPuertos()`` que devuelve una instancia de la clase MentorBitPuertos que provee los pines de conexión de los conectores de los puertos.
 *  Puerto genérico 1
 *  Puerto genérico 2
 *  Puerto genérico 3
 Cada uno compuesto de seis puertos digitales y dos analógicos.
 
 
-## EntrenadorSensores
+## MentorBitSensores
 
-Librería del módulo Sensores para Entrenador Arduino. Definición de la clase EntrenadorSensores, referida al Entrenador compatible con Arduino y el módulo de sensores.
+Librería del módulo Sensores para MentorBit Arduino. Definición de la clase MentorBitSensores, referida al MentorBit compatible con Arduino y el módulo de sensores.
 
-``EntrenadorSensores()``
- Devuelve una instancia de la clase EntrenadorSensores que provee los pines de conexión de los sensores de la placa y los puertos correspondientes. También provee de los métodos necesarios para obtener las lecturas de cada sensor de manera sencilla.
+``MentorBitSensores()``
+ Devuelve una instancia de la clase MentorBitSensores que provee los pines de conexión de los sensores de la placa y los puertos correspondientes. También provee de los métodos necesarios para obtener las lecturas de cada sensor de manera sencilla.
 *  DS18B20
 
 *  DHT
