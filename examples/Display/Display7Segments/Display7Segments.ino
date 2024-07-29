@@ -1,7 +1,7 @@
 /**
  * Display7Segments.ino - Ejemplo de uso del Display 7 segmentos del MentorBit
  * 
- * Creado el 15/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
+ * Creado el 15/09/2023 por Digital Codesign - info@digitalcodesign.com
  * 
  * Mostrar una variedad de valores por el display 7 segmentos del MentorBit
  * utilizando la librería.

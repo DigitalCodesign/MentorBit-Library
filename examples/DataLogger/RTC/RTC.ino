@@ -1,7 +1,7 @@
 /**
  * RTC.ino - Ejemplo de uso de la RTC del MentorBit
  * 
- * Creado el 19/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
+ * Creado el 19/09/2023 por Digital Codesign - info@digitalcodesign.com
  * 
  * Establecer la hora manualmente y automáticamente para luego obtener dicha
  * hora para comprobar el ajuste del reloj.

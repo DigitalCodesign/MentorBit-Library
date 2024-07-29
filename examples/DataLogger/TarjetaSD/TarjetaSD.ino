@@ -1,7 +1,7 @@
 /**
  * TarjetaSD.ino - Ejemplo de uso de la Tarjeta SD del MentorBit
  * 
- * Creado el 18/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
+ * Creado el 18/09/2023 por Digital Codesign - info@digitalcodesign.com
  * 
  * Escribir un texto a un archivo de la tarjeta y leer luego el mismo contenido.
  */

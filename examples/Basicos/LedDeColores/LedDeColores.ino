@@ -1,7 +1,7 @@
 /**
  * LedDeColores.ino - Ejemplo de uso de LEDs del MentorBit
  * 
- * Creado el 25/08/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
+ * Creado el 25/08/2023 por Digital Codesign - info@digitalcodesign.com
  * 
  * Encendido secuencial de los LEDs de colores del MentorBit
  * utilizando la librería.

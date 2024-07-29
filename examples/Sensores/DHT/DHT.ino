@@ -1,7 +1,7 @@
 /**
  * DHT.ino - Ejemplo de uso de DHT del MentorBit
  * 
- * Creado el 12/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
+ * Creado el 12/09/2023 por Digital Codesign - info@digitalcodesign.com
  * 
  * Volcado de información del sensor al monitor serial.
  */

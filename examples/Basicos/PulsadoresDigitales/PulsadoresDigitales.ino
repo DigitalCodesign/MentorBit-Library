@@ -1,7 +1,7 @@
 /**
  * PulsadoresDigitales.ino - Ejemplo de uso de pulsadores del MentorBit
  * 
- * Creado el 25/08/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
+ * Creado el 25/08/2023 por Digital Codesign - info@digitalcodesign.com
  * 
  * Encendido de LED en función del botón pulsado.
  */

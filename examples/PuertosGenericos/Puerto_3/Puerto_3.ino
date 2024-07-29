@@ -1,7 +1,7 @@
 /**
  * Puerto_1.ino - Ejemplo de uso del puerto genérico 3 del MentorBit
  * 
- * Creado el 27/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
+ * Creado el 27/09/2023 por Digital Codesign - info@digitalcodesign.com
  * 
  * Encendido secuencial de los pines del puerto utilizando la librería.
  */

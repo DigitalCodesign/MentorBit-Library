@@ -1,7 +1,7 @@
 /**
  * MotorDC.ino - Ejemplo de uso del motor de corriente continua del MentorBit
  * 
- * Creado el 13/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
+ * Creado el 13/09/2023 por Digital Codesign - info@digitalcodesign.com
  * 
  * Control del motor de corriente continua realizando giros en ambos sentidos
  * y a velocidades graduales

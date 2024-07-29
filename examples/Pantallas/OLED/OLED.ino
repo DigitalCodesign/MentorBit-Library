@@ -1,7 +1,7 @@
 /**
  * OLED.ino - Ejemplo de uso de la pantalla OLED del MentorBit
  * 
- * Creado el 13/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
+ * Creado el 13/09/2023 por Digital Codesign - info@digitalcodesign.com
  * 
  * Mostrar por la pantalla el icono por defecto.
  */

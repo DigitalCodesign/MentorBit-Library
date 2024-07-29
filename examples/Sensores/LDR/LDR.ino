@@ -1,7 +1,7 @@
 /**
  * LDR.ino - Ejemplo de uso de LDR del MentorBit
  * 
- * Creado el 12/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
+ * Creado el 12/09/2023 por Digital Codesign - info@digitalcodesign.com
  * 
  * Encendido proporcional de un LED utilizando la medida de la fotorresistencia
  * del MentorBit utilizando la librería.

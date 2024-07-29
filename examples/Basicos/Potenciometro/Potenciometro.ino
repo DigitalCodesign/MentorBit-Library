@@ -1,7 +1,7 @@
 /**
  * Potenciometro.ino - Ejemplo de uso del potenciometro del MentorBit
  * 
- * Creado el 25/08/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
+ * Creado el 25/08/2023 por Digital Codesign - info@digitalcodesign.com
  * 
  * Ajuste de brillo de un LED con la lectura del potenciómetro.
  */

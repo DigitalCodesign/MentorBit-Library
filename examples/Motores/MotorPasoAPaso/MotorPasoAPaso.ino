@@ -1,7 +1,7 @@
 /**
  * MotorPasoAPaso.ino - Ejemplo de uso del motor paso a paso del MentorBit
  * 
- * Creado el 13/09/2023 por Kevin Rosa - kevin.ingenieria@digitalcodesign.com
+ * Creado el 13/09/2023 por Digital Codesign - info@digitalcodesign.com
  * 
  * Control del motor paso a paso realizando un giro completo en ambos sentidos.
  */
