@@ -17,6 +17,16 @@
     #include "Arduino.h"
     #include "Servo.h"
 
+    #define SERVOMOTOR_1 11
+    #define SERVOMOTOR_2 12
+    #define MOTOR_DC_EN 4
+    #define MOTOR_DC_IN_1 28
+    #define MOTOR_DC_IN_2 29
+    #define MOTOR_PAP_IN_1 30
+    #define MOTOR_PAP_IN_2 31
+    #define MOTOR_PAP_IN_3 32
+    #define MOTOR_PAP_IN_4 33
+
     class MentorBitMotores
     {
 
@@ -24,23 +34,15 @@
 
             MentorBitMotores();
 
-            void inicializarServo();
-            void moverServo(uint16_t grados);
+            void inicializarServo(uint8_t servomotor);
+            void moverServo(uint8_t servomotor, uint16_t grados);
             void moverMotorDC(uint8_t velocidad, uint8_t direccion);
             void moverMotorPP(uint16_t pasos, uint8_t direccion);
 
-            uint16_t servomotor;
-            uint8_t enableDC;
-            uint8_t entrada1DC;
-            uint8_t entrada2DC;
-            uint8_t bobina1PAP;
-            uint8_t bobina2PAP;
-            uint8_t bobina3PAP;
-            uint8_t bobina4PAP;
-
         private:
 
-            Servo myServo;
+            Servo myServo1;
+            Servo myServo2;
 
     };
 
