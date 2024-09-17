@@ -16,12 +16,7 @@
  * Devuelve una instancia de la clase MentorBitDataLogger que provee los
  * pines y métodos necesarios para controlar la tarjeta SD y el RTC en el MentorBit.
  */
-MentorBitDataLogger::MentorBitDataLogger()
-{
-
-    chipSelectSD = PIN_A6;
-
-}
+MentorBitDataLogger::MentorBitDataLogger() {}
 
 /*
  * Función para inicializar el RTC.
@@ -97,7 +92,7 @@ String MentorBitDataLogger::obtenerHoraRTC()
 boolean MentorBitDataLogger::inicializarSD()
 {
 
-    if(!SD.begin(MentorBitDataLogger::chipSelectSD))
+    if(!SD.begin(SD_CHIP_SELECT))
     {
 
         return false;

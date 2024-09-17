@@ -16,6 +16,8 @@
     #include "SD.h"
     #include "RTClib.h"
 
+    #define SD_CHIP_SELECT PIN_A6
+
     class MentorBitDataLogger
     {
 
@@ -39,7 +41,6 @@
             void ajustarHoraRTC();
             String obtenerHoraRTC();
 
-            uint8_t chipSelectSD;
             RTC_DS1307 rtc;
 
         private:
