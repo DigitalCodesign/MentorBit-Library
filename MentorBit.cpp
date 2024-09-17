@@ -24,31 +24,13 @@
 MentorBit::MentorBit()
 {
 
-    led_rojo = LED_ROJO;
-    led_verde = LED_VERDE;
-    led_azul = LED_AZUL;
-    rgb_rojo = RGB_ROJO;
-    rgb_verde = RGB_VERDE;
-    rgb_azul = RGB_AZUL;
-    pulsador_pullup_digital = PULSADOR_PULLUP_DIGITAL;
-    pulsado_pulldown_digital = PULSADOR_PULLDOWN_DIGITAL;
-    zumbador = ZUMBADOR;
-    potenciometro = POTENCIOMETRO;
-    pulsador_pulldown_analogico = PULSADOR_PULLDOWN_ANALOGICO;
-    pulsador_pullup_analogico = PULSADOR_PULLUP_ANALOGICO;
-
-    pinMode(led_rojo, OUTPUT);
-    pinMode(led_verde, OUTPUT);
-    pinMode(led_azul, OUTPUT);
-    pinMode(rgb_rojo, OUTPUT);
-    pinMode(rgb_verde, OUTPUT);
-    pinMode(rgb_azul, OUTPUT);
-    pinMode(pulsador_pullup_digital, INPUT);
-    pinMode(pulsado_pulldown_digital, INPUT);
-    pinMode(zumbador, OUTPUT);
-    pinMode(potenciometro, INPUT);
-    pinMode(pulsador_pulldown_analogico, INPUT);
-    pinMode(pulsador_pullup_analogico, INPUT);
+    pinMode(LED_ROJO, OUTPUT);
+    pinMode(LED_VERDE, OUTPUT);
+    pinMode(LED_AZUL, OUTPUT);
+    pinMode(RGB_ROJO, OUTPUT);
+    pinMode(RGB_VERDE, OUTPUT);
+    pinMode(RGB_AZUL, OUTPUT);
+    pinMode(ZUMBADOR, OUTPUT);
 
 }
 

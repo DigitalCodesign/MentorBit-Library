@@ -38,19 +38,6 @@
 
             MentorBit();
 
-            uint8_t led_rojo;
-            uint8_t led_verde;
-            uint8_t led_azul;
-            uint8_t rgb_rojo;
-            uint8_t rgb_verde;
-            uint8_t rgb_azul;
-            uint8_t pulsador_pullup_digital;
-            uint8_t pulsado_pulldown_digital;
-            uint8_t zumbador;
-            uint8_t potenciometro;
-            uint8_t pulsador_pulldown_analogico;
-            uint8_t pulsador_pullup_analogico;
-
             void encenderLED(uint8_t led);
             void apagarLED(uint8_t led);
             void encenderRGB(uint8_t rojo, uint8_t verde, uint8_t azul);
