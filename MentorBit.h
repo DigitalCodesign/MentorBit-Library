@@ -51,6 +51,14 @@
             uint8_t pulsador_pulldown_analogico;
             uint8_t pulsador_pullup_analogico;
 
+            void encenderLED(uint8_t led);
+            void apagarLED(uint8_t led);
+            void encenderRGB(uint8_t rojo, uint8_t verde, uint8_t azul);
+            void apagarRGB();
+            void generarTono(uint16_t frecuencia, uint8_t duracion);
+            bool obtenerLecturaPulsador(uint8_t pulsador);
+            uint16_t obtenerLecturaPotenciometro();
+
     };
 
 #endif
