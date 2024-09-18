@@ -24,38 +24,35 @@ Ahora podemos emplear las propiedades y métodos de nuestro objeto miMentorBit. 
 Hay una serie de elementos que vienen incluidos en el MentorBit como Leds, Pulsadores, etcétera. Para referirnos a cada uno de ellos en nuestro código debemos emplear el nombre que se le ha dado en la librería. Podemos mirar la siguiente tabla para ver la relación entre los elementos y sus nombres de referencia.
 | Módulo | Elemento | Nombre de ref. |
 |:--|:--|:--|
-| MentorBit |Led de color Rojo | ledRojo |
-| MentorBit |Led de color Verde | ledVerde |
-| MentorBit |Led de color Azul | ledAzul|
-| MentorBit |RGB elemento Rojo | rgbRojo |
-| MentorBit |RGB elemento Verde | rgbVerde |
-| MentorBit |RGB elemento Azul | rgbAzul | 
-| MentorBit |Pulsador Digital (PullUP) | pulsadorPullUpDigital|
-| MentorBit |Pulsador Digital (PullDOWN) |pulsadorPullDownDigital |
-| MentorBit |Pulsador Analógico (PullUP) |pulsadorPullUpAnalogico |
-| MentorBit |Pulsador Analógico (PullDOWN) | pulsadorPullDownAnalogico |
-| MentorBit |Zumbador | zumbador |
-| MentorBit |Potenciómetro | potenciometro |
-| MentorBitSensores |Fotorresistencia | ldr |
-| MentorBitSensores |Sensor de gases MQ | mq |
-| MentorBitSensores |Sensor de temperatura y humedad | dht |
-| MentorBitSensores |Sensor de temperatura | ds18b20 |
-| MentorBitSensores |Sensor ultrasonidos (Pin de Echo) | ultrasonidosEcho |
-| MentorBitSensores |Sensor ultrasonidos (Pin de Trigger) | ultrasonidosTrigger |
-| MentorBitMotores |Servomotor | servomotor |
-| MentorBitMotores |Motor DC (Enable) | enableDC |
-| MentorBitMotores |Motor DC (Entrada 1) | entrada1DC |
-| MentorBitMotores |Motor DC (Entrada 2) | entrada2DC |
-| MentorBitMotores |Motor Paso a Paso (Bobina 1) | bobina1PAP |
-| MentorBitMotores |Motor Paso a Paso (Bobina 2) | bobina2PAP |
-| MentorBitMotores |Motor Paso a Paso (Bobina 3) | bobina3PAP |
-| MentorBitMotores |Motor Paso a Paso (Bobina 4) | bobina4PAP |
-| MentorBitPantallas |Pantalla LCD | lcd |
-| MentorBitPantallas |Pantalla OLED | oled |
-| MentorBitDataLogger |Pin selector de tarjeta SD | chipSelectSD |
-| MentorBitDataLogger |Reloj en Tiempo Real (RTC, Real Time Clock) | rtc |
-| MentorBitPuertos |Pin digital Y del Puerto X (del 0 al 6) | puertoX_digitalY |
-| MentorBitPuertos |Pin analógico Y del Puerto X (del 0 al 2) | puertoX_analogY |
+| MentorBit | Led de color Rojo | LED_ROJO |
+| MentorBit | Led de color Verde | LED_VERDE |
+| MentorBit | Led de color Azul | LED_AZUL|
+| MentorBit | RGB elemento Rojo | RGB_ROJO |
+| MentorBit | RGB elemento Verde | RGB_VERDE |
+| MentorBit | RGB elemento Azul | RGB_AZUL | 
+| MentorBit | Pulsador Digital (PullUP) | PULSADOR_PULLUP_DIGITAL |
+| MentorBit | Pulsador Digital (PullDOWN) | PULSADOR_PULLDOWN_DIGITAL |
+| MentorBit | Pulsador Analógico (PullUP) | PULSADOR_PULLUP_ANALOGICO |
+| MentorBit | Pulsador Analógico (PullDOWN) | PULSADOR_PULLDOWN_ANALOGICO |
+| MentorBit | Zumbador | ZUMBADOR |
+| MentorBit | Potenciómetro | POTENCIOMETRO |
+| MentorBitSensores | Fotorresistencia | LDR |
+| MentorBitSensores | Sensor de temperatura | DS18B20 |
+| MentorBitMotores | Servomotor 1 | SERVOMOTOR_1 |
+| MentorBitMotores | Servomotor 2 | SERVOMOTOR_2 |
+| MentorBitMotores | Motor DC (Enable) | MOTOR_DC_EN |
+| MentorBitMotores | Motor DC (Entrada 1) | MOTOR_DC_IN_1 |
+| MentorBitMotores | Motor DC (Entrada 2) | MOTOR_DC_IN_2 |
+| MentorBitMotores | Motor Paso a Paso (Bobina 1) | MOTOR_PAP_IN_1 |
+| MentorBitMotores | Motor Paso a Paso (Bobina 2) | MOTOR_PAP_IN_2 |
+| MentorBitMotores | Motor Paso a Paso (Bobina 3) | MOTOR_PAP_IN_3 |
+| MentorBitMotores | Motor Paso a Paso (Bobina 4) | MOTOR_PAP_IN_4 |
+| MentorBitPantallas | Pantalla LCD | lcd |
+| MentorBitPantallas | Pantalla OLED | oled |
+| MentorBitDataLogger | Pin selector de tarjeta SD | SD_CHIP_SELECT |
+| MentorBitDataLogger | Reloj en Tiempo Real (RTC, Real Time Clock) | rtc |
+| MentorBitPuertos | Pin digital Y del Puerto X (del 0 al 6) | PUERTO_X_DIGITAL_Y |
+| MentorBitPuertos | Pin analógico Y del Puerto X (del 0 al 2) | PUERTO_X_ANALOG_Y |
 
 ### Ejemplos
 Dispones de ejemplos de diferentes dificultades para ir probando y experimentando con los distintos componentes del MentorBit (LEDs, pulsadores, zumbador, etc.). Aquí tienes una lista con todos los que hay y qué puedes hacer con ellos:
@@ -108,7 +105,7 @@ En esta versión se cuenta con quince archivos principales en la librería :
 
 Librería base para MentorBit Arduino. Contiene la definición de la clase base MentorBit, que es referida al MentorBit compatible con Arduino.
 
-El constructor de la clase provee una instancia de la clase MentorBit con los pines de conexión de los elementos básicos de la placa.
+El constructor de la clase provee una instancia de la clase MentorBit con los pines de conexión de los elementos básicos de la placa y algunos métodos para utilizarlos.
 * LED de colores
 
 * LED RGB
@@ -119,14 +116,31 @@ El constructor de la clase provee una instancia de la clase MentorBit con los pi
 
 *  Potenciómetro
 
+* `` void encenderLED(uint8_t led) ``
+Enciende el diodo LED indicado como parámetro del método.
+
+* `` void apagarLED(uint8_t led) ``
+Apaga el diodo LED indicado como parámetro del método.
+
+* `` void encenderRGB(uint8_t rojo, uint8_t verde, uint8_t azul) ``
+Pone el LED RGB en los tonos e intensidades definidas para el color indicado como parámetro del método.
+
+* `` void apagarRGB() ``
+Apaga el LED RGB por completo.
+
+* `` void generarTono(uint16_t frecuencia, uint8_t duracion) ``
+Genera un tono de frecuencia y duración determiadas según los parámetros dados al método.
+
+* `` bool obtenerLecturaPulsador(uint8_t pulsador) ``
+Devuelve la lectura digital o analógica obtenida de los puertos donde se encuentran conectados los pulsadores según el indicado como parámetro del método.
+
+* `` uint16_t obtenerLecturaPotenciometro() ``
+Devuelve la lectura analógica obtenida del puerto donde se encuentra conectado el Potenciómetro.
+
 ## MentorBitDataLogger
 
 Librería del módulo de DataLogger (SD y RTC) para MentorBit Arduino. En ella se declaran los atributos y métodos para la clase MentorBitDataLogger,
 El constructor de la clase devuelve una instancia de la clase MentorBitDataLogger que provee los pines y métodos necesarios para controlar la tarjeta SD y el RTC en el MentorBit.
-
-``MentorBitDataLogger() {
-	chipSelectSD = PIN_A6;
-}``
 
 Cuenta con siete funciones que nos permiten un mejor manejo de la información.
 * `` String leerDeArchivo(String nombre) ``
@@ -172,10 +186,10 @@ El método `` void imprimir(X valor) ``está sobrecargado para funcionar con los
 
 Librería del módulo Motores para MentorBit Arduino. Definición de la clase MentorBitMotores, referida al MentorBit compatible con Arduino y el módulo de Motores.
 * `` MentorBitMotores() ``
-* `` void inicializarServo() ``
+* `` void inicializarServo(uint8_t servomotor) ``
 
 Una vez inicializado el Servo se provee de tres funciones que permiten manejar los diferentes motores.
-* `` void moverServo(uint16_t grados) ``
+* `` void moverServo(uint8_t servomotor, uint16_t grados) ``
 * `` void moverMotorDC(uint8_t velocidad,  uint8_t direccion) ``
 * `` void moverMotorPP(uint16_t pasos,  uint8_t direccion) ``
 
@@ -207,28 +221,12 @@ Librería del módulo Sensores para MentorBit Arduino. Definición de la clase M
 
 ``MentorBitSensores()``
  Devuelve una instancia de la clase MentorBitSensores que provee los pines de conexión de los sensores de la placa y los puertos correspondientes. También provee de los métodos necesarios para obtener las lecturas de cada sensor de manera sencilla.
-*  DS18B20
-
-*  DHT
-
 *  LDR
 
-*  HC-SR04
+*  DS18B20
 
 ``uint8_t  obtenerLecturaLDR()``
 Devuelve un valor entero con la lectura obtenida de la fotorresistencia
 
-``uint8_t obtenerLecturaMQ()``
-Devuelve un valor entero con la lectura obtenida en el pin donde se encuentra conectado el MQ.
-  
-``float  obtenerTemperaturaDHT()``
-  Devuelve un valor decimal con la lectura de la temperatura en Centígrados obtenida en el pin donde se encuentra conectado el DHT.
-
-``float obtenerHumedadDHT()``
-Devuelve un valor decimal con la lectura correspondiente a la humedad en un formato de porcentaje obtenida en el pin donde se encuentra conectado el DHT.
-  
-``float  obtenerTemperaturaDS18B20()``
+``float  obtenerLecturaDS18B20()``
 Devuelve un valor decimal con la lectura en Centígrados obtenida en el pin donde se encuentra conectado el DS18B20.
-
-``uint16_t  obtenerDistanciaUlrasonidos()``
-Devuelve un valor entero con la lectura en Centímetros obtenida con los pines donde se encuentra conectado el HC-SR04 (Ultrasonidos).
