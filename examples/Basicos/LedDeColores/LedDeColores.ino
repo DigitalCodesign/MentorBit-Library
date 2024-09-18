@@ -16,14 +16,14 @@ MentorBit miMentorBit;
 void setup() {
 
     // Definición de pines como salida
-    pinMode(LED_ROJO, OUTPUT);
-    pinMode(LED_VERDE, OUTPUT);
-    pinMode(LED_AZUL, OUTPUT);
+    pinMode(miMentorBit.LED_ROJO, OUTPUT);
+    pinMode(miMentorBit.LED_VERDE, OUTPUT);
+    pinMode(miMentorBit.LED_AZUL, OUTPUT);
 
     // Inicializar pines apagados
-    digitalWrite(LED_ROJO, LOW);
-    digitalWrite(LED_VERDE, LOW);
-    digitalWrite(LED_AZUL, LOW);
+    digitalWrite(miMentorBit.LED_ROJO, LOW);
+    digitalWrite(miMentorBit.LED_VERDE, LOW);
+    digitalWrite(miMentorBit.LED_AZUL, LOW);
 
 }
 
@@ -31,21 +31,21 @@ void setup() {
 void loop() {
 
     // Encendemos el LED rojo solamente y esperamos
-    digitalWrite(LED_ROJO, HIGH);
-    digitalWrite(LED_VERDE, LOW);
-    digitalWrite(LED_AZUL, LOW);
+    digitalWrite(miMentorBit.LED_ROJO, HIGH);
+    digitalWrite(miMentorBit.LED_VERDE, LOW);
+    digitalWrite(miMentorBit.LED_AZUL, LOW);
     delay(500);
 
     // Encendemos el LED verde solamente y esperamos
-    digitalWrite(LED_ROJO, LOW);
-    digitalWrite(LED_VERDE, HIGH);
-    digitalWrite(LED_AZUL, LOW);
+    digitalWrite(miMentorBit.LED_ROJO, LOW);
+    digitalWrite(miMentorBit.LED_VERDE, HIGH);
+    digitalWrite(miMentorBit.LED_AZUL, LOW);
     delay(500);
 
     // Encendemos el LED azul solamente y esperamos
-    digitalWrite(LED_ROJO, LOW);
-    digitalWrite(LED_VERDE, LOW);
-    digitalWrite(LED_AZUL, HIGH);
+    digitalWrite(miMentorBit.LED_ROJO, LOW);
+    digitalWrite(miMentorBit.LED_VERDE, LOW);
+    digitalWrite(miMentorBit.LED_AZUL, HIGH);
     delay(500);
 
 }

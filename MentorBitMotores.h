@@ -17,16 +17,6 @@
     #include "Arduino.h"
     #include "Servo.h"
 
-    #define SERVOMOTOR_1 11
-    #define SERVOMOTOR_2 12
-    #define MOTOR_DC_EN 4
-    #define MOTOR_DC_IN_1 28
-    #define MOTOR_DC_IN_2 29
-    #define MOTOR_PAP_IN_1 30
-    #define MOTOR_PAP_IN_2 31
-    #define MOTOR_PAP_IN_3 32
-    #define MOTOR_PAP_IN_4 33
-
     class MentorBitMotores
     {
 
