@@ -26,14 +26,12 @@
 
             MentorBitSensores();
 
-            void begin();
             uint16_t obtenerLecturaLDR();
             float obtenerLecturaDS18B20();
 
         private:
 
             OneWire ds18b20Wire;
-            bool _first_try;
 
     };
 

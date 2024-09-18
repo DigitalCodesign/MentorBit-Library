@@ -22,7 +22,7 @@
  * -> LDR
  * -> HC-SR04
  */
-MentorBitSensores::MentorBitSensores() : ds18b20Wire(DS18B20), _first_try(true) {}
+MentorBitSensores::MentorBitSensores() : ds18b20Wire(DS18B20) {}
 
 /*
  * Función para obtener la medida de la fotorresistencia.
