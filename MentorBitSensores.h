@@ -6,9 +6,6 @@
  * Declaración de atributos y métodos para la clase MentorBitSensores,
  * referida al MentorBit compatible con Arduino y el módulo de sensores.
  * 
- * -> DHT
- * -> MQ
- * -> HC-SR04
  * -> DS18B20
  * -> LDR
  */
@@ -17,9 +14,10 @@
 #define MentorBitSensores_h
 
     #include "Arduino.h"
-    #include "DHT.h"
     #include "OneWire.h"
-    #include "DallasTemperature.h"
+
+    #define LDR PIN_A1
+    #define DS18B20 27
 
     class MentorBitSensores
     {
@@ -28,24 +26,14 @@
 
             MentorBitSensores();
 
+            void begin();
             uint16_t obtenerLecturaLDR();
-            uint16_t obtenerLecturaMQ();
-            float obtenerTemperaturaDHT();
-            float obtenerHumedadDHT();
-            float obtenerTemperaturaDS18B20();
-            uint16_t obtenerDistanciaUlrasonidos();
-
-            uint8_t ldr;
-            uint8_t mq;
-            uint8_t dht;
-            uint8_t ds18b20;
-            uint8_t ultrasonidosEcho;
-            uint8_t ultrasonidosTrigger;
+            float obtenerLecturaDS18B20();
 
         private:
 
-            DHT myDHT;
-            DallasTemperature DS18B20;
+            OneWire ds18b20Wire;
+            bool _first_try;
 
     };
 
