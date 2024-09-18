@@ -16,13 +16,13 @@
     #include "Arduino.h"
     #include "OneWire.h"
 
-    #define LDR PIN_A1
-    #define DS18B20 27
-
     class MentorBitSensores
     {
 
         public:
+
+            static const uint8_t LDR = PIN_A1;
+            static const uint8_t DS18B20 = 27;
 
             MentorBitSensores();
 
