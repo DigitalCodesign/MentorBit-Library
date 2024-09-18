@@ -22,29 +22,7 @@
  * -> LDR
  * -> HC-SR04
  */
-MentorBitSensores::MentorBitSensores()
-    : myDHT(24, DHT11)
-    , DS18B20(new OneWire(27))
-{
-
-    ldr = PIN_A1;
-    mq = PIN_A4;
-    dht = 24;
-    ds18b20 = 9;
-    ultrasonidosEcho = 2;
-    ultrasonidosTrigger = 26;
-
-    myDHT.begin();
-    DS18B20.begin();
-
-    pinMode(ldr, INPUT);
-    pinMode(mq, INPUT);
-    pinMode(dht, INPUT);
-    pinMode(ds18b20, INPUT);
-    pinMode(ultrasonidosEcho, INPUT);
-    pinMode(ultrasonidosTrigger, OUTPUT);
-
-}
+MentorBitSensores::MentorBitSensores() : ds18b20Wire(DS18B20) {}
 
 /*
  * Función para obtener la medida de la fotorresistencia.
@@ -55,46 +33,7 @@ MentorBitSensores::MentorBitSensores()
 uint16_t MentorBitSensores::obtenerLecturaLDR()
 {
 
-    return analogRead(ldr);
-
-}
-
-/*
- * Función para obtener la medida del sensor MQ.
- * 
- * Devuelve un valor entero con la lectura obtenida en el pin donde se
- * encuentra conectado el MQ.
- */
-uint16_t MentorBitSensores::obtenerLecturaMQ()
-{
-
-    return analogRead(mq);
-
-}
-
-/*
- * Función para obtener la medida de temperatura del DHT.
- * 
- * Devuelve un valor decimal con la lectura en Centígrados obtenida en el
- * pin donde se encuentra conectado el DHT.
- */
-float MentorBitSensores::obtenerTemperaturaDHT()
-{
-
-    return myDHT.readTemperature();
-
-}
-
-/*
- * Función para obtener la medida de humedad del DHT.
- * 
- * Devuelve un valor decimal con la lectura en tanto por ciento obtenida
- * en el pin donde se encuentra conectado el DHT.
- */
-float MentorBitSensores::obtenerHumedadDHT()
-{
-
-    return myDHT.readHumidity();
+    return analogRead(LDR);
 
 }
 
@@ -104,32 +43,19 @@ float MentorBitSensores::obtenerHumedadDHT()
  * Devuelve un valor decimal con la lectura en Centígrados obtenida en el
  * pin donde se encuentra conectado el DS18B20.
  */
-float MentorBitSensores::obtenerTemperaturaDS18B20()
+float MentorBitSensores::obtenerLecturaDS18B20()
 {
 
-    DS18B20.requestTemperatures();
-    return DS18B20.getTempCByIndex(0);
+    int16_t temp;
 
-}
+    ds18b20Wire.reset();
+    ds18b20Wire.write(0xCC);
+    ds18b20Wire.write(0x44);
+    ds18b20Wire.reset();
+    ds18b20Wire.write(0xCC);
+    ds18b20Wire.write(0xBE);
+    ds18b20Wire.read_bytes((uint8_t*) &temp, sizeof(temp));
 
-/*
- * Función para obtener la medida de distancia del HC-SR04.
- * 
- * Devuelve un valor entero con la lectura en Centímetros obtenida con
- * los pines donde se encuentra conectado el HC-SR04 (Ultrasonidos).
- */
-uint16_t MentorBitSensores::obtenerDistanciaUlrasonidos()
-{
-
-    digitalWrite(ultrasonidosTrigger, LOW);
-    delayMicroseconds(4);
-    digitalWrite(ultrasonidosTrigger, HIGH);
-    delayMicroseconds(10);
-    digitalWrite(ultrasonidosTrigger, LOW);
-
-    long duration = pulseIn(ultrasonidosEcho, HIGH);
-    long distance = duration * 10 / 292 / 2;
-
-    return distance;
+    return (temp * 0.0625);
 
 }

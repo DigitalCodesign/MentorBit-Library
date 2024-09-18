@@ -18,6 +18,19 @@
 
     #include "Arduino.h"
 
+    #define LED_ROJO 5
+    #define LED_VERDE 6
+    #define LED_AZUL 7
+    #define RGB_ROJO 8
+    #define RGB_VERDE 9
+    #define RGB_AZUL 10
+    #define PULSADOR_PULLUP_DIGITAL 22
+    #define PULSADOR_PULLDOWN_DIGITAL 23
+    #define ZUMBADOR 25
+    #define POTENCIOMETRO PIN_A0
+    #define PULSADOR_PULLDOWN_ANALOGICO PIN_A2
+    #define PULSADOR_PULLUP_ANALOGICO PIN_A3
+
     class MentorBit
     {
 
@@ -25,18 +38,13 @@
 
             MentorBit();
 
-            uint8_t ledRojo;
-            uint8_t ledVerde;
-            uint8_t ledAzul;
-            uint8_t rgbRojo;
-            uint8_t rgbVerde;
-            uint8_t rgbAzul;
-            uint8_t pulsadorPullUpDigital;
-            uint8_t pulsadorPullDownDigital;
-            uint8_t zumbador;
-            uint8_t potenciometro;
-            uint8_t pulsadorPullDownAnalogico;
-            uint8_t pulsadorPullUpAnalogico;
+            void encenderLED(uint8_t led);
+            void apagarLED(uint8_t led);
+            void encenderRGB(uint8_t rojo, uint8_t verde, uint8_t azul);
+            void apagarRGB();
+            void generarTono(uint16_t frecuencia, uint8_t duracion);
+            bool obtenerLecturaPulsador(uint8_t pulsador);
+            uint16_t obtenerLecturaPotenciometro();
 
     };
 

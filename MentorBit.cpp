@@ -24,30 +24,84 @@
 MentorBit::MentorBit()
 {
 
-    ledRojo = 5;
-    ledVerde = 6;
-    ledAzul = 7;
-    rgbRojo = 8;
-    rgbVerde = 9;
-    rgbAzul = 10;
-    pulsadorPullUpDigital = 22;
-    pulsadorPullDownDigital = 23;
-    zumbador = 25;
-    potenciometro = PIN_A0;
-    pulsadorPullDownAnalogico = PIN_A2;
-    pulsadorPullUpAnalogico = PIN_A3;
+    pinMode(LED_ROJO, OUTPUT);
+    pinMode(LED_VERDE, OUTPUT);
+    pinMode(LED_AZUL, OUTPUT);
+    pinMode(RGB_ROJO, OUTPUT);
+    pinMode(RGB_VERDE, OUTPUT);
+    pinMode(RGB_AZUL, OUTPUT);
+    pinMode(ZUMBADOR, OUTPUT);
 
-    pinMode(ledRojo, OUTPUT);
-    pinMode(ledVerde, OUTPUT);
-    pinMode(ledAzul, OUTPUT);
-    pinMode(rgbRojo, OUTPUT);
-    pinMode(rgbVerde, OUTPUT);
-    pinMode(rgbAzul, OUTPUT);
-    pinMode(pulsadorPullUpDigital, INPUT);
-    pinMode(pulsadorPullDownDigital, INPUT);
-    pinMode(zumbador, OUTPUT);
-    pinMode(potenciometro, INPUT);
-    pinMode(pulsadorPullDownAnalogico, INPUT);
-    pinMode(pulsadorPullUpAnalogico, INPUT);
+}
+
+/**
+ * Enciende el diodo LED indicado como parámetro del método.
+ */
+void MentorBit::encenderLED(uint8_t led) {
+
+    digitalWrite(led, HIGH);
+
+}
+
+/**
+ * Apaga el diodo LED indicado como parámetro del método.
+ */
+void MentorBit::apagarLED(uint8_t led) {
+
+    digitalWrite(led, LOW);
+
+}
+
+/**
+ * Pone el LED RGB en los tonos e intensidades definidas para el color
+ * indicado como parámetro del método.
+ */
+void MentorBit::encenderRGB(uint8_t rojo, uint8_t verde, uint8_t azul) {
+
+    analogWrite(RGB_ROJO, rojo);
+    analogWrite(RGB_VERDE, verde);
+    analogWrite(RGB_AZUL, azul);
+
+}
+
+/**
+ * Apaga el LED RGB por completo.
+ */
+void MentorBit::apagarRGB() {
+
+    digitalWrite(RGB_ROJO, LOW);
+    digitalWrite(RGB_VERDE, LOW);
+    digitalWrite(RGB_AZUL, LOW);
+
+}
+
+/**
+ * Genera un tono de frecuencia y duración determiadas según los
+ * parámetros dados al método.
+ */
+void MentorBit::generarTono(uint16_t frecuencia, uint8_t duracion) {
+
+    tone(ZUMBADOR, frecuencia, duracion);
+
+}
+
+/**
+ * Devuelve la lectura digital o analógica obtenida de los puertos
+ * donde se encuentran conectados los pulsadores según el indicado
+ * como parámetro del método.
+ */
+bool MentorBit::obtenerLecturaPulsador(uint8_t pulsador) {
+
+    return digitalRead(pulsador);
+
+}
+
+/**
+ * Devuelve la lectura analógica obtenida del puerto donde se
+ * encuentra conectado el Potenciómetro.
+ */
+uint16_t MentorBit::obtenerLecturaPotenciometro() {
+
+    return analogRead(POTENCIOMETRO);
 
 }

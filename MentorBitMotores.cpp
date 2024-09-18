@@ -22,25 +22,16 @@
  * -> Motor Paso a Paso
  */
 MentorBitMotores::MentorBitMotores()
-    : myServo()
+    : myServo1(), myServo2()
 {
 
-    servomotor = 3;
-    enableDC = 4;
-    entrada1DC = 28;
-    entrada2DC = 29;
-    bobina1PAP = 30;
-    bobina2PAP = 31;
-    bobina3PAP = 32;
-    bobina4PAP = 33;
-
-    pinMode(enableDC, OUTPUT);
-    pinMode(entrada1DC, OUTPUT);
-    pinMode(entrada2DC, OUTPUT);
-    pinMode(bobina1PAP, OUTPUT);
-    pinMode(bobina2PAP, OUTPUT);
-    pinMode(bobina3PAP, OUTPUT);
-    pinMode(bobina4PAP, OUTPUT);
+    pinMode(MOTOR_DC_EN, OUTPUT);
+    pinMode(MOTOR_DC_IN_1, OUTPUT);
+    pinMode(MOTOR_DC_IN_2, OUTPUT);
+    pinMode(MOTOR_PAP_IN_1, OUTPUT);
+    pinMode(MOTOR_PAP_IN_2, OUTPUT);
+    pinMode(MOTOR_PAP_IN_3, OUTPUT);
+    pinMode(MOTOR_PAP_IN_4, OUTPUT);
 
 }
 
@@ -49,10 +40,14 @@ MentorBitMotores::MentorBitMotores()
  * 
  * No devuelve ningún valor.
  */
-void MentorBitMotores::inicializarServo()
+void MentorBitMotores::inicializarServo(uint8_t servomotor)
 {
 
-    myServo.attach(MentorBitMotores::servomotor);
+    if(servomotor == SERVOMOTOR_1)
+        myServo1.attach(servomotor);
+
+    else if(servomotor == SERVOMOTOR_2)
+        myServo2.attach(servomotor);
 
 }
 
@@ -61,10 +56,14 @@ void MentorBitMotores::inicializarServo()
  * 
  * No devuelve ningún valor.
  */
-void MentorBitMotores::moverServo(uint16_t grados)
+void MentorBitMotores::moverServo(uint8_t servomotor, uint16_t grados)
 {
 
-    myServo.write(grados);
+    if(servomotor == SERVOMOTOR_1)
+        myServo1.write(grados);
+
+    else if(servomotor == SERVOMOTOR_2)
+        myServo2.write(grados);
 
 }
 
@@ -81,22 +80,22 @@ void MentorBitMotores::moverMotorDC(uint8_t velocidad, uint8_t direccion)
     {
 
         case 0:
-            digitalWrite(entrada1DC, HIGH);
-            digitalWrite(entrada2DC, LOW);
+            digitalWrite(MOTOR_DC_IN_1, HIGH);
+            digitalWrite(MOTOR_DC_IN_2, LOW);
             break;
 
         case 1:
-            digitalWrite(entrada1DC, HIGH);
-            digitalWrite(entrada2DC, LOW);
+            digitalWrite(MOTOR_DC_IN_1, HIGH);
+            digitalWrite(MOTOR_DC_IN_2, LOW);
             break;
 
         default:
-            digitalWrite(entrada1DC, LOW);
-            digitalWrite(entrada2DC, LOW);
+            digitalWrite(MOTOR_DC_IN_1, LOW);
+            digitalWrite(MOTOR_DC_IN_2, LOW);
 
     }
 
-    analogWrite(enableDC, velocidad);
+    analogWrite(MOTOR_DC_EN, velocidad);
 
 }
 
@@ -128,10 +127,10 @@ void MentorBitMotores::moverMotorPP(uint16_t pasos, uint8_t direccion)
             {
                 for(uint16_t j = 0; j < 8; j++)
                 {
-                    digitalWrite(bobina1PAP, secuencia[j][0]);
-                    digitalWrite(bobina2PAP, secuencia[j][1]);
-                    digitalWrite(bobina3PAP, secuencia[j][2]);
-                    digitalWrite(bobina4PAP, secuencia[j][3]);
+                    digitalWrite(MOTOR_PAP_IN_1, secuencia[j][0]);
+                    digitalWrite(MOTOR_PAP_IN_2, secuencia[j][1]);
+                    digitalWrite(MOTOR_PAP_IN_3, secuencia[j][2]);
+                    digitalWrite(MOTOR_PAP_IN_4, secuencia[j][3]);
                     delay(1);
                 }
             }
@@ -142,27 +141,27 @@ void MentorBitMotores::moverMotorPP(uint16_t pasos, uint8_t direccion)
             {
                 for(uint16_t j = 0; j < 8; j++)
                 {
-                    digitalWrite(bobina1PAP, secuencia[j][3]);
-                    digitalWrite(bobina2PAP, secuencia[j][2]);
-                    digitalWrite(bobina3PAP, secuencia[j][1]);
-                    digitalWrite(bobina4PAP, secuencia[j][0]);
+                    digitalWrite(MOTOR_PAP_IN_1, secuencia[j][3]);
+                    digitalWrite(MOTOR_PAP_IN_2, secuencia[j][2]);
+                    digitalWrite(MOTOR_PAP_IN_3, secuencia[j][1]);
+                    digitalWrite(MOTOR_PAP_IN_4, secuencia[j][0]);
                     delay(1);
                 }
             }
             break;
 
         default:
-            digitalWrite(bobina1PAP, 0);
-            digitalWrite(bobina2PAP, 0);
-            digitalWrite(bobina3PAP, 0);
-            digitalWrite(bobina4PAP, 0);
+            digitalWrite(MOTOR_PAP_IN_1, 0);
+            digitalWrite(MOTOR_PAP_IN_2, 0);
+            digitalWrite(MOTOR_PAP_IN_3, 0);
+            digitalWrite(MOTOR_PAP_IN_4, 0);
             break;
 
     }
 
-    digitalWrite(bobina1PAP, 0);
-    digitalWrite(bobina2PAP, 0);
-    digitalWrite(bobina3PAP, 0);
-    digitalWrite(bobina4PAP, 0);
+    digitalWrite(MOTOR_PAP_IN_1, 0);
+    digitalWrite(MOTOR_PAP_IN_2, 0);
+    digitalWrite(MOTOR_PAP_IN_3, 0);
+    digitalWrite(MOTOR_PAP_IN_4, 0);
 
 }
