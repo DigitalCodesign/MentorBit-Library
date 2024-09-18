@@ -15,12 +15,12 @@ MentorBit miMentorBit;
 void setup() {
 
     // Definición de pines como salida para los LED
-    pinMode(miMentorBit.ledRojo, OUTPUT);
-    pinMode(miMentorBit.rgbRojo, OUTPUT);
+    pinMode(miMentorBit.LED_ROJO, OUTPUT);
+    pinMode(miMentorBit.RGB_ROJO, OUTPUT);
 
     // Inicializar pin de los LED apagado
-    digitalWrite(miMentorBit.ledRojo, LOW);
-    digitalWrite(miMentorBit.rgbRojo, LOW);
+    digitalWrite(miMentorBit.LED_ROJO, LOW);
+    digitalWrite(miMentorBit.RGB_ROJO, LOW);
 
 }
 
@@ -28,24 +28,24 @@ void setup() {
 void loop() {
 
     // Comprobar la lectura del pulsador Pull Up en pin analogico
-    if(analogRead(miMentorBit.pulsadorPullUpAnalogico) < 500)
+    if(analogRead(miMentorBit.PULSADOR_PULLUP_ANALOGICO) < 500)
     {
 
         // Encendemos el LED rojo durante un cuarto de segundo (0'25s)
-        digitalWrite(miMentorBit.ledRojo, HIGH);
+        digitalWrite(miMentorBit.LED_ROJO, HIGH);
         delay(250);
-        digitalWrite(miMentorBit.ledRojo, LOW);
+        digitalWrite(miMentorBit.LED_ROJO, LOW);
 
     }
 
     // Comprobar la lectura del pulsador Pull Down en pin analogico
-    if(analogRead(miMentorBit.pulsadorPullDownAnalogico) > 500)
+    if(analogRead(miMentorBit.PULSADOR_PULLDOWN_ANALOGICO) > 500)
     {
 
         // Encendemos el LED RGB rojo durante un cuarto de segundo (0'25s)
-        digitalWrite(miMentorBit.rgbRojo, HIGH);
+        digitalWrite(miMentorBit.RGB_ROJO, HIGH);
         delay(250);
-        digitalWrite(miMentorBit.rgbRojo, LOW);
+        digitalWrite(miMentorBit.RGB_ROJO, LOW);
 
     }
 
