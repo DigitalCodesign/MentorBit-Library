@@ -14,10 +14,6 @@ MentorBit miMentorBit;
 // Inicialización del sketch
 void setup() {
 
-    // Definición de pines como salida para los LED
-    pinMode(miMentorBit.LED_ROJO, OUTPUT);
-    pinMode(miMentorBit.RGB_ROJO, OUTPUT);
-
     // Inicializar pin de los LED apagado
     digitalWrite(miMentorBit.LED_ROJO, LOW);
     digitalWrite(miMentorBit.RGB_ROJO, LOW);
