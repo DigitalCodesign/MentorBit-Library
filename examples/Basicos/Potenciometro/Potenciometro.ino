@@ -6,7 +6,7 @@
  * Ajuste de brillo de un LED con la lectura del potenciómetro.
  */
 
-#include "MentorBit.h"
+#include <MentorBit.h>
 
 // Declaración de instancia de la clase
 MentorBit miMentorBit;

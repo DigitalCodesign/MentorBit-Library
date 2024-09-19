@@ -6,7 +6,7 @@
  * Generación de tonos secuencial con el zumbador.
  */
 
-#include "MentorBit.h"
+#include <MentorBit.h>
 
 // Declaración de instancia de la clase
 MentorBit miMentorBit;

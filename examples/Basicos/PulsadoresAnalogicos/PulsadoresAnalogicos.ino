@@ -6,7 +6,7 @@
  * Encendido de LED en función del botón pulsado.
  */
 
-#include "MentorBit.h"
+#include <MentorBit.h>
 
 // Declaración de instancia de la clase
 MentorBit miMentorBit;

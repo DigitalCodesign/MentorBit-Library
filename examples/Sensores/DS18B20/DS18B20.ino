@@ -6,7 +6,7 @@
  * Volcado de información del sensor al monitor serial.
  */
 
-#include "MentorBitSensores.h"
+#include <MentorBitSensores.h>
 
 // Declaración de instancia de las clases
 MentorBitSensores miMentorBitSensores;
