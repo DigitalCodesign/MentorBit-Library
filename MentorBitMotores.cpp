@@ -7,7 +7,7 @@
  * referida al MentorBit compatible con Arduino y el módulo de Motores.
  */
 
-#include "MentorBitMotores.h"
+#include <MentorBitMotores.h>
 
 /*
  * Constructor de la clase para el módulo de Motores del MentorBit.
