@@ -6,7 +6,7 @@
  * Control del motor paso a paso realizando un giro completo en ambos sentidos.
  */
 
-#include "MentorBitMotores.h"
+#include <MentorBitMotores.h>
 
 // Declaración de instancia de las clases
 MentorBitMotores miMentorBitMotores;

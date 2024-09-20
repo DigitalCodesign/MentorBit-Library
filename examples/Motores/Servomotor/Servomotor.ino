@@ -6,7 +6,7 @@
  * Control del servomotor realizando movimiento de diferentes ángulos.
  */
 
-#include "MentorBitMotores.h"
+#include <MentorBitMotores.h>
 
 // Declaración de instancia de las clases
 MentorBitMotores miMentorBitMotores;
