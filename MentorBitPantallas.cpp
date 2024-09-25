@@ -34,8 +34,7 @@ MentorBitPantallas::MentorBitPantallas()
 void MentorBitPantallas::inicializarLCD()
 {
 
-    MentorBitPantallas::lcd.init();
-
+    lcd.init();
 }
 
 /*
@@ -46,9 +45,8 @@ void MentorBitPantallas::inicializarLCD()
 void MentorBitPantallas::inicializarOLED()
 {
 
-    MentorBitPantallas::oled.begin(
-        SSD1306_SWITCHCAPVCC,
-        MentorBitPantallas::oledDirection
-    );
+    oled.begin(SSD1306_SWITCHCAPVCC, oledDirection);
+    oled.clearDisplay();
+    oled.display();
 
 }
