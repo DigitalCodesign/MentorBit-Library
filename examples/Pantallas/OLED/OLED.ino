@@ -6,7 +6,7 @@
  * Mostrar por la pantalla el icono por defecto.
  */
 
-#include "MentorBitPantallas.h"
+#include <MentorBitPantallas.h>
 
 // Declaración de instancia de las clases
 MentorBitPantallas miMentorBitPantallas;

@@ -18,23 +18,23 @@
 
     #include "Arduino.h"
 
-    #define LED_ROJO 5
-    #define LED_VERDE 6
-    #define LED_AZUL 7
-    #define RGB_ROJO 8
-    #define RGB_VERDE 9
-    #define RGB_AZUL 10
-    #define PULSADOR_PULLUP_DIGITAL 22
-    #define PULSADOR_PULLDOWN_DIGITAL 23
-    #define ZUMBADOR 25
-    #define POTENCIOMETRO PIN_A0
-    #define PULSADOR_PULLDOWN_ANALOGICO PIN_A2
-    #define PULSADOR_PULLUP_ANALOGICO PIN_A3
-
     class MentorBit
     {
 
         public:
+
+            static const uint8_t LED_ROJO = 5;
+            static const uint8_t LED_VERDE = 6;
+            static const uint8_t LED_AZUL = 7;
+            static const uint8_t RGB_ROJO = 8;
+            static const uint8_t RGB_VERDE = 9;
+            static const uint8_t RGB_AZUL = 10;
+            static const uint8_t PULSADOR_PULLUP_DIGITAL = 22;
+            static const uint8_t PULSADOR_PULLDOWN_DIGITAL = 23;
+            static const uint8_t ZUMBADOR = 25;
+            static const uint8_t POTENCIOMETRO = PIN_A0;
+            static const uint8_t PULSADOR_PULLDOWN_ANALOGICO = PIN_A2;
+            static const uint8_t PULSADOR_PULLUP_ANALOGICO = PIN_A3;
 
             MentorBit();
 

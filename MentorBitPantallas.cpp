@@ -21,13 +21,10 @@
  */
 MentorBitPantallas::MentorBitPantallas()
     : lcd(0x3F, 16, 2)
-    , oled(-1)
-{
-
-    uint16_t lcdDirection = 0x3F;
-    uint16_t oledDirection = 0x3C;
-
-}
+    , oled(128, 64, &Wire, -1)
+    , lcdDirection(0x3F)
+    , oledDirection(0x3C)
+{}
 
 /*
  * Función para inicializar la pantalla LCD.
@@ -37,8 +34,7 @@ MentorBitPantallas::MentorBitPantallas()
 void MentorBitPantallas::inicializarLCD()
 {
 
-    MentorBitPantallas::lcd.init();
-
+    lcd.init();
 }
 
 /*
@@ -49,9 +45,8 @@ void MentorBitPantallas::inicializarLCD()
 void MentorBitPantallas::inicializarOLED()
 {
 
-    MentorBitPantallas::oled.begin(
-        SSD1306_SWITCHCAPVCC,
-        MentorBitPantallas::oledDirection
-    );
+    oled.begin(SSD1306_SWITCHCAPVCC, oledDirection);
+    oled.clearDisplay();
+    oled.display();
 
 }

@@ -7,7 +7,7 @@
  * utilizando la librería.
  */
 
-#include "MentorBit.h"
+#include <MentorBit.h>
 
 // Declaración de instancia de la clase
 MentorBit miMentorBit;
@@ -15,15 +15,10 @@ MentorBit miMentorBit;
 // Inicialización del sketch
 void setup() {
 
-    // Definición de pines como salida
-    pinMode(miMentorBit.rgbRojo, OUTPUT);
-    pinMode(miMentorBit.rgbVerde, OUTPUT);
-    pinMode(miMentorBit.rgbAzul, OUTPUT);
-
     // Inicializar pines apagados
-    digitalWrite(miMentorBit.rgbRojo, LOW);
-    digitalWrite(miMentorBit.rgbVerde, LOW);
-    digitalWrite(miMentorBit.rgbAzul, LOW);
+    digitalWrite(miMentorBit.RGB_ROJO, LOW);
+    digitalWrite(miMentorBit.RGB_VERDE, LOW);
+    digitalWrite(miMentorBit.RGB_AZUL, LOW);
 
 }
 
@@ -31,39 +26,39 @@ void setup() {
 void loop() {
 
     // Encendemos el color rojo
-    digitalWrite(miMentorBit.rgbRojo, HIGH);
-    digitalWrite(miMentorBit.rgbVerde, LOW);
-    digitalWrite(miMentorBit.rgbAzul, LOW);
+    digitalWrite(miMentorBit.RGB_ROJO, HIGH);
+    digitalWrite(miMentorBit.RGB_VERDE, LOW);
+    digitalWrite(miMentorBit.RGB_AZUL, LOW);
     delay(500);
 
     // Encendemos el color rojo y el verde
-    digitalWrite(miMentorBit.rgbRojo, HIGH);
-    digitalWrite(miMentorBit.rgbVerde, HIGH);
-    digitalWrite(miMentorBit.rgbAzul, LOW);
+    digitalWrite(miMentorBit.RGB_ROJO, HIGH);
+    digitalWrite(miMentorBit.RGB_VERDE, HIGH);
+    digitalWrite(miMentorBit.RGB_AZUL, LOW);
     delay(500);
 
     // Encendemos el color verde
-    digitalWrite(miMentorBit.rgbRojo, LOW);
-    digitalWrite(miMentorBit.rgbVerde, HIGH);
-    digitalWrite(miMentorBit.rgbAzul, LOW);
+    digitalWrite(miMentorBit.RGB_ROJO, LOW);
+    digitalWrite(miMentorBit.RGB_VERDE, HIGH);
+    digitalWrite(miMentorBit.RGB_AZUL, LOW);
     delay(500);
 
     // Encendemos el color verde y el azul
-    digitalWrite(miMentorBit.rgbRojo, LOW);
-    digitalWrite(miMentorBit.rgbVerde, HIGH);
-    digitalWrite(miMentorBit.rgbAzul, HIGH);
+    digitalWrite(miMentorBit.RGB_ROJO, LOW);
+    digitalWrite(miMentorBit.RGB_VERDE, HIGH);
+    digitalWrite(miMentorBit.RGB_AZUL, HIGH);
     delay(500);
 
     // Encendemos el color Azul
-    digitalWrite(miMentorBit.rgbRojo, LOW);
-    digitalWrite(miMentorBit.rgbVerde, LOW);
-    digitalWrite(miMentorBit.rgbAzul, HIGH);
+    digitalWrite(miMentorBit.RGB_ROJO, LOW);
+    digitalWrite(miMentorBit.RGB_VERDE, LOW);
+    digitalWrite(miMentorBit.RGB_AZUL, HIGH);
     delay(500);
 
     // Encendemos el color azul y el rojo
-    digitalWrite(miMentorBit.rgbRojo, HIGH);
-    digitalWrite(miMentorBit.rgbVerde, LOW);
-    digitalWrite(miMentorBit.rgbAzul, HIGH);
+    digitalWrite(miMentorBit.RGB_ROJO, HIGH);
+    digitalWrite(miMentorBit.RGB_VERDE, LOW);
+    digitalWrite(miMentorBit.RGB_AZUL, HIGH);
     delay(500);
 
 }

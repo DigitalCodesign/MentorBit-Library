@@ -6,7 +6,7 @@
  * Mostrar por la pantalla el mensaje "Hello, world!".
  */
 
-#include "MentorBitPantallas.h"
+#include <MentorBitPantallas.h>
 
 // Declaración de instancia de las clases
 MentorBitPantallas miMentorBitPantallas;

@@ -17,20 +17,20 @@
     #include "Arduino.h"
     #include "Servo.h"
 
-    #define SERVOMOTOR_1 11
-    #define SERVOMOTOR_2 12
-    #define MOTOR_DC_EN 4
-    #define MOTOR_DC_IN_1 28
-    #define MOTOR_DC_IN_2 29
-    #define MOTOR_PAP_IN_1 30
-    #define MOTOR_PAP_IN_2 31
-    #define MOTOR_PAP_IN_3 32
-    #define MOTOR_PAP_IN_4 33
-
     class MentorBitMotores
     {
 
         public:
+
+            static const uint8_t SERVOMOTOR_1 = 11;
+            static const uint8_t SERVOMOTOR_2 = 12;
+            static const uint8_t MOTOR_DC_EN = 4;
+            static const uint8_t MOTOR_DC_IN_1 = 28;
+            static const uint8_t MOTOR_DC_IN_2 = 29;
+            static const uint8_t MOTOR_PAP_IN_1 = 30;
+            static const uint8_t MOTOR_PAP_IN_2 = 31;
+            static const uint8_t MOTOR_PAP_IN_3 = 32;
+            static const uint8_t MOTOR_PAP_IN_4 = 33;
 
             MentorBitMotores();
 

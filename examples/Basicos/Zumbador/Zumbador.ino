@@ -6,7 +6,7 @@
  * Generación de tonos secuencial con el zumbador.
  */
 
-#include "MentorBit.h"
+#include <MentorBit.h>
 
 // Declaración de instancia de la clase
 MentorBit miMentorBit;
@@ -14,11 +14,8 @@ MentorBit miMentorBit;
 // Inicialización del sketch
 void setup() {
 
-    // Definición de zumbador como salida
-    pinMode(miMentorBit.zumbador, OUTPUT);
-
     // Inicializar pines apagados
-    digitalWrite(miMentorBit.zumbador, LOW);
+    digitalWrite(miMentorBit.ZUMBADOR, LOW);
 
 }
 
@@ -26,14 +23,15 @@ void setup() {
 void loop() {
 
     // Bucle para generar diferentes frecuencias
-    for(uint8_t i = 100 ; i < 1000 ; i =+ 100)
-    {
+    for(uint8_t i = 200 ; i <= 5000 ; i += 100) {
 
         // Generar tono con la frecuencia dada por el bucle for
-        tone(miMentorBit.zumbador, i, 100);
+        tone(miMentorBit.ZUMBADOR, i);
+        delay(100);
 
     }
 
-    delay(500);
+    noTone(miMentorBit.ZUMBADOR);
+    delay(1000);
 
 }

@@ -16,12 +16,12 @@
     #include "SD.h"
     #include "RTClib.h"
 
-    #define SD_CHIP_SELECT PIN_A6
-
     class MentorBitDataLogger
     {
 
         public:
+
+            static const uint8_t SD_CHIP_SELECT = PIN_A6;
 
             MentorBitDataLogger();
 

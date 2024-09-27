@@ -7,7 +7,7 @@
  * utilizando la librería.
  */
 
-#include "MentorBit.h"
+#include <MentorBit.h>
 
 // Declaración de instancia de la clase
 MentorBit miMentorBit;
@@ -15,15 +15,10 @@ MentorBit miMentorBit;
 // Inicialización del sketch
 void setup() {
 
-    // Definición de pines como salida
-    pinMode(miMentorBit.ledRojo, OUTPUT);
-    pinMode(miMentorBit.ledVerde, OUTPUT);
-    pinMode(miMentorBit.ledAzul, OUTPUT);
-
     // Inicializar pines apagados
-    digitalWrite(miMentorBit.ledRojo, LOW);
-    digitalWrite(miMentorBit.ledVerde, LOW);
-    digitalWrite(miMentorBit.ledAzul, LOW);
+    digitalWrite(miMentorBit.LED_ROJO, LOW);
+    digitalWrite(miMentorBit.LED_VERDE, LOW);
+    digitalWrite(miMentorBit.LED_AZUL, LOW);
 
 }
 
@@ -31,21 +26,21 @@ void setup() {
 void loop() {
 
     // Encendemos el LED rojo solamente y esperamos
-    digitalWrite(miMentorBit.ledRojo, HIGH);
-    digitalWrite(miMentorBit.ledVerde, LOW);
-    digitalWrite(miMentorBit.ledAzul, LOW);
-    delay(500);
+    digitalWrite(miMentorBit.LED_ROJO, HIGH);
+    digitalWrite(miMentorBit.LED_VERDE, LOW);
+    digitalWrite(miMentorBit.LED_AZUL, LOW);
+    delay(3000);
 
     // Encendemos el LED verde solamente y esperamos
-    digitalWrite(miMentorBit.ledRojo, LOW);
-    digitalWrite(miMentorBit.ledVerde, HIGH);
-    digitalWrite(miMentorBit.ledAzul, LOW);
-    delay(500);
+    digitalWrite(miMentorBit.LED_ROJO, LOW);
+    digitalWrite(miMentorBit.LED_VERDE, HIGH);
+    digitalWrite(miMentorBit.LED_AZUL, LOW);
+    delay(2000);
 
     // Encendemos el LED azul solamente y esperamos
-    digitalWrite(miMentorBit.ledRojo, LOW);
-    digitalWrite(miMentorBit.ledVerde, LOW);
-    digitalWrite(miMentorBit.ledAzul, HIGH);
-    delay(500);
+    digitalWrite(miMentorBit.LED_ROJO, LOW);
+    digitalWrite(miMentorBit.LED_VERDE, LOW);
+    digitalWrite(miMentorBit.LED_AZUL, HIGH);
+    delay(1000);
 
 }

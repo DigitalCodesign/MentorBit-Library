@@ -6,7 +6,7 @@
  * Encendido de LED en función del botón pulsado.
  */
 
-#include "MentorBit.h"
+#include <MentorBit.h>
 
 // Declaración de instancia de la clase
 MentorBit miMentorBit;
@@ -14,15 +14,9 @@ MentorBit miMentorBit;
 // Inicialización del sketch
 void setup() {
 
-    // Definición de pines como entradas para los pulsadores y salida para los LED
-    pinMode(miMentorBit.pulsadorPullUpDigital, INPUT);
-    pinMode(miMentorBit.pulsadorPullDownDigital, INPUT);
-    pinMode(miMentorBit.ledRojo, OUTPUT);
-    pinMode(miMentorBit.rgbRojo, OUTPUT);
-
     // Inicializar pin del LED apagado
-    digitalWrite(miMentorBit.ledRojo, LOW);
-    digitalWrite(miMentorBit.rgbRojo, LOW);
+    digitalWrite(miMentorBit.LED_ROJO, LOW);
+    digitalWrite(miMentorBit.RGB_ROJO, LOW);
 
 }
 
@@ -30,24 +24,24 @@ void setup() {
 void loop() {
 
     // Comprobar la lectura del pulsador Pull Up en pin digital
-    if(digitalRead(miMentorBit.pulsadorPullUpDigital) == LOW)
+    if(digitalRead(miMentorBit.PULSADOR_PULLUP_DIGITAL) == LOW)
     {
 
         // Encendemos el LED rojo durante un cuarto de segundo (0'25s)
-        digitalWrite(miMentorBit.ledRojo, HIGH);
+        digitalWrite(miMentorBit.LED_ROJO, HIGH);
         delay(250);
-        digitalWrite(miMentorBit.ledRojo, LOW);
+        digitalWrite(miMentorBit.LED_ROJO, LOW);
 
     }
 
     // Comprobar la lectura del pulsador Pull Down en pin digital
-    if(digitalRead(miMentorBit.pulsadorPullDownDigital) == HIGH)
+    if(digitalRead(miMentorBit.PULSADOR_PULLDOWN_DIGITAL) == HIGH)
     {
 
         // Encendemos el LED del RGB rojo durante un cuarto de segundo (0'25s)
-        digitalWrite(miMentorBit.rgbRojo, HIGH);
+        digitalWrite(miMentorBit.RGB_ROJO, HIGH);
         delay(250);
-        digitalWrite(miMentorBit.rgbRojo, LOW);
+        digitalWrite(miMentorBit.RGB_ROJO, LOW);
 
     }
 
