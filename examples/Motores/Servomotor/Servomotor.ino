@@ -14,7 +14,7 @@ MentorBitMotores miMentorBitMotores;
 // Inicialización del sketch
 void setup() {
 
-    miMentorBitMotores.inicializarServo();
+    miMentorBitMotores.inicializarServo(miMentorBitMotores.SERVOMOTOR_1);
 
 }
 
@@ -22,19 +22,19 @@ void setup() {
 void loop() {
 
     // Mover el servomotor a 180º
-    miMentorBitMotores.moverServo(180);
+    miMentorBitMotores.moverServo(miMentorBitMotores.SERVOMOTOR_1, 180);
     delay(1000);
 
     // Mover el servomotor a 150º
-    miMentorBitMotores.moverServo(150);
+    miMentorBitMotores.moverServo(miMentorBitMotores.SERVOMOTOR_1, 150);
     delay(1000);
 
     // Mover el servomotor a 120º
-    miMentorBitMotores.moverServo(120);
+    miMentorBitMotores.moverServo(miMentorBitMotores.SERVOMOTOR_1, 120);
     delay(1000);
 
     // Mover el servomotor a 90º
-    miMentorBitMotores.moverServo(90);
+    miMentorBitMotores.moverServo(miMentorBitMotores.SERVOMOTOR_1, 90);
     delay(1000);
 
 }

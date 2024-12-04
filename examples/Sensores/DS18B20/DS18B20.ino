@@ -22,7 +22,7 @@ void setup() {
 void loop() {
 
     // Obtención de la lectura del sensor
-    float temperatura = miMentorBitSensores.obtenerTemperaturaDS18B20();
+    float temperatura = miMentorBitSensores.obtenerLecturaDS18B20();
 
     // Mostrar datos por monitor serial
     Serial.println("--------------------");

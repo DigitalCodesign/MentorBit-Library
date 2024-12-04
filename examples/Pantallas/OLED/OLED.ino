@@ -16,6 +16,8 @@ void setup() {
 
     // Inicializamos la pantalla y mostramos el icono
     miMentorBitPantallas.inicializarOLED();
+    miMentorBitPantallas.oled.setTextColor(SSD1306_WHITE);
+    miMentorBitPantallas.oled.print("Hello, World!");
     miMentorBitPantallas.oled.display();
 
 }

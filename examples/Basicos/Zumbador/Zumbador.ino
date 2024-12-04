@@ -22,16 +22,12 @@ void setup() {
 // Bucle principal del sketch
 void loop() {
 
-    // Bucle para generar diferentes frecuencias
-    for(uint8_t i = 200 ; i <= 5000 ; i += 100) {
-
-        // Generar tono con la frecuencia dada por el bucle for
-        tone(miMentorBit.ZUMBADOR, i);
-        delay(100);
-
-    }
-
-    noTone(miMentorBit.ZUMBADOR);
-    delay(1000);
+    // Generar tono con diferentes frecuencias
+    tone(miMentorBit.ZUMBADOR, 3000, 250);
+    delay(250);
+    tone(miMentorBit.ZUMBADOR, 2000, 250);
+    delay(250);
+    tone(miMentorBit.ZUMBADOR, 1000, 250);
+    delay(2500);
 
 }

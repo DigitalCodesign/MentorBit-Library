@@ -16,7 +16,7 @@ void setup() {
 
     // Inicializar pin del LED apagado
     digitalWrite(miMentorBit.LED_ROJO, LOW);
-    digitalWrite(miMentorBit.RGB_ROJO, LOW);
+    digitalWrite(miMentorBit.RGB_ROJO, HIGH);
 
 }
 
@@ -39,9 +39,9 @@ void loop() {
     {
 
         // Encendemos el LED del RGB rojo durante un cuarto de segundo (0'25s)
-        digitalWrite(miMentorBit.RGB_ROJO, HIGH);
-        delay(250);
         digitalWrite(miMentorBit.RGB_ROJO, LOW);
+        delay(250);
+        digitalWrite(miMentorBit.RGB_ROJO, HIGH);
 
     }
 
