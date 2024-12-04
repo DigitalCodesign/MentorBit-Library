@@ -46,7 +46,5 @@ void MentorBitPantallas::inicializarOLED()
 {
 
     oled.begin(SSD1306_SWITCHCAPVCC, oledDirection);
-    oled.clearDisplay();
-    oled.display();
 
 }
