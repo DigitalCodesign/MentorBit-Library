@@ -32,6 +32,10 @@ MentorBit::MentorBit()
     pinMode(RGB_AZUL, OUTPUT);
     pinMode(ZUMBADOR, OUTPUT);
 
+    digitalWrite(RGB_ROJO, HIGH);
+    digitalWrite(RGB_VERDE, HIGH);
+    digitalWrite(RGB_AZUL, HIGH);
+
 }
 
 /**
@@ -69,9 +73,9 @@ void MentorBit::encenderRGB(uint8_t rojo, uint8_t verde, uint8_t azul) {
  */
 void MentorBit::apagarRGB() {
 
-    digitalWrite(RGB_ROJO, LOW);
-    digitalWrite(RGB_VERDE, LOW);
-    digitalWrite(RGB_AZUL, LOW);
+    digitalWrite(RGB_ROJO, HIGH);
+    digitalWrite(RGB_VERDE, HIGH);
+    digitalWrite(RGB_AZUL, HIGH);
 
 }
 
