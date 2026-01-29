@@ -60,6 +60,7 @@ void MentorBitDisplay::inicializarDisplay()
 void MentorBitDisplay::imprimir(String valor)
 {
 
+    for(uint8_t i = 0; i < 8; i++) _display_buffer[i] = 0x00;
     for (uint8_t i = 0 ; i < 4 && valor[i] != '\0' ; i++)
         _display_buffer[i] = _charToSegmento(valor[i]);
 
@@ -75,6 +76,7 @@ void MentorBitDisplay::imprimir(String valor)
 void MentorBitDisplay::imprimir(int valor)
 {
 
+    for(uint8_t i = 0; i < 8; i++) _display_buffer[i] = 0x00;
     if (valor < 0 || valor > 9999) return;
     char buffer[5];
     snprintf(buffer, sizeof(buffer), "%4d", valor);
@@ -90,6 +92,7 @@ void MentorBitDisplay::imprimir(int valor)
 void MentorBitDisplay::imprimir(double valor)
 {
 
+    for(uint8_t i = 0; i < 8; i++) _display_buffer[i] = 0x00;
     String valor_string = String(valor, 3);
 
     uint8_t indice_coma = valor_string.indexOf('.');
