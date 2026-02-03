@@ -11,6 +11,7 @@
 #ifndef MentorBitDisplay_h
 #define MentorBitDisplay_h
 
+    #include "Arduino.h"
     #include "Wire.h"
 
     class MentorBitDisplay
