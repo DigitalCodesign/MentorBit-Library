@@ -24,25 +24,42 @@
 
             static const uint8_t SERVOMOTOR_1 = 11;
             static const uint8_t SERVOMOTOR_2 = 12;
+
             static const uint8_t MOTOR_DC_EN = 4;
             static const uint8_t MOTOR_DC_IN_1 = 28;
             static const uint8_t MOTOR_DC_IN_2 = 29;
+
             static const uint8_t MOTOR_PAP_IN_1 = 30;
             static const uint8_t MOTOR_PAP_IN_2 = 31;
             static const uint8_t MOTOR_PAP_IN_3 = 32;
             static const uint8_t MOTOR_PAP_IN_4 = 33;
 
+            enum Direccion {
+                PARADO = -1,
+                ATRAS = 0,
+                IZQUIERDA = 0,
+                ANTIHORARIO = 0,
+                ADELANTE = 1,
+                DERECHA = 1,
+                HORARIO = 1
+            };
+
             MentorBitMotores();
 
             void inicializarServo(uint8_t servomotor);
             void moverServo(uint8_t servomotor, uint16_t grados);
+            void desconectarServo(uint8_t servomotor);
+
             void moverMotorDC(uint8_t velocidad, uint8_t direccion);
+            void pararMotorDC();
+
             void moverMotorPP(uint16_t pasos, uint8_t direccion);
+            void moverMotorPP(uint16_t pasos, uint8_t direccion, uint8_t tiempo_entre_pasos);
 
         private:
 
-            Servo myServo1;
-            Servo myServo2;
+            Servo _myServo1;
+            Servo _myServo2;
 
     };
 
