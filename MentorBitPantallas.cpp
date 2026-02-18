@@ -7,7 +7,7 @@
  * referida al MentorBit compatible con Arduino y el módulo de pantallas.
  */
 
-#include "MPantallas.h"
+#include "MentorBitPantallas.h"
 
 #define LCD_CLEARDISPLAY 0x01
 #define LCD_RETURNHOME 0x02
