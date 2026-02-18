@@ -182,19 +182,49 @@ void MentorBitLCD::_crearCaracter(uint8_t ubicacion, uint8_t mapa_bits[])
     for (int i = 0; i < 8; i++) _send(mapa_bits[i], Rs); // Enviamos como dato
 }
 
+/**
+ * Carga un icono predefinido en una de las 8 ranuras de memoria de la LCD.
+ * 
+ * No devuelve ningún valor.
+ */
 void MentorBitLCD::cargarIcono(IconoLCD icono, uint8_t ubicacion_memoria)
 {
-    // Definición de los dibujos píxel a píxel (0 = apagado, 1 = encendido)
-    uint8_t corazon[8] = {0x00, 0x0A, 0x1F, 0x1F, 0x0E, 0x04, 0x00, 0x00};
-    uint8_t sonrisa[8] = {0x00, 0x00, 0x0A, 0x00, 0x11, 0x0E, 0x00, 0x00};
-    uint8_t bat_baja[8] = {0x0E, 0x11, 0x11, 0x11, 0x11, 0x11, 0x1F, 0x00};
-    uint8_t bat_llena[8] = {0x0E, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x00};
-    // Cargamos el icono correspondiente
+    // Limitamos la ubicación a 0-7 para no desbordar la memoria de la LCD
+    ubicacion_memoria &= 0x07; 
+    // --- MAPAS DE BITS (5x8 píxeles) ---
+    uint8_t corazon[8]    = {0x00, 0x0A, 0x1F, 0x1F, 0x0E, 0x04, 0x00, 0x00};
+    uint8_t sonrisa[8]    = {0x00, 0x00, 0x0A, 0x00, 0x11, 0x0E, 0x00, 0x00};
+    // Energía
+    uint8_t bat_baja[8]   = {0x0E, 0x11, 0x11, 0x11, 0x11, 0x11, 0x1F, 0x00};
+    uint8_t bat_media[8]  = {0x0E, 0x11, 0x11, 0x1F, 0x1F, 0x1F, 0x1F, 0x00};
+    uint8_t bat_llena[8]  = {0x0E, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x00};
+    // Sensores
+    uint8_t termometro[8] = {0x04, 0x0A, 0x0A, 0x0A, 0x0E, 0x1F, 0x1F, 0x0E};
+    uint8_t gota[8]       = {0x04, 0x04, 0x0A, 0x0A, 0x11, 0x11, 0x11, 0x0E};
+    uint8_t reloj[8]      = {0x1F, 0x11, 0x0A, 0x04, 0x0A, 0x11, 0x1F, 0x00};
+    // Sistemas y UI
+    uint8_t wifi[8]       = {0x00, 0x0E, 0x11, 0x04, 0x0A, 0x00, 0x04, 0x00};
+    uint8_t campana[8]    = {0x04, 0x0E, 0x0E, 0x0E, 0x1F, 0x00, 0x04, 0x00};
+    uint8_t check[8]      = {0x00, 0x00, 0x01, 0x03, 0x16, 0x1C, 0x08, 0x00};
+    uint8_t cruz[8]       = {0x00, 0x11, 0x0A, 0x04, 0x0A, 0x11, 0x00, 0x00};
+    uint8_t flecha_d[8]   = {0x00, 0x04, 0x02, 0x1F, 0x02, 0x04, 0x00, 0x00};
+    uint8_t flecha_i[8]   = {0x00, 0x04, 0x08, 0x1F, 0x08, 0x04, 0x00, 0x00};
+    // --- ASIGNACIÓN ---
     switch (icono) {
-        case CORAZON:       _crearCaracter(ubicacion_memoria, corazon);   break;
-        case SONRISA:       _crearCaracter(ubicacion_memoria, sonrisa);   break;
-        case BATERIA_BAJA:  _crearCaracter(ubicacion_memoria, bat_baja);  break;
-        case BATERIA_LLENA: _crearCaracter(ubicacion_memoria, bat_llena); break;
+        case CORAZON:       _crearCaracter(ubicacion_memoria, corazon);    break;
+        case SONRISA:       _crearCaracter(ubicacion_memoria, sonrisa);    break;
+        case BATERIA_BAJA:  _crearCaracter(ubicacion_memoria, bat_baja);   break;
+        case BATERIA_MEDIA: _crearCaracter(ubicacion_memoria, bat_media);  break;
+        case BATERIA_LLENA: _crearCaracter(ubicacion_memoria, bat_llena);  break;
+        case TEMPERATURA:   _crearCaracter(ubicacion_memoria, termometro); break;
+        case GOTA_AGUA:     _crearCaracter(ubicacion_memoria, gota);       break;
+        case RELOJ:         _crearCaracter(ubicacion_memoria, reloj);      break;
+        case WIFI:          _crearCaracter(ubicacion_memoria, wifi);       break;
+        case CAMPANA:       _crearCaracter(ubicacion_memoria, campana);    break;
+        case CHECK_OK:      _crearCaracter(ubicacion_memoria, check);      break;
+        case CRUZ_NOK:      _crearCaracter(ubicacion_memoria, cruz);       break;
+        case FLECHA_DER:    _crearCaracter(ubicacion_memoria, flecha_d);   break;
+        case FLECHA_IZQ:    _crearCaracter(ubicacion_memoria, flecha_i);   break;
     }
 }
 

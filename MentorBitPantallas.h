@@ -28,7 +28,17 @@
                 CORAZON = 0,
                 SONRISA = 1,
                 BATERIA_BAJA = 2,
-                BATERIA_LLENA = 3
+                BATERIA_MEDIA = 3,
+                BATERIA_LLENA = 4,
+                TEMPERATURA = 5,
+                GOTA_AGUA = 6,
+                RELOJ = 7,
+                WIFI = 8,
+                CAMPANA = 9,
+                CHECK_OK = 10,
+                CRUZ_NOK = 11,
+                FLECHA_DER = 12,
+                FLECHA_IZQ = 13
             };
 
             void begin();
