@@ -24,12 +24,22 @@
 
             MentorBitLCD(uint8_t lcd_addr, uint8_t lcd_cols, uint8_t lcd_rows);
 
+            enum IconoLCD {
+                CORAZON = 0,
+                SONRISA = 1,
+                BATERIA_BAJA = 2,
+                BATERIA_LLENA = 3
+            };
+
             void begin();
             void clear();
             void home();
             void setCursor(uint8_t col, uint8_t row);
             void backlight();
             void noBacklight();
+            void imprimirCentrado(uint8_t fila, String texto);
+            void dibujarBarra(uint8_t fila, uint8_t porcentaje);
+            void cargarIcono(IconoLCD icono, uint8_t ubicacion_memoria);
 
             virtual size_t write(uint8_t);
 
@@ -46,6 +56,7 @@
             void _expanderWrite(uint8_t);
             void _pulseEnable(uint8_t);
             void _command(uint8_t);
+            void _crearCaracter(uint8_t ubicacion, uint8_t mapa_bits[]);
 
     };
 

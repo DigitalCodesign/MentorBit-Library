@@ -16,6 +16,7 @@
 #define LCD_CURSORSHIFT 0x10
 #define LCD_FUNCTIONSET 0x20
 #define LCD_SETDDRAMADDR 0x80
+#define LCD_SETCGRAMADDR 0x40
 
 #define LCD_DISPLAYON 0x04
 #define LCD_DISPLAYOFF 0x00
@@ -128,6 +129,73 @@ void MentorBitLCD::noBacklight()
 {
     _backlight_value = 0x00;
     _expanderWrite(0);
+}
+
+/*
+ * Función para limpiar la fila y centrar el texto automáticamente.
+ * 
+ * No devuelve ningún valor.
+ */
+void MentorBitLCD::imprimirCentrado(uint8_t fila, String texto)
+{
+    // Limpiamos la fila sobrescribiéndola con espacios
+    setCursor(0, fila);
+    for (uint8_t i = 0; i < _cols; i++) print(" ");
+    // Recortamos si el texto es más largo que la pantalla
+    if (texto.length() > _cols) texto = texto.substring(0, _cols);
+    // Calculamos la posición inicial para centrar
+    uint8_t pos_x = (_cols - texto.length()) / 2;
+    setCursor(pos_x, fila);
+    print(texto);
+}
+
+/*
+ * Dibuja una barra en la fila elegida, dado un porcentaje (0-100)
+ * 
+ * No devuelve ningún valor.
+ */
+void MentorBitLCD::dibujarBarra(uint8_t fila, uint8_t porcentaje)
+{
+    // Aseguramos límites
+    if (porcentaje > 100) porcentaje = 100;
+    // Calculamos cuántos bloques sólidos corresponden a ese porcentaje
+    // Mapeamos de 0-100% al número de columnas de la LCD (ej. 16)
+    uint8_t bloques_llenos = (porcentaje * _cols) / 100;
+    setCursor(0, fila);
+    // Dibujamos la barra
+    for (uint8_t i = 0; i < _cols; i++)
+    {
+        if (i < bloques_llenos) write(0xFF); // Carácter de bloque sólido
+        else print("-");  // Relleno vacío
+    }
+}
+
+/**
+ * Función base para crear caracteres.
+ * 
+ * No devuelve ningún valor.
+ */
+void MentorBitLCD::_crearCaracter(uint8_t ubicacion, uint8_t mapa_bits[])
+{
+    ubicacion &= 0x7; // Solo tenemos 8 posiciones (0-7)
+    _command(LCD_SETCGRAMADDR | (ubicacion << 3));
+    for (int i = 0; i < 8; i++) _send(mapa_bits[i], Rs); // Enviamos como dato
+}
+
+void MentorBitLCD::cargarIcono(IconoLCD icono, uint8_t ubicacion_memoria)
+{
+    // Definición de los dibujos píxel a píxel (0 = apagado, 1 = encendido)
+    uint8_t corazon[8] = {0x00, 0x0A, 0x1F, 0x1F, 0x0E, 0x04, 0x00, 0x00};
+    uint8_t sonrisa[8] = {0x00, 0x00, 0x0A, 0x00, 0x11, 0x0E, 0x00, 0x00};
+    uint8_t bat_baja[8] = {0x0E, 0x11, 0x11, 0x11, 0x11, 0x11, 0x1F, 0x00};
+    uint8_t bat_llena[8] = {0x0E, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x00};
+    // Cargamos el icono correspondiente
+    switch (icono) {
+        case CORAZON:       _crearCaracter(ubicacion_memoria, corazon);   break;
+        case SONRISA:       _crearCaracter(ubicacion_memoria, sonrisa);   break;
+        case BATERIA_BAJA:  _crearCaracter(ubicacion_memoria, bat_baja);  break;
+        case BATERIA_LLENA: _crearCaracter(ubicacion_memoria, bat_llena); break;
+    }
 }
 
 /*
