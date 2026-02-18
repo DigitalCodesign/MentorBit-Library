@@ -225,7 +225,8 @@ MentorBitPantallas::MentorBitPantallas()
 void MentorBitPantallas::inicializarLCD()
 {
 
-    lcd.init();
+    lcd.begin();
+    lcd.backlight();
 
 }
 
