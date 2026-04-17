@@ -14,7 +14,6 @@
     #include "Arduino.h"
     #include "Wire.h"
     #include "SD.h"
-    #include "RTClib.h"
 
     class MentorBitDataLogger
     {
@@ -25,27 +24,36 @@
 
             MentorBitDataLogger();
 
+            // --- Métodos específicos de la Tarjeta SD
             boolean inicializarSD();
-            boolean escribirEnArchivo(String nombre, String mensaje);
-            String leerDeArchivo(String nombre);
+            boolean escribirEnArchivo(String nombre_archivo, String mensaje);
+            String leerDeArchivo(String nombre_archivo);
+            boolean escribirLog(String nombre_archivo, String mensaje);
 
+            // --- Métodos específicos del Reloj en Tiempo Real
             boolean inicializarRTC();
             void ajustarHoraRTC(
-                uint16_t anyo,
-                uint8_t mes,
-                uint8_t dia,
-                uint8_t hora=0,
-                uint8_t minuto=0,
-                uint8_t segundo=0
+                uint16_t anyo, uint8_t mes, uint8_t dia,
+                uint8_t hora, uint8_t minuto, uint8_t segundo=0
             );
             void ajustarHoraRTC();
-            String obtenerHoraRTC();
+            String obtenerHoraRTC(String formato="hh:mm:ss");
+            boolean rtcFuncionando();
 
-            RTC_DS1307 rtc;
+            // --- Métodos extra (NVRAM)
+            void guardarDato(uint8_t direccion, uint8_t dato);
+            uint8_t leerDato(uint8_t direccion);
 
         private:
 
-            File _dataFile;
+            File _data_file;
+            uint16_t _y;
+            uint8_t _m, _d, _hh, _mm, _ss;
+            uint8_t _rtc_address;
+
+            uint8_t bcdToDec(uint8_t valor);
+            uint8_t decToBcd(uint8_t valor);
+            void _leerRTC();
 
     };
 
