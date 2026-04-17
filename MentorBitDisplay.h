@@ -13,8 +13,6 @@
 
     #include "Arduino.h"
     #include "Wire.h"
-    #include "Adafruit_GFX.h"
-    #include "Adafruit_LEDBackpack.h"
 
     class MentorBitDisplay
     {
@@ -24,16 +22,16 @@
             MentorBitDisplay();
 
             void inicializarDisplay();
-            void imprimir(char valor);
             void imprimir(String valor);
             void imprimir(int valor);
             void imprimir(double valor);
 
         private:
 
-            uint8_t _dots[4];
-            uint8_t _displayDirection;
-            Adafruit_7segment myDisplay;
+            uint8_t _display_buffer[8];
+            uint8_t _display_address;
+            void _writeDisplay();
+            uint8_t _charToSegmento(char c);
 
     };
 
