@@ -1,27 +1,27 @@
 # Librería de MentorBit
 
-Esta librería está construida por Digital Codesign para utilizar junto con el kit educacional "MentorBit". La librería se compone de ocho clases diferentes que permiten utilizar las diferentes funcionalidades del MentorBit a través de varias funciones y ejemplos.
+Esta librería está construida por Digital Codesign para utilizar junto con el kit educacional "MentorBit". La librería se compone de varias clases diferentes que permiten utilizar las diferentes funcionalidades del MentorBit a través de varias funciones y ejemplos.
 
-Puedes encontrar nuestro MentorBit y mucho más material de electrónica y robótica en nuestra tienda oficial:  [https://digitalcodesign.com/shop](https://digitalcodesign.com/shop)
-
+Puedes encontrar nuestro MentorBit y mucho más material de electrónica y robótica en nuestra tienda oficial: [https://digitalcodesign.com/shop](https://digitalcodesign.com/shop)
 
 # Modo de empleo
 Cuando tengas la librería instalada, debes incluir la librería al comienzo de tu sketch, antes del setup, con la siguiente línea:
 
-   ``#include  "MentorBit.h"``
+   `#include "MentorBit.h"`
 
 En función del módulo que quieras utilizar, deberás importarlo de la misma manera que en el ejemplo.
 
 ### Constructor
 
-Crea una instancia de la clase con el nombre que más te guste, nosotros usaremos en este caso "miMentorBit". Al constructor del MentorBit solo debemos indicarle el nombre de la instancia (No olvidar el ;)
+Crea una instancia de la clase con el nombre que más te guste, nosotros usaremos en este caso "miMentorBit". Al constructor del MentorBit solo debemos indicarle el nombre de la instancia (No olvidar el ;).
 
-``MentorBit miMentorBit;``
+`MentorBit miMentorBit;`
 
 Ahora podemos emplear las propiedades y métodos de nuestro objeto miMentorBit. La librería incluye varios módulos importables cuyo constructor coincidirá con el nombre del módulo.
 
 ### Elementos del MentorBit
-Hay una serie de elementos que vienen incluidos en el MentorBit como Leds, Pulsadores, etcétera. Para referirnos a cada uno de ellos en nuestro código debemos emplear el nombre que se le ha dado en la librería. Podemos mirar la siguiente tabla para ver la relación entre los elementos y sus nombres de referencia.
+Hay una serie de elementos que vienen incluidos en el MentorBit como LEDs, Pulsadores, etcétera. Para referirnos a cada uno de ellos en nuestro código debemos emplear el nombre que se le ha dado en la librería. Podemos mirar la siguiente tabla para ver la relación entre los elementos y sus nombres de referencia.
+
 | Módulo | Elemento | Nombre de ref. |
 |:--|:--|:--|
 | MentorBit | Led de color Rojo | LED_ROJO |
@@ -50,183 +50,151 @@ Hay una serie de elementos que vienen incluidos en el MentorBit como Leds, Pulsa
 | MentorBitPantallas | Pantalla LCD | lcd |
 | MentorBitPantallas | Pantalla OLED | oled |
 | MentorBitDataLogger | Pin selector de tarjeta SD | SD_CHIP_SELECT |
-| MentorBitDataLogger | Reloj en Tiempo Real (RTC, Real Time Clock) | rtc |
+| MentorBitDataLogger | Reloj en Tiempo Real (RTC) | rtc |
 | MentorBitPuertos | Pin digital Y del Puerto X (del 0 al 6) | PUERTO_X_DIGITAL_Y |
 | MentorBitPuertos | Pin analógico Y del Puerto X (del 0 al 2) | PUERTO_X_ANALOG_Y |
 
 ### Ejemplos
 Dispones de ejemplos de diferentes dificultades para ir probando y experimentando con los distintos componentes del MentorBit (LEDs, pulsadores, zumbador, etc.). Aquí tienes una lista con todos los que hay y qué puedes hacer con ellos:
 
-|Ejemplo |  Descripción  |
+| Ejemplo | Descripción |
 |--|--|
-|LedDeColores | Encendido secuencial de los LEDs |
-|LedRGB | Encendido secuencial y combinado del RGB |   
-|Potenciometro | Se toman lecturas del potenciómetro |    
-|PulsadoresAnalógicos | Se captura el input analógico del pulsador |    
-|PulsadoresDigitales | Se captura el input digital del pulsador |   
-|Zumbadores | Generación de tonos con el zumbador. |
-|RTC | Establecer la hora manualmente y automáticamente  | 
-|TarjetaSD | Escribir y leer sobre un archivo de la tarjeta.  |
-|Display7Segments | Muestra varios valores en el display|
-|MotorDC |  Controla el motor de corriente continua |
-|MotorPasoAPaso | Controla el motor Paso a Paso |
-|Servomotor | Controla el servomotor |
-|LCD | Muestra por la pantalla el mensaje "Hello, world!". |
-|OLED | Muestra por la pantalla el icono por defecto. |
-|DHT | Recogida de la información del sensor y volcado en Serial |
-|DS18B20 | Recogida de temperatura del sensor |
-|LDR | Lectura de la fotorresistencia |
-|MQ | Encendido de un LED utilizando la medida del MQ |
-|Ultrasonidos | Recogida de la distancia entre objecto y sensor |
-|Puerto_1 | Encendido secuencial de los pines del puerto 1 |
-|Puerto_2 | Encendido secuencial de los pines del puerto 2 |
-|Puerto_3 | Encendido secuencial de los pines del puerto 3 |
+| LedDeColores | Encendido secuencial de los LEDs |
+| LedRGB | Encendido secuencial y combinado del RGB |   
+| Potenciometro | Se toman lecturas del potenciómetro |    
+| PulsadoresAnalogicos | Se captura el input analógico del pulsador |    
+| PulsadoresDigitales | Se captura el input digital del pulsador |   
+| Zumbador | Generación de tonos con el zumbador. |
+| RTC | Establecer la hora manualmente y automáticamente | 
+| TarjetaSD | Escribir y leer sobre un archivo de la tarjeta. |
+| Display7Segments | Muestra varios valores en el display |
+| MotorDC | Controla el motor de corriente continua |
+| MotorPasoAPaso | Controla el motor Paso a Paso |
+| Servomotor | Controla el servomotor |
+| LCD | Muestra por la pantalla el mensaje "Hello, world!". |
+| OLED | Muestra por la pantalla el icono por defecto. |
+| DHT | Recogida de la información del sensor y volcado en Serial |
+| DS18B20 | Recogida de temperatura del sensor |
+| LDR | Lectura de la fotorresistencia |
+| MQ | Encendido de un LED utilizando la medida del MQ |
+| Ultrasonidos | Recogida de la distancia entre objeto y sensor |
+| Puerto_1 | Encendido secuencial de los pines del puerto 1 |
+| Puerto_2 | Encendido secuencial de los pines del puerto 2 |
+| Puerto_3 | Encendido secuencial de los pines del puerto 3 |
 
 
 # Ficheros
 
-En esta versión se cuenta con quince archivos principales en la librería : 
-- MentorBit.cpp
-- MentorBit.h
-- MentorBitDataLogger.cpp
-- MentorBitDataLogger.h
-- MentorBitDisplay.cpp
-- MentorBitDisplay.h
-- MentorBitMotores.cpp
-- MentorBitMotores.h
-- MentorBitPantallas.cpp
-- MentorBitPantallas.h
-- MentorBitPuertos.cpp
-- MentorBitPuertos.h
-- MentorBitSensores.cpp
-- MentorBitSensores.h
+En esta versión se cuenta con dieciséis archivos principales en la librería: 
+- MentorBit.cpp y MentorBit.h
+- MentorBitDataLogger.cpp y MentorBitDataLogger.h
+- MentorBitDisplay.cpp y MentorBitDisplay.h
+- MentorBitMotores.cpp y MentorBitMotores.h
+- MentorBitPantallas.cpp y MentorBitPantallas.h
+- MentorBitPuertos.cpp y MentorBitPuertos.h
+- MentorBitSensores.cpp y MentorBitSensores.h
+- MentorPort.h
+
+---
 
 ## MentorBit
 
 Librería base para MentorBit Arduino. Contiene la definición de la clase base MentorBit, que es referida al MentorBit compatible con Arduino.
 
-El constructor de la clase provee una instancia de la clase MentorBit con los pines de conexión de los elementos básicos de la placa y algunos métodos para utilizarlos.
-* LED de colores
+El constructor de la clase provee una instancia con los pines de conexión de los elementos básicos de la placa y métodos para utilizarlos:
 
-* LED RGB
+* `void encenderLED(uint8_t led)` / `void apagarLED(uint8_t led)`: Enciende o apaga el diodo LED indicado.
+* `void encenderRGB(uint8_t rojo, uint8_t verde, uint8_t azul)`: Pone el LED RGB en los tonos e intensidades (0-255) indicadas.
+* `void apagarRGB()`: Apaga el LED RGB por completo.
+* `void generarTono(uint16_t frecuencia, uint8_t duracion)`: Genera un tono con la frecuencia y duración dadas.
+* `bool obtenerLecturaPulsador(uint8_t pulsador)`: Devuelve la lectura digital obtenida de los pulsadores.
+* `uint16_t obtenerLecturaPotenciometro()`: Devuelve la lectura analógica (0-1023) del potenciómetro.
 
-* Pulsadores
-
-*  Zumbador
-
-*  Potenciómetro
-
-* `` void encenderLED(uint8_t led) ``
-Enciende el diodo LED indicado como parámetro del método.
-
-* `` void apagarLED(uint8_t led) ``
-Apaga el diodo LED indicado como parámetro del método.
-
-* `` void encenderRGB(uint8_t rojo, uint8_t verde, uint8_t azul) ``
-Pone el LED RGB en los tonos e intensidades definidas para el color indicado como parámetro del método.
-
-* `` void apagarRGB() ``
-Apaga el LED RGB por completo.
-
-* `` void generarTono(uint16_t frecuencia, uint8_t duracion) ``
-Genera un tono de frecuencia y duración determiadas según los parámetros dados al método.
-
-* `` bool obtenerLecturaPulsador(uint8_t pulsador) ``
-Devuelve la lectura digital o analógica obtenida de los puertos donde se encuentran conectados los pulsadores según el indicado como parámetro del método.
-
-* `` uint16_t obtenerLecturaPotenciometro() ``
-Devuelve la lectura analógica obtenida del puerto donde se encuentra conectado el Potenciómetro.
+---
 
 ## MentorBitDataLogger
 
-Librería del módulo de DataLogger (SD y RTC) para MentorBit Arduino. En ella se declaran los atributos y métodos para la clase MentorBitDataLogger,
-El constructor de la clase devuelve una instancia de la clase MentorBitDataLogger que provee los pines y métodos necesarios para controlar la tarjeta SD y el RTC en el MentorBit.
+Librería del módulo de DataLogger (SD y RTC). Provee los métodos necesarios para controlar la tarjeta SD y el Reloj en Tiempo Real (RTC).
 
-Cuenta con siete funciones que nos permiten un mejor manejo de la información.
-* `` String leerDeArchivo(String nombre) ``
-Devuelve una cadena de texto con el contenido del archivo o una cadena vacía si no es capaz de realizar la lectura.
+**Tarjeta SD:**
+* `boolean inicializarSD()`: Inicializa la tarjeta SD y devuelve `true` si funciona correctamente.
+* `String leerDeArchivo(String nombre)`: Lee y devuelve todo el contenido del archivo especificado.
+* `boolean escribirEnArchivo(String nombre, String mensaje)`: Escribe un mensaje en el archivo indicado.
+* `boolean escribirLog(String nombre_archivo, String mensaje)`: Combina la lectura del RTC con la escritura en la SD para guardar un log con formato `[DD/MM/YYYY hh:mm:ss] mensaje`.
 
-* `` boolean escribirEnArchivo(String nombre,  String mensaje) ``
-Devuelve un booleano, true si consigue realizar la escritura correctamente y false si no es capaz de hacerlo.
+**RTC (Reloj en Tiempo Real):**
+* `boolean inicializarRTC()` / `boolean rtcFuncionando()`: Inicializa y comprueba el estado del RTC.
+* `String obtenerHoraRTC(String formato="hh:mm:ss")`: Devuelve la hora actual. Permite especificar un formato (ej. "DD/MM/YYYY hh:mm:ss").
+* `void ajustarHoraRTC()`: Ajusta la hora automáticamente a la hora de compilación del sistema.
+* `void ajustarHoraRTC(uint16_t anyo, uint8_t mes, uint8_t dia, uint8_t hora, uint8_t minuto, uint8_t segundo=0)`: Ajuste manual del reloj.
+* `void guardarDato(uint8_t direccion, uint8_t dato)` / `uint8_t leerDato(uint8_t direccion)`: Almacena y recupera valores (bytes) directamente en la memoria interna (NVRAM) del RTC (hasta 56 bytes).
 
-* `` boolean  inicializarSD() ``
-Inicializa la tarjeta SD y devuelve **TRUE** cuando se haya realizado el procedimiento haya funcionado correctamente. Devuelve **FALSE** en otro caso  
-
-* `` String  obtenerHoraRTC() ``
-Devuelve la hora actual en formato de cadena de texto
-
-* `` void  ajustarHoraRTC() ``
-Ajusta la hora del RTC a la hora del sistema
-
-* `` void  ajustarHoraRTC (uint16_t anyo, uint8_t mes, uint8_t dia, uint8_t hora=0, uint8_t minuto=0, uint8_tsegundo=0) ``
-Función para ajustar la hora del RTC a la hora dada.
-
-* `` boolean inicializarRTC() ``
-Devuelve un booleano, **TRUE** si consigue inicializar correctamente y **FALSE** si no es capaz de hacerlo.
- 
+---
 
 ## MentorBitDisplay
 
-Librería del módulo de Display para MentorBit Arduino. En ella se define de la clase MentorBitDisplay, referida al MentorBit compatible con Arduino y el módulo de display 7 segmentos.
+Librería del módulo de Display 7 Segmentos. 
 
-Incluido su constructor e inicializador cuenta con el métodos imprimir:
-* `` MentorBitDisplay() ``
-Devuelve una instancia de la clase MentorBitDisplay que provee las direcciones y métodos necesarios para controlar el display 7 segmentos integrado en el MentorBit
+* `void inicializarDisplay()`: Enciende y prepara el display I2C integrado.
+* El método `void imprimir(X valor)` está sobrecargado para mostrar diferentes tipos de datos automáticamente:
+  * Cadenas de texto (`String` o arreglos de caracteres).
+  * Números enteros (`int`).
+  * Números decimales (`double`), respetando la posición de la coma.
 
-* `` void inicializarDisplay() ``
-
-El método `` void imprimir(X valor) ``está sobrecargado para funcionar con los siguientes tipos de datos
-* int
-* double
-* char
-* string
-
+---
 
 ## MentorBitMotores
 
-Librería del módulo Motores para MentorBit Arduino. Definición de la clase MentorBitMotores, referida al MentorBit compatible con Arduino y el módulo de Motores.
-* `` MentorBitMotores() ``
-* `` void inicializarServo(uint8_t servomotor) ``
+Librería para el control de actuadores cinéticos. Incluye constantes en el enumerador `Direccion` (PARADO, ATRAS, IZQUIERDA, ANTIHORARIO, ADELANTE, DERECHA, HORARIO) para facilitar la lectura del código.
 
-Una vez inicializado el Servo se provee de tres funciones que permiten manejar los diferentes motores.
-* `` void moverServo(uint8_t servomotor, uint16_t grados) ``
-* `` void moverMotorDC(uint8_t velocidad,  uint8_t direccion) ``
-* `` void moverMotorPP(uint16_t pasos,  uint8_t direccion) ``
+**Servomotores:**
+* `void inicializarServo(uint8_t servomotor)` / `void desconectarServo(uint8_t servomotor)`: Conecta o desconecta dinámicamente un servo.
+* `void moverServo(uint8_t servomotor, uint16_t grados)`: Posiciona el servo en el ángulo deseado.
 
+**Motor DC:**
+* `void moverMotorDC(uint8_t velocidad, uint8_t direccion)`: Mueve el motor a la velocidad (0-255) y sentido indicado.
+* `void pararMotorDC()`: Frena el motor de corriente continua por completo.
+
+**Motor Paso a Paso (Stepper):**
+* `void moverMotorPP(uint16_t pasos, uint8_t direccion)`: Mueve el motor paso a paso la cantidad indicada.
+* `void moverMotorPP(uint16_t pasos, uint8_t direccion, uint8_t tiempo_entre_pasos)`: Permite un control más fino indicando el delay (en milisegundos) entre pasos.
+
+---
 
 ## MentorBitPantallas
 
-Definición de la clase MentorBitPantallas, referida al MentorBit compatible con Arduino y el módulo de pantallas.
-* `` MentorBitPantallas() ``
-Devuelve una instancia de la clase MentorBitPantallas que provee las direcciones de conexión de los pantallas de la placa y un objeto para utilizarlas.
+Control combinado de pantallas avanzadas. Incluye los objetos `lcd` (pantalla de 16x2 I2C) y `oled` (matriz de puntos).
 
-* `` void inicializarLCD() ``
-* `` void inicializarOLED() ``
+**Inicialización:**
+* `void inicializarLCD()`: Inicia la LCD con su respectiva retroiluminación.
+* `void inicializarOLED()`: Inicia el display OLED.
 
+**Métodos Avanzados para la LCD (`MentorBitLCD`):**
+La LCD de MentorBit no solo permite usar comandos estándar de la librería `Print` (como `lcd.print("Hola");`), sino que incluye funciones gráficas y utilidades:
+* `clear()` y `home()`: Limpian la pantalla y reinician la posición del cursor.
+* `setCursor(uint8_t col, uint8_t row)`: Posiciona el texto.
+* `backlight()` / `noBacklight()`: Enciende y apaga la luz de fondo.
+* `imprimirCentrado(uint8_t fila, String texto)`: Limpia una fila específica y centra un texto automáticamente.
+* `dibujarBarra(uint8_t fila, uint8_t porcentaje)`: Dibuja una barra de progreso visual (0 a 100%) en la línea elegida.
+* `cargarIcono(IconoLCD icono, uint8_t ubicacion_memoria)`: Carga uno de los iconos predefinidos en la memoria (0-7) de la LCD. Los iconos disponibles incluyen: `CORAZON`, `SONRISA`, `BATERIA_BAJA/MEDIA/LLENA`, `TEMPERATURA`, `GOTA_AGUA`, `RELOJ`, `WIFI`, `CAMPANA`, `CHECK_OK`, `CRUZ_NOK`, y flechas.
 
-## MentorBitPuertos
+---
 
-Librería de los puertos genéricos para MentorBit Arduino. Definición de la clase base MentorBitPuertos, que hace referencia a los diferentes puertos que forma parte del MentorBit compatible con Arduino de forma genérica.
+## MentorBitPuertos y MentorPort
 
-La clase cuenta con un constructor ``MentorBitPuertos()`` que devuelve una instancia de la clase MentorBitPuertos que provee los pines de conexión de los conectores de los puertos.
-*  Puerto genérico 1
-*  Puerto genérico 2
-*  Puerto genérico 3
-Cada uno compuesto de seis puertos digitales y dos analógicos.
+Librerías para la gestión de conectividad modular de pines de propósito general. 
 
+El sistema cuenta con tres puertos genéricos compuestos de pines digitales y analógicos, más dos puertos específicos de módulos:
+* `MentorBitPuertos()`: Constructor que prepara la interfaz.
+* `void conectar(uint8_t port, MentorPort& module)`: Vincula a nivel de software un puerto físico con un objeto módulo que herede de `MentorPort`.
+
+`MentorPort.h` es la clase base (interfaz virtual) para la creación de librerías de módulos de expansión, dotando a MentorBit de extensibilidad estandarizada.
+
+---
 
 ## MentorBitSensores
 
-Librería del módulo Sensores para MentorBit Arduino. Definición de la clase MentorBitSensores, referida al MentorBit compatible con Arduino y el módulo de sensores.
+Librería de recolección de variables del entorno físico del MentorBit.
 
-``MentorBitSensores()``
- Devuelve una instancia de la clase MentorBitSensores que provee los pines de conexión de los sensores de la placa y los puertos correspondientes. También provee de los métodos necesarios para obtener las lecturas de cada sensor de manera sencilla.
-*  LDR
-
-*  DS18B20
-
-``uint8_t  obtenerLecturaLDR()``
-Devuelve un valor entero con la lectura obtenida de la fotorresistencia
-
-``float  obtenerLecturaDS18B20()``
-Devuelve un valor decimal con la lectura en Centígrados obtenida en el pin donde se encuentra conectado el DS18B20.
+* `uint16_t obtenerLecturaLDR()`: Devuelve un valor analógico (0-1023) correspondiente a la luz detectada por la fotorresistencia.
+* `float obtenerLecturaDS18B20()`: Solicita y convierte la información del bus *OneWire*, devolviendo la lectura exacta de la temperatura en grados Centígrados.
