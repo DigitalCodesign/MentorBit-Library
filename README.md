@@ -198,3 +198,14 @@ Librería de recolección de variables del entorno físico del MentorBit.
 
 * `uint16_t obtenerLecturaLDR()`: Devuelve un valor analógico (0-1023) correspondiente a la luz detectada por la fotorresistencia.
 * `float obtenerLecturaDS18B20()`: Solicita y convierte la información del bus *OneWire*, devolviendo la lectura exacta de la temperatura en grados Centígrados.
+
+## Recursos Adicionales
+
+¿Quieres saber más sobre MentorBit o necesitas comprar uno? Aquí tienes algunos enlaces que te serán de utilidad:
+
+- [Web del fabricante](https://digitalcodesign.com/)
+- [Tienda Online de Canarias](https://canarias.digitalcodesign.com/shop)
+- [Tienda Online de Península](https://digitalcodesign.com/shop)
+- [Web Oficial de MentorBit](https://digitalcodesign.com/mentorbit)
+- [Manual de usuario del MentorBit](https://drive.google.com/file/d/1LihxjplzKxC2sLOBprXDpevP77DC8Yiv/view)
+- [Modelo 3D de MentorBit en formato .STEP](https://drive.google.com/file/d/1vkdoFbuI6Grp2JLRS9rvaMw9hJ6F_ViC/view?usp=drive_link)
